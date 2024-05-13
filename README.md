@@ -95,9 +95,9 @@ therefore they are stored in an associated project folder and can be accessed by
 
 Running the model contained herein requires users to have an active TUFLOW-FV binary and license with the AED pre-compiled plugin.
 
-- Download and install the TUFLOW-FV model and license server from [WBM BMT](https://www.tuflow.com/products/tuflow-fv/).
+- Download and install the TUFLOW-FV model and license server from [BMT TUFLOW](https://www.tuflow.com/products/tuflow-fv/).
 
-- Download and install the compatible AED model plugin (FV-AED) from [the UWA-AED website](https://aquatic.science.uwa.edu.au/research/models/AED/quickstart.html).
+- Download and install the compatible AED model plugin (FV-AED) from [the UWA-AED releases repository](https://github.com/AquaticEcoDynamics/releases).
 
 ### Cloning and executing the model
 
