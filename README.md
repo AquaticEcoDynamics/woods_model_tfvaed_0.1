@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <!--
-Readme for the tfvaed_1.0 Cycle 1 Cockburn Sound model
+Readme for the tfvaed_0.1 Woods Lake model
 -->
 
 <!-- PROJECT SHIELDS -->
@@ -17,24 +17,19 @@ Readme for the tfvaed_1.0 Cycle 1 Cockburn Sound model
 <div align="center">
 
 <!--
-  <a href="https://github.com/AquaticEcoDynamics/csiem_model_tfvaed_1.0">
+  <a href="https://github.com/AquaticEcoDynamics/woods_model_tfvaed_0.1">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 -->
 
-<h3 align="center">WAMSI Westport <em>Cockburn Sound Water Quality Model</em></h3>
+<h3 align="center">HydroTasmania <em>Woods Lake Water Quality Model</em></h3>
 
   <p align="center">
-    This repository houses the hydrodynamic-biogeochemical model for Cockburn Sound, a coastal embayment located near Perth, Western Australia.
-    <br />
-    <a href="https://aquaticecodynamics.github.io/csiem-science/"><strong>Explore the online manual »</strong></a>
-    <br />
-    <br />
-    <a href="https://aquaticecodynamics.github.io/csiem-science/appendix-b-results-archive.html">View Demo</a>
+    This repository houses the hydrodynamic-biogeochemical model for Woods Lake, a lake located in Tasmania.
     ·
-    <a href="https://github.com/AquaticEcoDynamics/csiem_model_tfvaed_1.0/issues">Report Bug</a>
+    <a href="https://github.com/AquaticEcoDynamics/woods_model_tfvaed_0.1/issues">Report Bug</a>
     ·
-    <a href="https://github.com/AquaticEcoDynamics/csiem_model_tfvaed_1.0/issues">Request Feature</a>
+    <a href="https://github.com/AquaticEcoDynamics/woods_model_tfvaed_0.1/issues">Request Feature</a>
   </p>
 </div>
 
@@ -66,21 +61,6 @@ Readme for the tfvaed_1.0 Cycle 1 Cockburn Sound model
 
 <br>
 
-<!-- ABOUT THE PROJECT -->
-
-## About The Project
-
-<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
-<br>
-
-In 2022, the Western Australian Marine Science Insitution and Wesport commisioned development of an independent hydrodynamic-biogeochemical model for [Cockburn Sound](https://en.wikipedia.org/wiki/Cockburn_Sound), which is located on the coast of Perth, Western Australia.
-
-The model uses the [TUFLOW-FV](https://www.tuflow.com/products/tuflow-fv/) 3D finite volume hydrodynamic model, and the [AED](https://aquaticecodynamics.github.io/aed-science/) water quality model.
-
-<!-- Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description` -->
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## Built With
 
 <br>
@@ -109,7 +89,7 @@ The model uses the [TUFLOW-FV](https://www.tuflow.com/products/tuflow-fv/) 3D fi
 <br>
 
 This repository contains model files (except the `bc_repo`) that are version-controlled can be run locally on Windows or Linux. The `bc_repo` contains boundary conditions files that the sizes are too large to be stored at Github, 
-therefore they are stored on Pawsey WAMSI project folder and can be accessed by direct download or a `fetch` method (see below). To get a local copy up and running follow these steps.
+therefore they are stored in an associated project folder and can be accessed by direct download or a `fetch` method (see below). To get a local copy up and running follow these steps.
 
 ### Prerequisites
 
@@ -121,14 +101,14 @@ Running the model contained herein requires users to have an active TUFLOW-FV bi
 
 ### Cloning and executing the model
 
-1. Clone the current csiem_model_tfvaed_1.0 repo
+1. Clone the current woods_model_tfvaed_0.1 repo
    ```sh
-   Linux: git clone https://github.com/AquaticEcoDynamics/csiem_model_tfvaed_1.0.git
+   Linux: git clone https://github.com/AquaticEcoDynamics/woods_model_tfvaed_0.1.git
    Windows: use Github Destop to clone or download ZIP at the Github website
    ```
-2. Clone the complete model files including `bc_repo` folder. For Linux users, copy the fetch_csiem.sh shell file from the Github [csiem_model_tools](https://github.com/AquaticEcoDynamics/csiem_model_tools/blob/main/fetch/fetch_csiem.sh) repository. Then fetch the `bc_repo` as:
+2. Clone the complete model files including `bc_repo` folder. For Linux users, copy the fetch_woods.sh shell file from the Github [woods_model_tools](https://github.com/AquaticEcoDynamics/woods_model_tools/blob/main/fetch/fetch_woods.sh) repository. Then fetch the `bc_repo` as:
    ```sh
-   ./fetch_csiem.sh 1.0
+   ./fetch_woods.sh 1.0
    ```
    The above fetch command will download all the model files including the bc_repo;
    
@@ -155,17 +135,16 @@ Running the model contained herein requires users to have an active TUFLOW-FV bi
 
 | Sub-type                | Conventions                                                            | comments                                                                                                                                                                                          |
 | ----------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| WQ (water quality)      | csiem\_{model generation ID}\_{mesh option}\_{model period}\_WQ.fvc    | Main configuration file for coupled TFV-AED model, e.g. csiem_v1_B009_20130101_20131231_WQ.fvc                                                                                                    |
-| HD (hydrodynamics)      | csiem\_{model generation ID}\_{mesh  option}\_{model  period}\_HD.fvc  | Main configuration file for TFV hydrodynamic model only, e.g. csiem_v1_B009_20130101_20131231_HD.fvc                                                                                              |
-| ST (sediment transport) | csiem\_{model generation ID}\_{mesh  option}\_{model  period}\_SED.fvc | Main configuration file for TFV-ST model, e.g. csiem_v1_B009_20130101_20131231_ST.fvc.<br> Note: the TFV-ST model was originally set by BMT and to be updated with corresponding file paths/names |
+| WQ (water quality)      | woods\_{model generation ID}\_{mesh option}\_{model period}\_WQ.fvc    | Main configuration file for coupled TFV-AED model, e.g. woods_v1_B009_20130101_20131231_WQ.fvc                                                                                                    |
+| HD (hydrodynamics)      | woods\_{model generation ID}\_{mesh  option}\_{model  period}\_HD.fvc  | Main configuration file for TFV hydrodynamic model only, e.g. woods_v1_B009_20130101_20131231_HD.fvc                                                                                              |
 
 - includes
 
 | Sub-type                 | Conventions                                       | comments                                                                         |
 | ------------------------ | ------------------------------------------------- | -------------------------------------------------------------------------------- |
-| bc (boundary conditions) | {boundary type}\_{data source}\_{data period}.fvc | e.g. met_BARRA_perth_20130101_20131231.fvc                                       |
+| bc (boundary conditions) | {boundary type}\_{data source}\_{data period}.fvc | e.g. met_BOM_liawenee_20130101_20131231.fvc                                      |
 | ic (initial condition)   | initial_conditions\_{model version}.fvc           | e.g. initial_conditions_wq.fvc                                                   |
-| domain                   | domain_config\_{mesh option}\_{model type}.fvc    | e.g. domain_config_csiem_mesh_B.fvc                                              |
+| domain                   | domain_config\_{mesh option}\_{model type}.fvc    | e.g. domain_config_woods_mesh.fvc                                                |
 | turbulence               | turbulence.fvc                                    | Include configuration for turbulence parameters                                  |
 | wq (water quality)       | AED model configuration files                     | Include configuration for AED water quality module                               |
 | output                   | output\_{output category}.fvc                     | Configuration for model outputs, e.g. output_wq.fvc                              |
@@ -175,57 +154,26 @@ Running the model contained herein requires users to have an active TUFLOW-FV bi
 
 | Sub-type                                 | Conventions                                                                                              | comments                                                                             |
 | ---------------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| 1_ocean (ocean boundary)                 | - NetCDF: {data source}\_{UTC zone}\_{data period}.nc <br> - CSV: ocean_bgc\_{source}\_{data period}.csv | e.g. ROMS_UTC+8_20130101_20140101_FILLED.nc<br> ocean_bgc_IMOS_20220101_20221231.csv |
-| 2_weather (weather condition)            | {data source}\_{domain}\_{UTC zone}\_{data period}.nc                                                    | e.g. WRF_d02_UTC+0_20220101_20230101.nc                                              |
-| 3_waves (waves inputs)                   | {data source}\_{domain}\_{UTC zone}\_{data period}.nc                                                    | e.g. WWM_Agrid_UTC+0_20150101_20151231.nc                                            |
-| 4_sce (Swan-Canning Estuary)             | {location}\_{BC type}\_{ data period}\_{model type}.csv                                                  | e.g. NAR_Inflow_20100101_20230101_wq.csv                                             |
-| 5_phe (Peel-Harvey Estuary)              | N/A (to be updated)                                                                                      |                                                                                      |
-| 6_gw (Groundwater inputs)                | SGD\_{zone id}\_{data period}.csv                                                                        | e.g. SGD_zone1_1_20130101_20131231.csv                                               |
-| 7_discharges (industrial discharge)      | {data source}\_{data period}.nc                                                                          | e.g. BP_20130101_20140101_wq.csv                                                     |
-| 8_intakes (industrial intakes)           | {data source}\_{data period}.nc                                                                          | e.g. PSDP1_20130101_20140101_wq.csv                                                  |
-| 9_operations (Cockburn Sound operations) | N/A (to be updated)                                                                                      |                                                                                      |
+| 1_weather (weather condition)            | {data source}\_{domain}\_{UTC zone}\_{data period}.nc                                                    | e.g. BOM_UTC+0_20220101_20230101.nc                                              |
+| 2_waves (waves inputs)                   | {data source}\_{domain}\_{UTC zone}\_{data period}.nc                                                    | e.g. SWAN_UTC+0_20150101_20151231.nc                                            |
+| 3_weir (dam wall)                       | {location}\_{BC type}\_{ data period}\_{model type}.csv                                                  | e.g.  Dam_20100101_20230101_wq.csv                                             |
+| 4_river (lake river)                     | N/A (to be updated)                                                                                      |                                                                                      |
 
 - gis_repo
 
 | Sub-type                                         | Conventions                                         | comments                             |
 | ------------------------------------------------ | --------------------------------------------------- | ------------------------------------ |
-| 1_domain (GIS files for model domain)            | csiem\_mesh\_{mesh option}\_{version ID}\_{resolution} | e.g. csiem_mesh_B009_opt.2dm         |
-| 2_benthic (GIS files for benthic conditions)     | csiem\_{benthic type}\_{version ID}                   | e.g. Cockburn_Sound_Material_011.shp |
-| 3_output (GIS files for output definition)       | extraction_point.csv                                |                                      |
-| 4_gw (GIS files for defining groundwater inputs) | groundwater\_zones\_{version NO}                      | e.g. groundwater_zones_v2.shp        |
+| 1_domain (GIS files for model domain)            | woods\_mesh\_{mesh option}\_{version ID}\_{resolution} | e.g. woods_mesh_B009_opt.2dm         |
+| 2_benthic (GIS files for benthic conditions)     | woods\_{benthic type}\_{version ID}                   | e.g. Woods_Material_011.shp |
+| 3_output (GIS files for output definition)       | output_point.csv                                |                                      |
 
 ### Analysis
 
-Input files and model output files are able to be processed using the `csiem-marvl` repository that includes the supporting scripts and site data. Please contact the developers for further information.
+Input files and model output files are able to be processed using the `aed-marvl` repository that includes the supporting scripts and site data. Please contact the developers for further information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- USAGE EXAMPLES -->
 
-<!--
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
--->
-
-<!-- ROADMAP -->
-
-<!--
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/AquaticEcoDynamics/csiem_model_tfvaed_1.0/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
--->
 
 <!-- CONTRIBUTING -->
 
@@ -258,20 +206,12 @@ Distributed under the --- License. See `LICENSE.txt` for more information.
 
 Matt Hipsey: [@matthipsey](https://twitter.com/matthipsey) - matt.hipsey@uwa.edu.au
 
-Project Link: [csiem online manual](https://aquaticecodynamics.github.io/csiem-science/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
 
 ## Acknowledgments
-
-- Funding from the [WAMSI Westport Research Program](https://wamsi.org.au/research/programs/wamsi-westport-marine-science-program/)
-- Gayan Gunaratne, Louise Bruce and the [BMT](https://www.tuflow.com/) software team
-- Brendan Busch & Peisheng Huang from the [AED](https://aed.see.uwa.edu.au/) research group
-- Oceanographic models from Ivica Janeković & Chari Pattiaratchi from the [UWA Oceans Institute](https://www.uwa.edu.au/oceans-institute)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
