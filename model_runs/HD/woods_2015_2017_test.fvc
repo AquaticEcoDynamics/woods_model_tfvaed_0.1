@@ -1,0 +1,231 @@
+! Woods Lake Simulation : Initial Test
+!_________________________________________________________________
+!
+
+! SIMULATION CONFIGURATION
+!_________________________________________________________________
+spherical == 0
+include salinity == 1,1
+include temperature == 1,1
+include sediment == 0,0
+include heat == 1
+LONGWAVERADIATIONMODEL == 3
+SHORTWAVERADIATIONMODEL == 1
+
+!INCLUDEWAVESTRESS == 1
+!SHORTWAVERADIATIONALBEDO == 0.25
+
+momentum mixing model == Smagorinsky
+scalar mixing model == Smagorinsky
+vertical mixing model == external !parametric !constant
+external turbulence model dir == ..\..\includes\turbulence\GOTM\
+!waterqualitymodel == EXTERNAL
+!external water quality model dir == ..\External\AED2
+spatial order == 1,1
+
+!horizontal gradient limiter == LCD
+
+vertical gradient limiter == MC
+bottom drag model == ks
+equation of state == UNESCO
+
+! Heat PARAMETERS
+!SHORTWAVERADIATIONEXTINCTIONCOEFFICIENTS == 5.00000,1.20000,3.00000,5.00000
+!SHORTWAVERADIATIONFRACTIONS == 0.51,0.45,0.035,0.005
+
+!TIME COMANDS
+!_________________________________________________________________
+time format == ISODATE
+reference time == 01/01/2001
+start time == 01/01/2015 00:00:00
+end time == 01/07/2017 00:00:00
+cfl external == 0.80
+cfl internal == 0.80
+timestep limits == 0.1, 15.
+turbulence update dt == 600                                     ! for GOTM (s)
+display dt == 600.
+
+!MODEL PARAMETERS
+!_________________________________________________________________
+stability limits == 1050.0,1050.0
+cell wet/dry depths == 2.0e-2, 2.0e-2                           ! <cells dry depth (m), cell wet depth (m)>
+
+latitude == -42.0000                                            ! <latitude in degree (-ve for southern Hemishpere)
+reference salinity == 0.0
+reference temperature == 10.0
+reference density == 1000.0
+density air == 1.18
+
+global bottom roughness == 0.0020                               ! <Global roughness>
+global horizontal eddy viscosity == 0.2                         ! <eddy viscosity coefficient/s (m2/s;-)>
+global horizontal scalar diffusivity == 0.2,0.2                 ! <diffusivity; coefficient/s (m2/s;-)>
+diffusivity limiter dt == 30.                                   ! <NOT IN MANUAL>
+kinematic viscosity == 1.0e-6                                   ! <eddy viscosity value (m2/s)>
+vertical mixing parameters ==  0.01, 0.01                       !
+global vertical eddy viscosity limits == 1.0e-04, 9999.
+global vertical scalar diffusivity limits == 1.0e-06, 9999.
+!min vertical eddy viscosity == 1.0e-4
+
+
+!GEOMETRY
+!_________________________________________________________________
+geometry 2d == ..\..\gis_repo\1_domain\mesh\Woods_v2_b.2dm
+
+vertical mesh type == z
+layer faces == ..\..\gis_repo\1_domain\layers\layers_WL.csv !High velocity error when running
+sigma layers == 3
+min bottom layer thickness == 0.1
+cell 3d depth == 5.0e-1
+
+!vertical mesh type == sigma
+!layer faces == ..\..\gis_repo\1_domain\layers\layers_sigma.csv   !High velocity error when running
+!sigma layers == 3
+!min bottom layer thickness == 0.1
+!cell 3d depth == 5.0e-1
+
+
+! MATERIAL PROPERTIES
+!_________________________________________________________________
+material == 1
+  bottom roughness == 0.005
+end material
+material == 2
+  bottom roughness == 0.005
+end material
+material == 3
+  bottom roughness == 0.005
+end material
+material == 4
+  bottom roughness == 0.005
+end material
+material == 5
+  bottom roughness == 0.005
+end material
+	material == 6
+end material
+	material == 7
+  bottom roughness == 0.005
+end material
+!SCALAR PROPERTIES
+!_________________________________________________________________
+Ntracer == 1
+
+! INITIAL CONDITIONS
+!_________________________________________________________________
+initial water level == 738.166 
+initial salinity == 0.02 ! in psu
+initial temperature == 14.69
+initial tracer concentration == 0.0
+
+!INITIAL CONDITION 2D == ..\BCs\Initial\IC_AED_20150101.csv
+!initial wq concentration == 14.69,13.328,0,0,302.81,100,3.2,3.2,0.128,0.0128,166.6,166.6,2.142,2.142,0.0896,0.0896,0.0129
+initial wq concentration == 0.0,0.0,4.0,0,0.1,0.,302.81,100,0.2,3.2,0.128,0.0128,166.6,166.6,2.142,2.142,0.0896,0.0896,0.0129,0.1,0.1
+
+
+
+
+!BOUNDARY CONDITIONS
+! Met______________________________________________________________
+
+bc == AIR_TEMP, ..\..\bc_repo\1_weather\BOM\tfv_met_liawenee.csv
+  bc header == ISOTime,ATemp
+end bc
+
+bc == REL_HUM, ..\..\bc_repo\1_weather\BOM\tfv_met_liawenee.csv
+  bc header == ISOTime,Rel_Hum
+end bc
+
+bc == W10, ..\..\bc_repo\1_weather\BOM\tfv_met_liawenee.csv
+  bc header == ISOTime,Wx,Wy
+!bc scale == 1.2,1.2
+end bc
+
+bc == SW_RAD, ..\..\bc_repo\1_weather\BOM\tfv_met_liawenee.csv
+  bc header == ISOTime,Sol_Rad
+end bc
+
+bc == CLOUD, ..\..\bc_repo\1_weather\BOM\tfv_met_liawenee.csv
+  bc header == ISOTime,Clouds
+end bc
+
+bc == PRECIP, ..\..\bc_repo\1_weather\BOM\tfv_rain_liawenee.csv
+  bc header == ISOTime,Precip
+end bc
+
+! ______________________________________________________________Met
+
+!! Inflows___________________________________________________________
+!
+!bc == QC, 476513.0,5362187.0, ..\BCs\Inflows\tfv_liawenee_inflow_20140101_20170701.csv
+!  bc header ==  ISOTime,Flow,Sal,Temp,ss1,ss2,ret,oxy,sil,amm,nit,frp,frp_ads,doc,poc,don,pon,dop,pop,grn
+!  bc scale == 1.75,1,1,1,1,1
+!end bc
+!
+!bc == QC,480265.0,5356051.0, ..\BCs\Inflows\tfv_tods_inflow_20140101_20170701.csv
+!  bc header ==  ISOTime,Flow,Sal,Temp,ss1,ss2,ret,oxy,sil,amm,nit,frp,frp_ads,doc,poc,don,pon,dop,pop,grn
+!  bc scale == 1,1,1,1,1,1
+!end bc
+!
+!! ___________________________________________________________Inflows
+!
+!! Outflows_______________________________________________________
+!bc == QC,475075.0,5352837.0, ..\BCs\Outflows\tfv_Poatina_outflow_20140101_20170701.csv
+!  bc header ==  ISOTime,Flow,Sal,Temp
+!  bc scale == 1,1,1
+!end bc
+!
+!!bc == QC,485821.0,5367819.1, ..\BCs\Outflows\tfv_outflow_PowerStation_Summer.csv
+!!  bc header ==  ISOTime,Flow,Sal,Temp
+!!end bc
+
+
+
+! _______________________________________________________Outflows
+
+
+!!!  Wave model
+!grid definition file == ..\..\bc_repo\2_waves\SWAN\WAVE.nc
+!grid definition variables == x,y
+!grid definition label == SWAN_waves_regional
+!ENDGRID
+!bc == Wave, SWAN_waves_regional, ..\..\bc_repo\2_waves\SWAN\WAVE.nc
+!  bc header == time,hs,tps,thetap
+!  bc reference time == 01/01/1970 00:00
+!  bc time units == seconds
+!end bc
+
+
+!OUTPUT COMMANDS
+
+!_________________________________________________________________
+
+output dir == ..\..\outputs\results\
+! NETCDF Output
+output == netcdf
+  !output parameters == h,d,v,Sal,Temp,W10  !,wvht,wvper,wvdir
+  output parameters == h,d,v,Sal,Temp,W10  
+  output interval == 3600. ! 1 hourly in seconds
+end output
+
+!! NETCDF Output
+!output == netcdf
+!suffix == WQ
+!  output parameters == h,d,v,Sal,Temp,wq_all
+!  output interval == 43200. ! 14400.00 ! 4 hourly in seconds
+!end output
+
+!output == netcdf
+!suffix == WQDIAG
+!  output parameters == h,d,v,Temp,wq_all,wq_diag_all
+!  output interval == 21600 ! 6 hourly in seconds
+!end output
+
+output == points
+	output points file == ..\..\gis_repo\3_output\points\woods_points.csv    ! Check for different season scenarios
+	vertical averaging == sigma-range, 0, 1
+	output parameters == H,V,TEMP,SAL,TRACE_1 
+	output interval == 3600. ! (s)
+end output
+
+write restart dt == 86400.
+restart overwrite == 0

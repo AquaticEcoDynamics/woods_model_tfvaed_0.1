@@ -1,0 +1,14 @@
+output dir == ..\..\outputs\results !Scratch 1
+
+output == points
+	output points file == ..\..\gis_repo\3_output\points\woods_points.csv    ! Check for different season scenarios
+	vertical averaging == sigma-range, 0, 1
+	output parameters == H,V,TEMP,SAL,TRACE_1 
+	output interval == 900. ! (s)
+end output
+
+output == profiles
+	output points file == ..\..\gis_repo\3_output\points\woods_points.csv    ! Check for different season scenarios
+	output parameters == V,TEMP,SAL,TRACE_1 
+	output interval == 43200. !(s)
+end output

@@ -1,0 +1,13 @@
+
+bc_repo/.DS_Store
+gis_repo/.DS_Store
+bc_repo/2_waves/SWAN/.DS_Store
+gis_repo/1_domain/bathymetry/CSV/.DS_Store
+gis_repo/2_benthic/.DS_Store
+outputs/results/.DS_Store
+model_runs/HD/log/.DS_Store
+model_runs/HD/.DS_Store
+includes/wq/.DS_Store
+includes/wq/AED2/.DS_Store
+includes/bc/.DS_Store
+gis_repo/1_domain/mesh/.DS_Store

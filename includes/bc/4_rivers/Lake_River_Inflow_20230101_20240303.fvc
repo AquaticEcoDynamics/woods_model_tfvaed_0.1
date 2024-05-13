@@ -1,0 +1,7 @@
+! PSDP Direct insertion
+bc == Q, 2  ,  ../../../bc_repo/4_rivers/SACKVILLE/Q_20230101_20240301_HD.csv
+  bc header == Date,Flow,SAL,TEMP,TRACE_1
+!              Date,Q,Salt,Temp,TRACE1
+  bc scale ==  1.0,1.0,1.0,1.0 
+  bc default == 0,0,0,1
+end bc
