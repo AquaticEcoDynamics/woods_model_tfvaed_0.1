@@ -1,0 +1,381 @@
+
+***************************** TUFLOWFV *****************************
+
+Build version: 2023.1.1
+Build date: 01/12/2023 10:15
+Git branch: main
+Git hash: 7994ec3
+Build platform: Windows
+Build architecture:  x86-64
+Compiler version: Ifort 2021.3.0
+Build precision: single
+NVidia GPU enabled: Cuda v11.8.89 sm_50
+GIS Module Version: 2020-07-PD
+
+********************************************************************
+
+Computer name: DEP64896
+User name: 00065525
+Execution timestamp: 27/05/2024 10:36:23
+
+
+Initialising TUFLOW Licence Settings...
+
+No TUFLOW licence Settings files found.  Default settings applied.
+WIBU Retry Time == 60  ! Seconds.  Values less than 1 are set to 1.  Default = 60.
+WIBU Retry Count == 0  ! Number of times to retry for a licence at start of simulation.  Use -1 for indefinitely.  Default = 0.
+WIBU Dongles Only == OFF  ! If set to ON, searches for WIBU dongles only.  Default is OFF.
+
+Attempting to process input control file:
+Trying to open file: woods_2023_2024_test.fvc ... OK. File unit: 101
+TIME FORMAT == ISO DATE & TIME
+REFERENCE TIME == 01/01/2001 00:00:00
+Trying to open file: ..\..\includes\bc\1_weather\met_CFSR_20230101_20240501.fvc ... OK. File unit: 102
+Closing file unit: 102
+Start echoing input file:
+SPHERICAL == .TRUE.
+INCLUDE SALINITY == .TRUE.
+COUPLE SALINITY DENSITY == .TRUE.
+INCLUDE TEMPERATURE == .TRUE.
+COUPLE TEMPERATURE DENSITY == .TRUE.
+INCLUDE SEDIMENT == .FALSE.
+INCLUDE HEAT == .TRUE.
+LONG WAVE RADIATION MODEL == 3
+SHORT WAVE RADIATION MODEL == 1
+MOMENTUM MIXING MODEL == SMAGORINSKY
+SCALAR MIXING MODEL == SMAGORINSKY
+VERTICAL MIXING MODEL == EXTERNAL
+EXTERNAL TURBULENCE MODEL DIR == ..\..\includes\turbulence\GOTM\
+SPATIAL ORDER == 1, 1
+VERTICALGRADIENTLIMITER == MC
+BOTTOM DRAG MODEL == KS
+EQUATION OF STATE == UNESCO
+START TIME == 02/01/2023 00:00:00
+END TIME == 01/04/2024 00:00:00
+CFL EXTERNAL ==   0.8000000
+CFL INTERNAL ==   0.8000000
+TIMESTEP LIMITS ==   0.1000000    ,    15.00000
+TURBULENCE UPDATE DT ==    600.0000
+DISPLAY DT ==    600.0000
+STABILITY LIMITS ==    1050.000    ,    1050.000
+WARNING: Wet depth is less than dry depth. Momentum will never be switched off
+CELL DRY/WET DEPTHS ==   0.2000000E-01,   0.2000000E-01
+LATITUDE ==   -42.00000
+REFERENCE SALINITY ==    0.000000
+REFERENCE TEMPERATURE ==    10.00000
+REFERENCE DENSITY ==    1000.000
+DENSITY AIR ==    1.180000
+GLOBAL BOTTOM ROUGHNESS ==   0.2000000E-02
+GLOBAL HORIZONTAL EDDY VISCOSITY (SMAG COEFF) ==   0.2000000
+GLOBAL HORIZONTAL SCALAR DIFFUSIVITY (SMAG COEFF) ==   0.2000000
+DIFFUSIVITY LIMITER DT ==    30.00000
+KINEMATIC VISCOSITY ==   0.1000000E-05
+GLOBAL VERTICAL EDDY VISCOSITY LIMITS ==   0.1000000E-03,    9999.000
+GLOBAL VERTICAL SCALAR DIFFUSIVITY LIMITS ==   0.1000000E-05,    9999.000
+GEOMETRY2D == ..\..\gis_repo\1_domain\mesh\Woods_v2_b_WGS84.2dm
+VERTICAL MESH TYPE == Z
+LAYER FACE FILE == ..\..\gis_repo\1_domain\layers\layers_WL.csv
+SURFACE SIGMA LAYERS == 3
+MINIMUM LAYER THICKNESS ==   0.1000000
+CELL 3D DEPTH ==   0.5000000
+MATERIAL == 1
+  BOTTOM ROUGHNESS ==   0.5000000E-02
+END MATERIAL
+MATERIAL == 2
+  BOTTOM ROUGHNESS ==   0.5000000E-02
+END MATERIAL
+MATERIAL == 3
+  BOTTOM ROUGHNESS ==   0.5000000E-02
+END MATERIAL
+MATERIAL == 4
+  BOTTOM ROUGHNESS ==   0.5000000E-02
+END MATERIAL
+MATERIAL == 5
+  BOTTOM ROUGHNESS ==   0.5000000E-02
+END MATERIAL
+MATERIAL == 6
+END MATERIAL
+MATERIAL == 7
+  BOTTOM ROUGHNESS ==   0.5000000E-02
+END MATERIAL
+NTRACER == 1
+INITIAL WATER LEVEL ==    738.1660
+INITIAL SALINITY ==   0.2000000E-01
+INITIAL TEMPERATURE ==    14.69000
+INITIAL TRACER CONCENTRATION ==    0.000000
+INITIAL WQ CONCENTRATION ==    0.000000,   0.000000,   4.000000,   0.000000,  0.1000000,   0.000000,   302.8100,   100.0000,  0.2000000,   3.200000,  0.1280000,  0.1280000E-01,   166.6000,   166.6000,   2.142000,   2.142000,  0.
+Trying to open file: ..\..\includes\bc\1_weather\met_CFSR_20230101_20240501.fvc ... OK. File unit: 102
+GRID DEFINITION FILE == ..\..\includes\bc\1_weather\..\..\..\bc_repo\1_weather\CFSR\CFSR_20230101_20240501.nc
+GRID DEFINITION VARIABLES ==  LONGITUDE, LATITUDE
+GRID DEFINITION LABEL == ATMOS
+END GRID
+BC == W10_GRID, ATMOS, ..\..\includes\bc\1_weather\..\..\..\bc_repo\1_weather\CFSR\CFSR_20230101_20240501.nc
+  BC HEADER ==  local_time, uwnd10m, vwnd10m
+  UPDATE DT ==    3600.000
+  BC TIME UNITS == HOURS
+BC REFERENCE TIME == 01/01/1990 00:00:00
+  BC DEFAULT ==             NaN
+END BC
+BC == MSLP_GRID, ATMOS, ..\..\includes\bc\1_weather\..\..\..\bc_repo\1_weather\CFSR\CFSR_20230101_20240501.nc
+  BC HEADER ==  local_time, mslp
+  UPDATE DT ==    3600.000
+  BC TIME UNITS == HOURS
+BC REFERENCE TIME == 01/01/1990 00:00:00
+  BC DEFAULT ==             NaN
+  BC SCALE ==   0.1000000E-01
+END BC
+BC == LW_RAD_GRID, ATMOS, ..\..\includes\bc\1_weather\..\..\..\bc_repo\1_weather\CFSR\CFSR_20230101_20240501.nc
+  BC HEADER ==  local_time, downward_longwave
+  UPDATE DT ==    3600.000
+  BC TIME UNITS == HOURS
+BC REFERENCE TIME == 01/01/1990 00:00:00
+  BC DEFAULT ==             NaN
+END BC
+BC == SW_RAD_GRID, ATMOS, ..\..\includes\bc\1_weather\..\..\..\bc_repo\1_weather\CFSR\CFSR_20230101_20240501.nc
+  BC HEADER ==  local_time, downward_shortwave
+  UPDATE DT ==    3600.000
+  BC TIME UNITS == HOURS
+BC REFERENCE TIME == 01/01/1990 00:00:00
+  BC DEFAULT ==             NaN
+END BC
+BC == AIR_TEMP_GRID, ATMOS, ..\..\includes\bc\1_weather\..\..\..\bc_repo\1_weather\CFSR\CFSR_20230101_20240501.nc
+  BC HEADER ==  local_time, air_temp_2m
+  UPDATE DT ==    3600.000
+  BC TIME UNITS == HOURS
+BC REFERENCE TIME == 01/01/1990 00:00:00
+  BC DEFAULT ==             NaN
+  BC OFFSET ==   -273.1500
+END BC
+BC == REL_HUM_GRID, ATMOS, ..\..\includes\bc\1_weather\..\..\..\bc_repo\1_weather\CFSR\CFSR_20230101_20240501.nc
+  BC HEADER ==  local_time, relhum
+  UPDATE DT ==    3600.000
+  BC TIME UNITS == HOURS
+BC REFERENCE TIME == 01/01/1990 00:00:00
+  BC DEFAULT ==             NaN
+END BC
+Closing file unit: 102
+OUTPUT DIR == ..\..\outputs\results\
+OUTPUT == NETCDF
+  OUTPUT PARAMETERS ==  H, D, V, SAL, TEMP, W10,
+  OUTPUT INTERVAL ==    3600.000
+END OUTPUT
+WRITE RESTART DT ==    86400.00
+RESTART OVERWRITE == .FALSE.
+Closing file unit: 101
+Finished echoing input file.
+
+Successfully processed input control files.
+
+Initialising TUFLOW FV engine license:
+
+Searching for a BMT WIBU Hardware Licence...
+
+TUFLOW FV Engine            Dongle 3793274  Expiry 2025/04/09  LAN   1 of   10 (9 remaining)
+Successfully found WIBU TUFLOW FV engine licence
+
+Initialising TUFLOW FV simulation threads:
+TUFLOW FV Threads (24)      Dongle 3793274  Expiry 2025/04/09  LAN   1 to   24 (16 remaining)
+Successfully initialised 24 threads.
+
+Initialising requested TUFLOW FV module license/s:
+TUFLOW FV 3D Module         Dongle 3793274  Expiry 2025/04/09  LAN   1 of   10 (9 remaining)
+TUFLOW FV AD Module         Dongle 3793274  Expiry 2025/04/09  LAN   1 of   10 (9 remaining)
+Successful.
+
+Attempting to build model domain object/s:
+
+Processing mesh geometry file/s:
+Reading 2dm mesh file...
+Trying to open file: ..\..\gis_repo\1_domain\mesh\Woods_v2_b_WGS84.2dm ... OK. File unit: 101
+Closing file unit: 101
+Finished reading 2dm mesh file.
+
+Checking spherical coordinates...
+Finished checking spherical coordinates.
+Processing mesh face connections...
+Finished processing mesh face connections.
+
+Checking nodestring overlaps...
+Nodestring overlap checked.
+Reading 3D layer specification file...
+Trying to open file: ..\..\gis_repo\1_domain\layers\layers_WL.csv ... OK. File unit: 101
+Closing file unit: 101
+Trying to open file: ..\..\gis_repo\1_domain\layers\layers_WL.csv ... OK. File unit: 101
+ Z columns read from csvfile. 4 lines successfully read.
+Closing file unit: 101
+Finished reading 3D layer specification file.
+
+Found 4083 nodes.
+Found 4947 2D cells.
+Found 1 nodestrings.
+Mesh geometry file/s succesfully processed.
+
+Constructing domain, comprising:
+ 4947 2D cells.
+ 24143 3D cells.
+ 44210 3D faces.
+Constructing node object...OK
+Constructing cell object...OK
+Constructing face object...OK
+Constructing gridmap object/s...
+  Extracting grid definition from ..\..\includes\bc\1_weather\..\..\..\bc_repo\1_weather\CFSR\CFSR_20230101_20240501.nc
+Trying to open file: ..\..\includes\bc\1_weather\..\..\..\bc_repo\1_weather\CFSR\CFSR_20230101_20240501.nc ...OK
+Closing file: ..\..\includes\bc\1_weather\..\..\..\bc_repo\1_weather\CFSR\CFSR_20230101_20240501.nc
+    Constructing grid to mesh-cells map
+OK
+Constructing external mode objects...OK
+
+Successfully built model domain object/s.
+
+Attempting to initialise atmospheric module:
+WARNING: Cloud cover not defined by the user. Clear skies assumed for long wave radiation heat transfer model
+Successfully initialised atmospheric module.
+
+Attempting to initialise external turbulence model:
+Initialising "GOTM" external turbulence module:
+Succesfully initialised external turbulence model.
+
+Attempting to initialise model structural configurations:
+Constructing struct object...
+Finished constructing struct object
+Successfully initialised model structural configurations.
+
+Attempting to initialise model boundary conditions:
+Constructing fvbc object...
+
+BC 1, Type=W10_GRID, ID=ATMOS
+Update dt=   3600.000    s
+BC grid label = ATMOS
+BC grid id = 1
+BC reference time = 01/01/1990 00:00:00
+BC time units = HOURS
+BC variable offset/s =   0.00E+00  0.00E+00
+BC variable scale/s =   1.00E+00  1.00E+00
+BC default value/s =   NaN  NaN
+BC variable name/s =  TIME, W10_X, W10_Y
+BC file header/s =  LOCAL_TIME, UWND10M, VWND10M
+Trying to open file: ..\..\includes\bc\1_weather\..\..\..\bc_repo\1_weather\CFSR\CFSR_20230101_20240501.nc ...OK
+LOCAL_TIME,UWND10M,VWND10M, variables found in netcdf file. 11664 timesteps successfully read.
+BC 1 is OK
+
+BC 2, Type=MSLP_GRID, ID=ATMOS
+Update dt=   3600.000    s
+BC grid label = ATMOS
+BC grid id = 1
+BC reference time = 01/01/1990 00:00:00
+BC time units = HOURS
+BC variable offset/s =   0.00E+00
+BC variable scale/s =   1.00E-02
+BC default value/s =   NaN
+BC variable name/s =  TIME, MSLP
+BC file header/s =  LOCAL_TIME, MSLP
+Trying to open file: ..\..\includes\bc\1_weather\..\..\..\bc_repo\1_weather\CFSR\CFSR_20230101_20240501.nc ...OK
+LOCAL_TIME,MSLP, variables found in netcdf file. 11664 timesteps successfully read.
+BC 2 is OK
+
+BC 3, Type=LW_RAD_GRID, ID=ATMOS
+Update dt=   3600.000    s
+BC grid label = ATMOS
+BC grid id = 1
+BC reference time = 01/01/1990 00:00:00
+BC time units = HOURS
+BC variable offset/s =   0.00E+00
+BC variable scale/s =   1.00E+00
+BC default value/s =   NaN
+BC variable name/s =  TIME, LW_RAD
+BC file header/s =  LOCAL_TIME, DOWNWARD_LONGWAVE
+Trying to open file: ..\..\includes\bc\1_weather\..\..\..\bc_repo\1_weather\CFSR\CFSR_20230101_20240501.nc ...OK
+LOCAL_TIME,DOWNWARD_LONGWAVE, variables found in netcdf file. 11664 timesteps successfully read.
+BC 3 is OK
+
+BC 4, Type=SW_RAD_GRID, ID=ATMOS
+Update dt=   3600.000    s
+BC grid label = ATMOS
+BC grid id = 1
+BC reference time = 01/01/1990 00:00:00
+BC time units = HOURS
+BC variable offset/s =   0.00E+00
+BC variable scale/s =   1.00E+00
+BC default value/s =   NaN
+BC variable name/s =  TIME, SW_RAD
+BC file header/s =  LOCAL_TIME, DOWNWARD_SHORTWAVE
+Trying to open file: ..\..\includes\bc\1_weather\..\..\..\bc_repo\1_weather\CFSR\CFSR_20230101_20240501.nc ...OK
+LOCAL_TIME,DOWNWARD_SHORTWAVE, variables found in netcdf file. 11664 timesteps successfully read.
+BC 4 is OK
+
+BC 5, Type=AIR_TEMP_GRID, ID=ATMOS
+Update dt=   3600.000    s
+BC grid label = ATMOS
+BC grid id = 1
+BC reference time = 01/01/1990 00:00:00
+BC time units = HOURS
+BC variable offset/s =  -2.73E+02
+BC variable scale/s =   1.00E+00
+BC default value/s =   NaN
+BC variable name/s =  TIME, AIR_TEMP
+BC file header/s =  LOCAL_TIME, AIR_TEMP_2M
+Trying to open file: ..\..\includes\bc\1_weather\..\..\..\bc_repo\1_weather\CFSR\CFSR_20230101_20240501.nc ...OK
+LOCAL_TIME,AIR_TEMP_2M, variables found in netcdf file. 11664 timesteps successfully read.
+BC 5 is OK
+
+BC 6, Type=REL_HUM_GRID, ID=ATMOS
+Update dt=   3600.000    s
+BC grid label = ATMOS
+BC grid id = 1
+BC reference time = 01/01/1990 00:00:00
+BC time units = HOURS
+BC variable offset/s =   0.00E+00
+BC variable scale/s =   1.00E+00
+BC default value/s =   NaN
+BC variable name/s =  TIME, REL_HUM
+BC file header/s =  LOCAL_TIME, RELHUM
+Trying to open file: ..\..\includes\bc\1_weather\..\..\..\bc_repo\1_weather\CFSR\CFSR_20230101_20240501.nc ...OK
+LOCAL_TIME,RELHUM, variables found in netcdf file. 11664 timesteps successfully read.
+BC 6 is OK
+
+Finished constructing fvbc object.
+
+Initialising ghost cell boundary conditions...
+Finished initialising ghost cell boundary conditions.
+
+Initialising face object boundary conditions...
+Finished initialising face object boundary conditions.
+
+Successfully initialised model boundary conditions.
+
+Attempting to generate model initial conditions:
+Successfully generated model initial conditions.
+
+Attempting to initialise model output:
+
+Allocating output object memory:
+Memory allocation OK.
+
+Processing output requests:
+Processing request 1 is...
+OK.
+
+Opening output files...
+Trying to open file: ..\..\outputs\results\woods_2023_2024_test.nc ...OK
+
+Successfully initialised model output.
+
+Running simulation
+Number of OpenMP threads=24
+Number of TUFLOW FV engine threads=24
+Thread stacksize=4194304
+
+Entering timestep loop
+t = 02/01/2023 00:00:00.  dt =   0.000 /  0.000 s.  elapsed time =       0.0 s.
+    Writing NETCDF output. t = 02/01/2023 00:00:00.
+t = 02/01/2023 00:10:08.  dt =  14.464 /  0.761 s.  elapsed time =       0.2 s.
+t = 02/01/2023 00:20:00.  dt =  14.449 /  0.760 s.  elapsed time =       0.5 s.
+t = 02/01/2023 00:30:07.  dt =  14.440 /  0.760 s.  elapsed time =       0.7 s.
+t = 02/01/2023 00:40:13.  dt =  14.425 /  0.759 s.  elapsed time =       0.9 s.
+t = 02/01/2023 00:50:04.  dt =  14.416 /  0.759 s.  elapsed time =       1.1 s.
+t = 02/01/2023 01:00:10.  dt =  14.406 /  0.758 s.  elapsed time =       1.3 s.
+    Writing NETCDF output. t = 02/01/2023 01:00:00.
+t = 02/01/2023 01:10:14.  dt =  14.394 /  0.758 s.  elapsed time =       1.6 s.
+t = 02/01/2023 01:20:04.  dt =  14.385 /  0.757 s.  elapsed time =       1.8 s.
+t = 02/01/2023 01:30:08.  dt =  14.373 /  0.756 s.  elapsed time =       2.0 s.
+t = 02/01/2023 01:40:12.  dt =  14.367 /  0.756 s.  elapsed time =       2.2 s.
