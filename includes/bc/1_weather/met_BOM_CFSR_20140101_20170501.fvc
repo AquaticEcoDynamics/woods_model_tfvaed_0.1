@@ -1,18 +1,18 @@
-bc == AIR_TEMP, ..\..\..\bc_repo\1_weather\BOM\tfv_met_liawenee.csv
+bc == AIR_TEMP, ..\..\..\bc_repo\1_weather\BOM\BOM_met_liawenee_2014_2017.csv
   bc header == ISOTime,ATemp
 end bc
 
-bc == REL_HUM, ..\..\..\bc_repo\1_weather\BOM\tfv_met_liawenee.csv
+bc == REL_HUM, ..\..\..\bc_repo\1_weather\BOM\BOM_met_liawenee_2014_2017.csv
   bc header == ISOTime,Rel_Hum
 end bc
 
-bc == W10, ..\..\..\bc_repo\1_weather\BOM\tfv_met_liawenee.csv
+bc == W10, ..\..\..\bc_repo\1_weather\BOM\BOM_met_liawenee_2014_2017.csv
   bc header == ISOTime,Wx,Wy
 !bc scale == 1.2,1.2
 end bc
 
 
-bc == PRECIP, ..\..\..\bc_repo\1_weather\BOM\tfv_rain_liawenee.csv
+bc == PRECIP, ..\..\..\bc_repo\1_weather\BOM\BOM_rain_liawenee_2014_2017.csv
   bc header == ISOTime,Precip
 end bc
 

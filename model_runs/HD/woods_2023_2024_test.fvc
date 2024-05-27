@@ -9,7 +9,7 @@ include salinity == 1,1
 include temperature == 1,1
 include sediment == 0,0
 include heat == 1
-LONGWAVERADIATIONMODEL == 3
+LONGWAVERADIATIONMODEL == 2!3
 SHORTWAVERADIATIONMODEL == 1
 
 !INCLUDEWAVESTRESS == 1
