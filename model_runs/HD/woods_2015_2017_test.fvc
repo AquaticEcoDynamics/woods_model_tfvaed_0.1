@@ -127,9 +127,15 @@ initial wq concentration == 0.0,0.0,4.0,0,0.1,0.,302.81,100,0.2,3.2,0.128,0.0128
 !BOUNDARY CONDITIONS
 ! Met______________________________________________________________
 ! Possible met options for usage with the 2015 model.
+
+! BOM data with calculated Solar from Cloud data
 !include == ..\..\includes\bc\1_weather\met_BOM_20140101_20170501.fvc
+
+! Global Climate Models
 !include == ..\..\includes\bc\1_weather\met_ERA_20140101_20180131.fvc
 !include == ..\..\includes\bc\1_weather\met_CFSR_20140101_20180201.fvc
+
+! Integrated BOM and Global Climate Models
 !include == ..\..\includes\bc\1_weather\met_BOM_ERA5_20140101_20170501.fvc
 include == ..\..\includes\bc\1_weather\met_BOM_CFSR_20140101_20170501.fvc
 

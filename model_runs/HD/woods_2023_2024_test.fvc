@@ -128,8 +128,14 @@ initial wq concentration == 0.0,0.0,4.0,0,0.1,0.,302.81,100,0.2,3.2,0.128,0.0128
 ! Met______________________________________________________________
 ! Possible met options for usage with the 2023 model.
 
+! Global Climate Models
 !include == ..\..\includes\bc\1_weather\met_ERA_20230101_20240518.fvc
-include == ..\..\includes\bc\1_weather\met_CFSR_20230101_20240501.fvc
+!include == ..\..\includes\bc\1_weather\met_CFSR_20230101_20240501.fvc
+
+
+! Integrated BOM and Global Climate Models
+include == ..\..\includes\bc\1_weather\met_BOM_CFSR_20221101_20240501.fvc
+!include == ..\..\includes\bc\1_weather\met_BOM_ERA5_20221101_20240501.fvc
 
 
 
