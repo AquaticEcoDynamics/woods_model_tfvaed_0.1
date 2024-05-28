@@ -1,0 +1,890 @@
+
+***************************** TUFLOWFV *****************************
+
+Build version: 2023.1.1-dev
+Build date: 01/12/2023 10:15
+Git branch: dev
+Git hash: 7994ec3
+Build platform: Linux
+Build architecture:  x86-64
+Compiler version: Ifort 2021.3.0
+Build precision: single
+NVidia GPU enabled: Cuda v11.8.89 sm_50
+GIS Module Version: 2020-07-PD
+
+********************************************************************
+
+Computer name: rosella
+User name: hydro
+Execution timestamp: 28/05/2024 16:33:22
+
+
+Initialising TUFLOW Licence Settings...
+
+No TUFLOW licence Settings files found.  Default settings applied.
+WIBU Retry Time == 60  ! Seconds.  Values less than 1 are set to 1.  Default = 60.
+WIBU Retry Count == 0  ! Number of times to retry for a licence at start of simulation.  Use -1 for indefinitely.  Default = 0.
+WIBU Dongles Only == OFF  ! If set to ON, searches for WIBU dongles only.  Default is OFF.
+
+Attempting to process input control file:
+Trying to open file: woods_2023_2024_testwq.fvc ... OK. File unit: 101
+TIME FORMAT == ISO DATE & TIME
+REFERENCE TIME == 01/01/2001 00:00:00
+Trying to open file: ../../includes/bc/1_weather/met_BOM_CFSR_20221101_20240501.fvc ... OK. File unit: 102
+Closing file unit: 102
+Start echoing input file:
+HARDWARE TARGET == GPU
+SPHERICAL == .TRUE.
+INCLUDE SALINITY == .TRUE.
+COUPLE SALINITY DENSITY == .TRUE.
+INCLUDE TEMPERATURE == .TRUE.
+COUPLE TEMPERATURE DENSITY == .TRUE.
+INCLUDE SEDIMENT == .FALSE.
+INCLUDE HEAT == .TRUE.
+LONG WAVE RADIATION MODEL == 2
+SHORT WAVE RADIATION MODEL == 1
+MOMENTUM MIXING MODEL == SMAGORINSKY
+SCALAR MIXING MODEL == SMAGORINSKY
+VERTICAL MIXING MODEL == EXTERNAL
+EXTERNAL TURBULENCE MODEL DIR == ../../includes/turbulence/GOTM/
+WATER QUALITY MODEL == EXTERNAL
+WATER QUALITY MODEL DIR == ../../includes/wq/AED/
+SPATIAL ORDER == 1, 1
+VERTICALGRADIENTLIMITER == MC
+BOTTOM DRAG MODEL == KS
+EQUATION OF STATE == UNESCO
+START TIME == 02/01/2023 00:00:00
+END TIME == 01/04/2024 00:00:00
+CFL EXTERNAL ==   0.8000000
+CFL INTERNAL ==   0.8000000
+TIMESTEP LIMITS ==   0.1000000    ,    15.00000
+TURBULENCE UPDATE DT ==    600.0000
+DISPLAY DT ==    600.0000
+STABILITY LIMITS ==    1050.000    ,    1050.000
+WARNING: Wet depth is less than dry depth. Momentum will never be switched off
+CELL DRY/WET DEPTHS ==   0.2000000E-01,   0.2000000E-01
+LATITUDE ==   -42.00000
+REFERENCE SALINITY ==    0.000000
+REFERENCE TEMPERATURE ==    10.00000
+REFERENCE DENSITY ==    1000.000
+DENSITY AIR ==    1.180000
+GLOBAL BOTTOM ROUGHNESS ==   0.2000000E-02
+GLOBAL HORIZONTAL EDDY VISCOSITY (SMAG COEFF) ==   0.2000000
+GLOBAL HORIZONTAL SCALAR DIFFUSIVITY (SMAG COEFF) ==   0.2000000
+DIFFUSIVITY LIMITER DT ==    30.00000
+KINEMATIC VISCOSITY ==   0.1000000E-05
+GLOBAL VERTICAL EDDY VISCOSITY LIMITS ==   0.1000000E-03,    9999.000
+GLOBAL VERTICAL SCALAR DIFFUSIVITY LIMITS ==   0.1000000E-05,    9999.000
+GEOMETRY2D == ../../gis_repo/1_domain/mesh/Woods_v2_b_WGS84.2dm
+VERTICAL MESH TYPE == Z
+LAYER FACE FILE == ../../gis_repo/1_domain/layers/layers_WL.csv
+SURFACE SIGMA LAYERS == 3
+MINIMUM LAYER THICKNESS ==   0.1000000
+CELL 3D DEPTH ==   0.5000000
+MATERIAL == 1
+  BOTTOM ROUGHNESS ==   0.5000000E-02
+END MATERIAL
+MATERIAL == 2
+  BOTTOM ROUGHNESS ==   0.5000000E-02
+END MATERIAL
+MATERIAL == 3
+  BOTTOM ROUGHNESS ==   0.5000000E-02
+END MATERIAL
+MATERIAL == 4
+  BOTTOM ROUGHNESS ==   0.5000000E-02
+END MATERIAL
+MATERIAL == 5
+  BOTTOM ROUGHNESS ==   0.5000000E-02
+END MATERIAL
+MATERIAL == 6
+END MATERIAL
+MATERIAL == 7
+  BOTTOM ROUGHNESS ==   0.5000000E-02
+END MATERIAL
+NTRACER == 1
+INITIAL WATER LEVEL ==    738.1660
+INITIAL SALINITY ==   0.2000000E-01
+INITIAL TEMPERATURE ==    14.69000
+INITIAL TRACER CONCENTRATION ==    0.000000
+INITIAL WQ CONCENTRATION ==    1.000000,   300.0000,   10.00000,   10.00000,   1.000000,   1.000000,   300.0000,   100.0000,   20.00000,   20.00000,   5.000000,   5.000000,   10.00000,   1.000000,  0.1000000,   10.00000,   1.000
+Trying to open file: ../../includes/bc/1_weather/met_BOM_CFSR_20221101_20240501.fvc ... OK. File unit: 102
+BC == AIR_TEMP, ../../includes/bc/1_weather/../../../bc_repo/1_weather/BOM/BOM_met_liawenee_2023_2024.csv
+  BC HEADER ==  ISOTime, ATemp
+END BC
+BC == REL_HUM, ../../includes/bc/1_weather/../../../bc_repo/1_weather/BOM/BOM_met_liawenee_2023_2024.csv
+  BC HEADER ==  ISOTime, Rel_Hum
+END BC
+BC == W10, ../../includes/bc/1_weather/../../../bc_repo/1_weather/BOM/BOM_met_liawenee_2023_2024.csv
+  BC HEADER ==  ISOTime, Wx, Wy
+END BC
+BC == PRECIP, ../../includes/bc/1_weather/../../../bc_repo/1_weather/BOM/BOM_rain_liawenee_2023_2024.csv
+  BC HEADER ==  ISOTime, Precip
+END BC
+GRID DEFINITION FILE == ../../includes/bc/1_weather/../../../bc_repo/1_weather/CFSR/CFSR_20230101_20240501.nc
+GRID DEFINITION VARIABLES ==  LONGITUDE, LATITUDE
+GRID DEFINITION LABEL == ATMOS
+END GRID
+BC == LW_RAD_GRID, ATMOS, ../../includes/bc/1_weather/../../../bc_repo/1_weather/CFSR/CFSR_20230101_20240501.nc
+  BC HEADER ==  local_time, downward_longwave
+  UPDATE DT ==    3600.000
+  BC TIME UNITS == HOURS
+BC REFERENCE TIME == 01/01/1990 00:00:00
+  BC DEFAULT ==             NaN
+END BC
+BC == SW_RAD_GRID, ATMOS, ../../includes/bc/1_weather/../../../bc_repo/1_weather/CFSR/CFSR_20230101_20240501.nc
+  BC HEADER ==  local_time, downward_shortwave
+  UPDATE DT ==    3600.000
+  BC TIME UNITS == HOURS
+BC REFERENCE TIME == 01/01/1990 00:00:00
+  BC DEFAULT ==             NaN
+END BC
+Closing file unit: 102
+OUTPUT DIR == ../../outputs/results/
+OUTPUT == NETCDF
+  SUFFIX == HD
+  OUTPUT PARAMETERS ==  H, D, V, TAUB, SAL, TEMP, EVAP,
+  OUTPUT INTERVAL ==    3600.000
+  COMPRESSION == .TRUE.
+END OUTPUT
+OUTPUT == NETCDF
+  SUFFIX == WQ
+  OUTPUT PARAMETERS ==  H, D, SAL, TEMP, WQ_ALL, WQ_DIAG_ALL,
+  OUTPUT INTERVAL ==    7200.000
+  COMPRESSION == .TRUE.
+END OUTPUT
+WRITE RESTART DT ==    86400.00
+RESTART OVERWRITE == .FALSE.
+Closing file unit: 101
+Finished echoing input file.
+
+Configuring "AED" external module... Successful.
+
+
+Successfully processed input control files.
+
+Initialising TUFLOW FV engine license:
+
+Searching for a BMT WIBU Hardware Licence...
+
+TUFLOW FV Engine            Dongle 3793274  Expiry 2025/04/09  LAN   1 of   10 (9 remaining)
+Successfully found WIBU TUFLOW FV engine licence
+
+Initialising TUFLOW FV simulation threads:
+TUFLOW FV Threads (16)      Dongle 3793274  Expiry 2025/04/09  LAN   1 to   16 (24 remaining)
+Successfully initialised 16 threads.
+
+Initialising requested TUFLOW FV module license/s:
+TUFLOW FV 3D Module         Dongle 3793274  Expiry 2025/04/09  LAN   1 of   10 (9 remaining)
+TUFLOW FV AD Module         Dongle 3793274  Expiry 2025/04/09  LAN   1 of   10 (9 remaining)
+TUFLOW FV GPU Cards (1)     Dongle 3793274  Expiry 2025/04/09  LAN   1 of   10 (9 remaining)
+Successful.
+
+Attempting to build model domain object/s:
+
+Processing mesh geometry file/s:
+Reading 2dm mesh file...
+Trying to open file: ../../gis_repo/1_domain/mesh/Woods_v2_b_WGS84.2dm ... OK. File unit: 101
+Closing file unit: 101
+Finished reading 2dm mesh file.
+
+Checking spherical coordinates...
+Finished checking spherical coordinates.
+Processing mesh face connections...
+Finished processing mesh face connections.
+
+Checking nodestring overlaps...
+Nodestring overlap checked.
+Reading 3D layer specification file...
+Trying to open file: ../../gis_repo/1_domain/layers/layers_WL.csv ... OK. File unit: 101
+Closing file unit: 101
+Trying to open file: ../../gis_repo/1_domain/layers/layers_WL.csv ... OK. File unit: 101
+ Z columns read from csvfile. 12 lines successfully read.
+Closing file unit: 101
+Finished reading 3D layer specification file.
+
+Found 4083 nodes.
+Found 4947 2D cells.
+Found 1 nodestrings.
+Mesh geometry file/s succesfully processed.
+
+Constructing domain, comprising:
+ 4947 2D cells.
+ 50438 3D cells.
+ 92532 3D faces.
+Constructing node object...OK
+Constructing cell object...OK
+Constructing face object...OK
+Constructing gridmap object/s...
+  Extracting grid definition from ../../includes/bc/1_weather/../../../bc_repo/1_weather/CFSR/CFSR_20230101_20240501.nc
+Trying to open file: ../../includes/bc/1_weather/../../../bc_repo/1_weather/CFSR/CFSR_20230101_20240501.nc ...OK
+Closing file: ../../includes/bc/1_weather/../../../bc_repo/1_weather/CFSR/CFSR_20230101_20240501.nc
+    Constructing grid to mesh-cells map
+OK
+Constructing external mode objects...OK
+
+Successfully built model domain object/s.
+
+Attempting to initialise atmospheric module:
+Successfully initialised atmospheric module.
+
+Attempting to initialise external turbulence model:
+Initialising "GOTM" external turbulence module:
+Succesfully initialised external turbulence model.
+
+Attempting to initialise model structural configurations:
+Constructing struct object...
+Finished constructing struct object
+Successfully initialised model structural configurations.
+
+Attempting to initialise model boundary conditions:
+Constructing fvbc object...
+
+BC 1, Type=AIR_TEMP
+BC variable name/s = TIME, AIR_TEMP
+BC file header/s = ISOTime, ATemp
+BC reference time = 01/01/2001 00:00:00
+BC time units = ISOTIME
+BC variable offset/s =   0.00E+00
+BC variable scale/s =   1.00E+00
+BC variable default/s =   NaN
+Trying to open file: ../../includes/bc/1_weather/../../../bc_repo/1_weather/BOM/BOM_met_liawenee_2023_2024.csv ... OK. File unit: 101
+ISOTime, ATemp columns read from csvfile. 13129 lines successfully read.
+Closing file unit: 101
+BC 1 is OK
+
+BC 2, Type=REL_HUM
+BC variable name/s = TIME, REL_HUM
+BC file header/s = ISOTime, Rel_Hum
+BC reference time = 01/01/2001 00:00:00
+BC time units = ISOTIME
+BC variable offset/s =   0.00E+00
+BC variable scale/s =   1.00E+00
+BC variable default/s =   NaN
+Trying to open file: ../../includes/bc/1_weather/../../../bc_repo/1_weather/BOM/BOM_met_liawenee_2023_2024.csv ... OK. File unit: 101
+ISOTime, Rel_Hum columns read from csvfile. 13129 lines successfully read.
+Closing file unit: 101
+BC 2 is OK
+
+BC 3, Type=W10
+BC variable name/s = TIME, W10_X, W10_Y
+BC file header/s = ISOTime, Wx, Wy
+BC reference time = 01/01/2001 00:00:00
+BC time units = ISOTIME
+BC variable offset/s =   0.00E+00, 0.00E+00
+BC variable scale/s =   1.00E+00, 1.00E+00
+BC variable default/s =   NaN, NaN
+Trying to open file: ../../includes/bc/1_weather/../../../bc_repo/1_weather/BOM/BOM_met_liawenee_2023_2024.csv ... OK. File unit: 101
+ISOTime, Wx, Wy columns read from csvfile. 13129 lines successfully read.
+Closing file unit: 101
+BC 3 is OK
+
+BC 4, Type=PRECIP
+Subtype=1
+BC variable name/s = TIME, PRECIP, PRECIP_TEMP
+BC file header/s = ISOTime, Precip, PRECIP_TEMP
+BC reference time = 01/01/2001 00:00:00
+BC time units = ISOTIME
+BC variable offset/s =   0.00E+00, 0.00E+00
+BC variable scale/s =   1.00E+00, 1.00E+00
+BC variable default/s =   NaN, NaN
+Trying to open file: ../../includes/bc/1_weather/../../../bc_repo/1_weather/BOM/BOM_rain_liawenee_2023_2024.csv ... OK. File unit: 101
+WARNING: PRECIP_TEMP column not found in csv file. Assigning a value of             NaN
+ISOTime, Precip columns read from csvfile. 548 lines successfully read.
+Closing file unit: 101
+BC 4 is OK
+
+BC 5, Type=LW_RAD_GRID, ID=ATMOS
+Update dt=   3600.000    s
+BC grid label = ATMOS
+BC grid id = 1
+BC reference time = 01/01/1990 00:00:00
+BC time units = HOURS
+BC variable offset/s =   0.00E+00
+BC variable scale/s =   1.00E+00
+BC default value/s =   NaN
+BC variable name/s =  TIME, LW_RAD
+BC file header/s =  LOCAL_TIME, DOWNWARD_LONGWAVE
+Trying to open file: ../../includes/bc/1_weather/../../../bc_repo/1_weather/CFSR/CFSR_20230101_20240501.nc ...OK
+LOCAL_TIME,DOWNWARD_LONGWAVE, variables found in netcdf file. 11664 timesteps successfully read.
+BC 5 is OK
+
+BC 6, Type=SW_RAD_GRID, ID=ATMOS
+Update dt=   3600.000    s
+BC grid label = ATMOS
+BC grid id = 1
+BC reference time = 01/01/1990 00:00:00
+BC time units = HOURS
+BC variable offset/s =   0.00E+00
+BC variable scale/s =   1.00E+00
+BC default value/s =   NaN
+BC variable name/s =  TIME, SW_RAD
+BC file header/s =  LOCAL_TIME, DOWNWARD_SHORTWAVE
+Trying to open file: ../../includes/bc/1_weather/../../../bc_repo/1_weather/CFSR/CFSR_20230101_20240501.nc ...OK
+LOCAL_TIME,DOWNWARD_SHORTWAVE, variables found in netcdf file. 11664 timesteps successfully read.
+BC 6 is OK
+
+Finished constructing fvbc object.
+
+Initialising ghost cell boundary conditions...
+Finished initialising ghost cell boundary conditions.
+
+Initialising face object boundary conditions...
+Finished initialising face object boundary conditions.
+
+Successfully initialised model boundary conditions.
+
+Attempting to intitialise external water quality model:
+
+**************************************************************************
+WATER QUALITY MODEL INITIALISATION
+**************************************************************************
+
+Initialising "AED" external module:
+Successful.
+25 water quality variables to be simulated:
+  1 NCS_ss1
+  2 OXY_oxy
+  3 NIT_amm
+  4 NIT_nit
+  5 PHS_frp
+  6 PHS_frp_ads
+  7 OGM_doc
+  8 OGM_poc
+  9 OGM_don
+  10 OGM_pon
+  11 OGM_dop
+  12 OGM_pop
+  13 PHY_grn
+  14 PHY_grn_IN
+  15 PHY_grn_IP
+  16 PHY_bga
+  17 PHY_bga_IN
+  18 PHY_bga_IP
+  19 PHY_diat
+  20 PHY_diat_IN
+  21 PHY_diat_IP
+  22 PHY_doli
+  23 PHY_doli_IN
+  24 PHY_doli_IP
+  25 TRC_age
+2 benthic variables to be simulated:
+  1 MAC_pota
+  2 NCS_ss1_sed
+185 diagnostic variables to be reported:
+  1 SDF_Fsed_oxy
+  2 SDF_Fsed_rsi
+  3 SDF_Fsed_amm
+  4 SDF_Fsed_nit
+  5 SDF_Fsed_frp
+  6 SDF_Fsed_doc
+  7 SDF_Fsed_don
+  8 SDF_Fsed_dop
+  9 MAC_par
+  10 MAC_gpp
+  11 MAC_npp
+  12 MAC_mac_ben
+  13 MAC_mac_lai
+  14 MAC_mac_ag
+  15 MAC_mac_bg
+  16 MAC_mac_root_depth
+  17 MAC_mac_root_o2
+  18 NCS_ss1_vvel
+  19 NCS_ss1_set
+  20 NCS_ss_sed
+  21 NCS_tau_0
+  22 NCS_epsilon
+  23 NCS_fs1
+  24 NCS_set
+  25 NCS_swi
+  26 NCS_swi_dz
+  27 NCS_resus
+  28 NCS_d_taub
+  29 OXY_sat
+  30 OXY_oxy_dsf
+  31 OXY_oxy_atm
+  32 OXY_oxy_dsfv
+  33 OXY_oxy_atmv
+  34 NIT_amm_dsf
+  35 NIT_nit_dsf
+  36 NIT_nitrif
+  37 NIT_denit
+  38 NIT_anammox
+  39 NIT_dnra
+  40 NIT_din_atm
+  41 PHS_frp_ads_set
+  42 PHS_frp_ads_res
+  43 PHS_frp_ads_swi
+  44 PHS_frp_srp
+  45 PHS_frp_dsf
+  46 PHS_dip_atm
+  47 OGM_poc_set
+  48 OGM_pon_set
+  49 OGM_pop_set
+  50 OGM_cdom
+  51 OGM_toc_sed
+  52 OGM_ton_sed
+  53 OGM_top_sed
+  54 OGM_poc_swi
+  55 OGM_doc_swi
+  56 OGM_pon_swi
+  57 OGM_don_swi
+  58 OGM_pop_swi
+  59 OGM_dop_swi
+  60 OGM_poc_res
+  61 OGM_pon_res
+  62 OGM_pop_res
+  63 OGM_poc_hyd
+  64 OGM_pon_hyd
+  65 OGM_pop_hyd
+  66 OGM_doc_min
+  67 OGM_don_min
+  68 OGM_dop_min
+  69 OGM_doc_anaerobic
+  70 OGM_doc_denit
+  71 OGM_bod5
+  72 OGM_pom_vvel
+  73 PHY_grn_NtoP
+  74 PHY_grn_fI
+  75 PHY_grn_fNit
+  76 PHY_grn_fPho
+  77 PHY_grn_fSil
+  78 PHY_grn_fT
+  79 PHY_grn_fSal
+  80 PHY_grn_gpp_c
+  81 PHY_grn_rsp_c
+  82 PHY_grn_exc_c
+  83 PHY_grn_mor_c
+  84 PHY_grn_set_c
+  85 PHY_grn_gpp_n
+  86 PHY_grn_rsp_n
+  87 PHY_grn_exc_n
+  88 PHY_grn_mor_n
+  89 PHY_grn_set_n
+  90 PHY_grn_gpp_p
+  91 PHY_grn_rsp_p
+  92 PHY_grn_exc_p
+  93 PHY_grn_mor_p
+  94 PHY_grn_set_p
+  95 PHY_bga_NtoP
+  96 PHY_bga_fI
+  97 PHY_bga_fNit
+  98 PHY_bga_fPho
+  99 PHY_bga_fSil
+  100 PHY_bga_fT
+  101 PHY_bga_fSal
+  102 PHY_bga_gpp_c
+  103 PHY_bga_rsp_c
+  104 PHY_bga_exc_c
+  105 PHY_bga_mor_c
+  106 PHY_bga_set_c
+  107 PHY_bga_gpp_n
+  108 PHY_bga_rsp_n
+  109 PHY_bga_exc_n
+  110 PHY_bga_mor_n
+  111 PHY_bga_set_n
+  112 PHY_bga_gpp_p
+  113 PHY_bga_rsp_p
+  114 PHY_bga_exc_p
+  115 PHY_bga_mor_p
+  116 PHY_bga_set_p
+  117 PHY_diat_NtoP
+  118 PHY_diat_fI
+  119 PHY_diat_fNit
+  120 PHY_diat_fPho
+  121 PHY_diat_fSil
+  122 PHY_diat_fT
+  123 PHY_diat_fSal
+  124 PHY_diat_gpp_c
+  125 PHY_diat_rsp_c
+  126 PHY_diat_exc_c
+  127 PHY_diat_mor_c
+  128 PHY_diat_set_c
+  129 PHY_diat_gpp_n
+  130 PHY_diat_rsp_n
+  131 PHY_diat_exc_n
+  132 PHY_diat_mor_n
+  133 PHY_diat_set_n
+  134 PHY_diat_gpp_p
+  135 PHY_diat_rsp_p
+  136 PHY_diat_exc_p
+  137 PHY_diat_mor_p
+  138 PHY_diat_set_p
+  139 PHY_doli_NtoP
+  140 PHY_doli_fI
+  141 PHY_doli_fNit
+  142 PHY_doli_fPho
+  143 PHY_doli_fSil
+  144 PHY_doli_fT
+  145 PHY_doli_fSal
+  146 PHY_doli_gpp_c
+  147 PHY_doli_rsp_c
+  148 PHY_doli_exc_c
+  149 PHY_doli_mor_c
+  150 PHY_doli_set_c
+  151 PHY_doli_gpp_n
+  152 PHY_doli_rsp_n
+  153 PHY_doli_exc_n
+  154 PHY_doli_mor_n
+  155 PHY_doli_set_n
+  156 PHY_doli_gpp_p
+  157 PHY_doli_rsp_p
+  158 PHY_doli_exc_p
+  159 PHY_doli_mor_p
+  160 PHY_doli_set_p
+  161 PHY_tphy
+  162 PHY_tchla
+  163 PHY_in
+  164 PHY_ip
+  165 PHY_gpp
+  166 PHY_ncp
+  167 PHY_upt_no3
+  168 PHY_upt_nh4
+  169 PHY_upt_n2
+  170 PHY_upt_po4
+  171 PHY_upt_dic
+  172 PHY_set
+  173 PHY_par
+  174 PHY_phy_swi_c
+  175 PHY_phy_swi_n
+  176 PHY_phy_swi_p
+  177 TOT_tn
+  178 TOT_tp
+  179 TOT_toc
+  180 TOT_tss
+  181 TOT_turbidity
+  182 TOT_light
+  183 TOT_par
+  184 TOT_uv
+  185 TOT_extc
+
+**************************************************************************
+END OF WATER QUALITY MODEL INITIALISATION
+**************************************************************************
+
+Attempting to generate model initial conditions:
+Correct number of WQ initial conditions has been provided.
+WQ initial conditions (see list of constituent numbers above if using TUFLOW WQ Module):
+      WQ initial condition for constituent 1 =    1.000000
+      WQ initial condition for constituent 2 =    300.0000
+      WQ initial condition for constituent 3 =    10.00000
+      WQ initial condition for constituent 4 =    10.00000
+      WQ initial condition for constituent 5 =    1.000000
+      WQ initial condition for constituent 6 =    1.000000
+      WQ initial condition for constituent 7 =    300.0000
+      WQ initial condition for constituent 8 =    100.0000
+      WQ initial condition for constituent 9 =    20.00000
+      WQ initial condition for constituent 10 =    20.00000
+      WQ initial condition for constituent 11 =    5.000000
+      WQ initial condition for constituent 12 =    5.000000
+      WQ initial condition for constituent 13 =    10.00000
+      WQ initial condition for constituent 14 =    1.000000
+      WQ initial condition for constituent 15 =   0.1000000
+      WQ initial condition for constituent 16 =    10.00000
+      WQ initial condition for constituent 17 =    1.000000
+      WQ initial condition for constituent 18 =   0.1000000
+      WQ initial condition for constituent 19 =    10.00000
+      WQ initial condition for constituent 20 =    1.000000
+      WQ initial condition for constituent 21 =   0.1000000
+      WQ initial condition for constituent 22 =    10.00000
+      WQ initial condition for constituent 23 =    1.000000
+      WQ initial condition for constituent 24 =   0.1000000
+      WQ initial condition for constituent 25 =    0.000000
+Successfully generated model initial conditions.
+
+Attempting to initialise model output:
+
+Allocating output object memory:
+Memory allocation OK.
+
+Processing output requests:
+Processing request 1 is...
+OK.
+Processing request 2 is...
+OK.
+
+Opening output files...
+Trying to open file: ../../outputs/results/woods_2023_2024_testwq_HD.nc ...OK
+Trying to open file: ../../outputs/results/woods_2023_2024_testwq_WQ.nc ...OK
+
+Successfully initialised model output.
+
+FVC[0]: TUFLOW FVC version 0.4.1 (Mar 20 2024 14:30:10) - single precision - win64
+FVC[0]: Interrogating CUDA enabled GPUs
+FVC[0]: CUDA driver version = 12040
+FVC[0]: Found 1 CUDA enabled device(s)
+FVC[0]: Device 0, NVIDIA GeForce RTX 3090 Ti, has compute capability = 8.6
+FVC[0]: Adding device 0 to list of available CUDA devices
+FVC[0]: Hardware option = GPU
+FVC[0]: Requested device 0 found in available device list
+FVC[0]: incl_mslp = 0
+FVC[0]: vert_mesh_typ = 1
+FVC[0]: limiter3 = 2
+FVC[0]: nSed = 0
+FVC[0]: jSed1 = 0
+FVC[0]: nTrace = 1
+FVC[0]: jTrace1 = 6
+FVC[0]: bot_drag_model = 2
+FVC[0]: g = 9.810000
+FVC[0]: rho0 = 1000.000000
+FVC[0]: sal0 = 0.000000
+FVC[0]: temp0 = 10.000000
+FVC[0]: hDry = 0.020000
+FVC[0]: hWet = 0.020000
+FVC[0]: h3d = 0.500000
+FVC[0]: theta_bar = 0.100000
+FVC[0]: theta_M = 1.000000
+FVC[0]: theta_S = 0.500000
+FVC[0]: kappa = 0.410000
+FVC[0]: fcor_ = -0.000097
+FVC[0]: mslpa = 101325.000000
+FVC[0]: dZmin = 0.100000
+FVC[0]: alphaR12 = 1.000000
+FVC[0]: alphaR22 = 1.000000
+FVC[0]: alphaR32 = 1.000000
+FVC[0]: alphaR23 = 1.000000
+FVC[0]: alphaR33 = 1.000000
+FVC[0]: sedMin = 0.000000
+FVC[0]: sedMax = 100000.000000
+FVC[0]: hTransp = 0.100000
+FVC[0]: prandtl_0 = 0.740000
+FVC[0]: vert_mix_par_c1 = 0.000000
+FVC[0]: vert_mix_par_c2 = 0.000000
+FVC[0]: nuw = 0.000001
+FVC[0]: wave_par_hmin = 0.010000
+FVC[0]: autoweir_hmin = 0.050000
+FVC[0]: autoweir_Cw = 1.705000
+FVC[0]: autoweir_Ex = 1.500000
+FVC[0]: autoweir_a = 8.550000
+FVC[0]: autoweir_b = 0.556000
+FVC[0]: autoweir_Csfmin = 0.700000
+FVC[0]: alpha_bar = 1.000000
+FVC[0]: alpha_m = 1.000000
+FVC[0]: Device 0 total GPU memory = 24240 Mb, free memory = 23952 Mb
+FVC[0]: Loading module FVC_kernels.ptx
+FVC[0]: Full module path: /opt/bin/tuflowfv_uwa/bin/FVC_kernels.ptx
+Running simulation
+Number of OpenMP threads=16
+Number of TUFLOW FV engine threads=1
+Thread stacksize=4194304
+
+Entering timestep loop
+t = 02/01/2023 00:00:00.  dt =   0.000 /  0.000 s.  elapsed time =       0.0 s.
+    Writing NETCDF output. t = 02/01/2023 00:00:00.
+    Writing NETCDF output. t = 02/01/2023 00:00:00.
+t = 02/01/2023 00:10:01.  dt =  14.627 /  0.770 s.  elapsed time =       0.9 s.
+    Calling AED. t = 02/01/2023 00:15:11.
+    Returning from AED.
+t = 02/01/2023 00:20:10.  dt =  11.510 /  0.767 s.  elapsed time =       1.2 s.
+t = 02/01/2023 00:30:05.  dt =   9.193 /  0.766 s.  elapsed time =       1.3 s.
+    Calling AED. t = 02/01/2023 00:30:05.
+    Returning from AED.
+t = 02/01/2023 00:40:01.  dt =   9.154 /  0.763 s.  elapsed time =       1.6 s.
+    Calling AED. t = 02/01/2023 00:45:02.
+    Returning from AED.
+t = 02/01/2023 00:50:04.  dt =   8.377 /  0.762 s.  elapsed time =       1.9 s.
+t = 02/01/2023 01:00:06.  dt =   8.365 /  0.760 s.  elapsed time =       2.1 s.
+    Calling AED. t = 02/01/2023 01:00:06.
+    Returning from AED.
+    Writing NETCDF output. t = 02/01/2023 01:00:00.
+t = 02/01/2023 01:10:08.  dt =   8.343 /  0.758 s.  elapsed time =       2.4 s.
+    Calling AED. t = 02/01/2023 01:15:08.
+    Returning from AED.
+t = 02/01/2023 01:20:00.  dt =   8.337 /  0.758 s.  elapsed time =       2.7 s.
+t = 02/01/2023 01:30:08.  dt =   8.330 /  0.757 s.  elapsed time =       2.9 s.
+    Calling AED. t = 02/01/2023 01:30:08.
+    Returning from AED.
+t = 02/01/2023 01:40:03.  dt =   7.569 /  0.757 s.  elapsed time =       3.1 s.
+    Calling AED. t = 02/01/2023 01:45:05.
+    Returning from AED.
+t = 02/01/2023 01:50:01.  dt =   7.575 /  0.757 s.  elapsed time =       3.4 s.
+t = 02/01/2023 02:00:06.  dt =   6.830 /  0.759 s.  elapsed time =       3.7 s.
+    Calling AED. t = 02/01/2023 02:00:06.
+    Returning from AED.
+    Writing NETCDF output. t = 02/01/2023 02:00:00.
+    Writing NETCDF output. t = 02/01/2023 02:00:00.
+t = 02/01/2023 02:10:07.  dt =   6.834 /  0.759 s.  elapsed time =       4.3 s.
+    Calling AED. t = 02/01/2023 02:15:00.
+    Returning from AED.
+t = 02/01/2023 02:20:03.  dt =   6.862 /  0.762 s.  elapsed time =       4.6 s.
+t = 02/01/2023 02:30:00.  dt =   6.870 /  0.763 s.  elapsed time =       4.9 s.
+    Calling AED. t = 02/01/2023 02:30:00.
+    Returning from AED.
+t = 02/01/2023 02:40:06.  dt =   7.641 /  0.764 s.  elapsed time =       5.1 s.
+    Calling AED. t = 02/01/2023 02:45:04.
+    Returning from AED.
+t = 02/01/2023 02:50:08.  dt =   8.411 /  0.765 s.  elapsed time =       5.4 s.
+t = 02/01/2023 03:00:05.  dt =   8.396 /  0.763 s.  elapsed time =       5.6 s.
+    Calling AED. t = 02/01/2023 03:00:05.
+    Returning from AED.
+    Writing NETCDF output. t = 02/01/2023 03:00:00.
+t = 02/01/2023 03:10:06.  dt =   9.152 /  0.763 s.  elapsed time =       5.9 s.
+    Calling AED. t = 02/01/2023 03:15:03.
+    Returning from AED.
+t = 02/01/2023 03:20:10.  dt =   9.897 /  0.761 s.  elapsed time =       6.2 s.
+t = 02/01/2023 03:30:07.  dt =  10.633 /  0.759 s.  elapsed time =       6.4 s.
+    Calling AED. t = 02/01/2023 03:30:07.
+    Returning from AED.
+t = 02/01/2023 03:40:08.  dt =   9.862 /  0.759 s.  elapsed time =       6.7 s.
+    Calling AED. t = 02/01/2023 03:45:09.
+    Returning from AED.
+t = 02/01/2023 03:50:04.  dt =  12.127 /  0.758 s.  elapsed time =       6.9 s.
+t = 02/01/2023 04:00:02.  dt =  11.345 /  0.756 s.  elapsed time =       7.1 s.
+    Calling AED. t = 02/01/2023 04:00:02.
+    Returning from AED.
+    Writing NETCDF output. t = 02/01/2023 04:00:00.
+    Writing NETCDF output. t = 02/01/2023 04:00:00.
+t = 02/01/2023 04:10:09.  dt =  14.370 /  0.756 s.  elapsed time =       7.7 s.
+    Calling AED. t = 02/01/2023 04:15:01.
+    Returning from AED.
+t = 02/01/2023 04:20:08.  dt =  12.073 /  0.755 s.  elapsed time =       8.0 s.
+t = 02/01/2023 04:30:09.  dt =  14.328 /  0.754 s.  elapsed time =       8.2 s.
+    Calling AED. t = 02/01/2023 04:30:09.
+    Returning from AED.
+t = 02/01/2023 04:40:07.  dt =  13.553 /  0.753 s.  elapsed time =       8.4 s.
+    Calling AED. t = 02/01/2023 04:45:14.
+    Returning from AED.
+t = 02/01/2023 04:50:00.  dt =  14.294 /  0.752 s.  elapsed time =       8.7 s.
+t = 02/01/2023 05:00:00.  dt =  14.275 /  0.751 s.  elapsed time =       8.8 s.
+    Calling AED. t = 02/01/2023 05:00:00.
+    Returning from AED.
+    Writing NETCDF output. t = 02/01/2023 05:00:00.
+t = 02/01/2023 05:10:14.  dt =  14.263 /  0.751 s.  elapsed time =       9.1 s.
+    Calling AED. t = 02/01/2023 05:15:13.
+    Returning from AED.
+t = 02/01/2023 05:20:12.  dt =  14.243 /  0.750 s.  elapsed time =      10.7 s.
+t = 02/01/2023 05:30:02.  dt =  14.984 /  0.749 s.  elapsed time =      10.8 s.
+    Calling AED. t = 02/01/2023 05:30:02.
+    Returning from AED.
+t = 02/01/2023 05:40:00.  dt =  14.214 /  0.748 s.  elapsed time =      11.1 s.
+    Calling AED. t = 02/01/2023 05:45:02.
+    Returning from AED.
+t = 02/01/2023 05:50:01.  dt =  14.947 /  0.747 s.  elapsed time =      11.3 s.
+t = 02/01/2023 06:00:10.  dt =  14.186 /  0.747 s.  elapsed time =      11.5 s.
+    Calling AED. t = 02/01/2023 06:00:10.
+    Returning from AED.
+    Writing NETCDF output. t = 02/01/2023 06:00:00.
+    Writing NETCDF output. t = 02/01/2023 06:00:00.
+t = 02/01/2023 06:10:07.  dt =  14.914 /  0.746 s.  elapsed time =      17.3 s.
+    Calling AED. t = 02/01/2023 06:15:07.
+    Returning from AED.
+t = 02/01/2023 06:20:05.  dt =  13.413 /  0.745 s.  elapsed time =      17.5 s.
+t = 02/01/2023 06:30:13.  dt =  14.151 /  0.745 s.  elapsed time =      17.7 s.
+    Calling AED. t = 02/01/2023 06:30:13.
+    Returning from AED.
+t = 02/01/2023 06:40:05.  dt =  13.397 /  0.744 s.  elapsed time =      17.9 s.
+    Calling AED. t = 02/01/2023 06:45:00.
+    Returning from AED.
+t = 02/01/2023 06:50:11.  dt =  14.140 /  0.744 s.  elapsed time =      18.1 s.
+t = 02/01/2023 07:00:02.  dt =  13.391 /  0.744 s.  elapsed time =      18.3 s.
+    Calling AED. t = 02/01/2023 07:00:02.
+    Returning from AED.
+    Writing NETCDF output. t = 02/01/2023 07:00:00.
+t = 02/01/2023 07:10:08.  dt =  14.138 /  0.744 s.  elapsed time =      18.6 s.
+    Calling AED. t = 02/01/2023 07:15:05.
+    Returning from AED.
+t = 02/01/2023 07:20:13.  dt =  13.395 /  0.744 s.  elapsed time =      18.8 s.
+t = 02/01/2023 07:30:03.  dt =  14.139 /  0.744 s.  elapsed time =      19.0 s.
+    Calling AED. t = 02/01/2023 07:30:03.
+    Returning from AED.
+t = 02/01/2023 07:40:09.  dt =  13.399 /  0.744 s.  elapsed time =      19.2 s.
+    Calling AED. t = 02/01/2023 07:45:04.
+    Returning from AED.
+t = 02/01/2023 07:50:00.  dt =  14.146 /  0.745 s.  elapsed time =      19.4 s.
+t = 02/01/2023 08:00:07.  dt =  13.402 /  0.745 s.  elapsed time =      19.6 s.
+    Calling AED. t = 02/01/2023 08:00:07.
+    Returning from AED.
+    Writing NETCDF output. t = 02/01/2023 08:00:00.
+    Writing NETCDF output. t = 02/01/2023 08:00:00.
+t = 02/01/2023 08:10:13.  dt =  14.152 /  0.745 s.  elapsed time =      20.2 s.
+    Calling AED. t = 02/01/2023 08:15:10.
+    Returning from AED.
+t = 02/01/2023 08:20:07.  dt =  13.408 /  0.745 s.  elapsed time =      20.5 s.
+t = 02/01/2023 08:30:12.  dt =  14.155 /  0.745 s.  elapsed time =      20.6 s.
+    Calling AED. t = 02/01/2023 08:30:12.
+    Returning from AED.
+t = 02/01/2023 08:40:08.  dt =  13.413 /  0.745 s.  elapsed time =      20.9 s.
+    Calling AED. t = 02/01/2023 08:45:03.
+    Returning from AED.
+t = 02/01/2023 08:50:12.  dt =  14.160 /  0.745 s.  elapsed time =      21.1 s.
+t = 02/01/2023 09:00:10.  dt =  13.415 /  0.745 s.  elapsed time =      21.2 s.
+    Calling AED. t = 02/01/2023 09:00:10.
+    Returning from AED.
+    Writing NETCDF output. t = 02/01/2023 09:00:00.
+t = 02/01/2023 09:10:04.  dt =  14.909 /  0.745 s.  elapsed time =      21.5 s.
+    Calling AED. t = 02/01/2023 09:15:02.
+    Returning from AED.
+t = 02/01/2023 09:20:07.  dt =  13.417 /  0.745 s.  elapsed time =      21.7 s.
+t = 02/01/2023 09:30:04.  dt =  14.912 /  0.746 s.  elapsed time =      21.9 s.
+    Calling AED. t = 02/01/2023 09:30:04.
+    Returning from AED.
+t = 02/01/2023 09:40:03.  dt =  14.167 /  0.746 s.  elapsed time =      22.1 s.
+    Calling AED. t = 02/01/2023 09:45:13.
+    Returning from AED.
+t = 02/01/2023 09:50:03.  dt =  14.914 /  0.746 s.  elapsed time =      22.3 s.
+t = 02/01/2023 10:00:04.  dt =  14.174 /  0.746 s.  elapsed time =      22.5 s.
+    Calling AED. t = 02/01/2023 10:00:04.
+    Returning from AED.
+    Writing NETCDF output. t = 02/01/2023 10:00:00.
+    Writing NETCDF output. t = 02/01/2023 10:00:00.
+t = 02/01/2023 10:10:09.  dt =  14.917 /  0.746 s.  elapsed time =      23.1 s.
+    Calling AED. t = 02/01/2023 10:15:08.
+    Returning from AED.
+t = 02/01/2023 10:20:06.  dt =  14.923 /  0.746 s.  elapsed time =      23.3 s.
+t = 02/01/2023 10:30:03.  dt =  14.926 /  0.746 s.  elapsed time =      23.5 s.
+    Calling AED. t = 02/01/2023 10:30:03.
+    Returning from AED.
+t = 02/01/2023 10:40:00.  dt =  14.926 /  0.746 s.  elapsed time =      23.7 s.
+    Calling AED. t = 02/01/2023 10:45:14.
+    Returning from AED.
+t = 02/01/2023 10:50:12.  dt =  14.931 /  0.747 s.  elapsed time =      23.9 s.
+t = 02/01/2023 11:00:09.  dt =  14.928 /  0.746 s.  elapsed time =      24.1 s.
+    Calling AED. t = 02/01/2023 11:00:09.
+    Returning from AED.
+    Writing NETCDF output. t = 02/01/2023 11:00:00.
+t = 02/01/2023 11:10:07.  dt =  14.935 /  0.747 s.  elapsed time =      24.3 s.
+    Calling AED. t = 02/01/2023 11:15:05.
+    Returning from AED.
+t = 02/01/2023 11:20:04.  dt =  14.931 /  0.747 s.  elapsed time =      24.6 s.
+t = 02/01/2023 11:30:01.  dt =  14.933 /  0.747 s.  elapsed time =      24.7 s.
+    Calling AED. t = 02/01/2023 11:30:01.
+    Returning from AED.
+t = 02/01/2023 11:40:13.  dt =  14.928 /  0.746 s.  elapsed time =      24.9 s.
+    Calling AED. t = 02/01/2023 11:45:13.
+    Returning from AED.
+t = 02/01/2023 11:50:01.  dt =  14.920 /  0.746 s.  elapsed time =      25.2 s.
+t = 02/01/2023 12:00:12.  dt =  14.175 /  0.746 s.  elapsed time =      25.3 s.
+    Calling AED. t = 02/01/2023 12:00:12.
+    Returning from AED.
+    Writing NETCDF output. t = 02/01/2023 12:00:00.
+    Writing NETCDF output. t = 02/01/2023 12:00:00.
+t = 02/01/2023 12:10:09.  dt =  14.899 /  0.745 s.  elapsed time =      25.9 s.
+    Calling AED. t = 02/01/2023 12:15:07.
+    Returning from AED.
+t = 02/01/2023 12:20:07.  dt =  14.146 /  0.744 s.  elapsed time =      26.2 s.
+t = 02/01/2023 12:30:01.  dt =  14.140 /  0.744 s.  elapsed time =      26.3 s.
+    Calling AED. t = 02/01/2023 12:30:01.
+    Returning from AED.
+t = 02/01/2023 12:40:05.  dt =  13.371 /  0.743 s.  elapsed time =      26.6 s.
+    Calling AED. t = 02/01/2023 12:45:13.
+    Returning from AED.
+t = 02/01/2023 12:50:07.  dt =  13.362 /  0.742 s.  elapsed time =      26.8 s.
+t = 02/01/2023 13:00:08.  dt =  13.350 /  0.742 s.  elapsed time =      27.0 s.
+    Calling AED. t = 02/01/2023 13:00:08.
+    Returning from AED.
+    Writing NETCDF output. t = 02/01/2023 13:00:00.
+t = 02/01/2023 13:10:01.  dt =  12.590 /  0.741 s.  elapsed time =      27.3 s.
+    Calling AED. t = 02/01/2023 13:15:03.
+    Returning from AED.
+t = 02/01/2023 13:20:05.  dt =  12.584 /  0.740 s.  elapsed time =      27.5 s.
+t = 02/01/2023 13:30:07.  dt =  12.572 /  0.740 s.  elapsed time =      27.7 s.
+    Calling AED. t = 02/01/2023 13:30:07.
+    Returning from AED.
+t = 02/01/2023 13:40:11.  dt =  11.823 /  0.739 s.  elapsed time =      28.1 s.
+    Calling AED. t = 02/01/2023 13:45:07.
+    Returning from AED.
+t = 02/01/2023 13:50:03.  dt =  11.823 /  0.739 s.  elapsed time =      28.4 s.
+t = 02/01/2023 14:00:06.  dt =  11.813 /  0.738 s.  elapsed time =      28.6 s.
+    Calling AED. t = 02/01/2023 14:00:06.
+    Returning from AED.
+    Writing NETCDF output. t = 02/01/2023 14:00:00.
+    Writing NETCDF output. t = 02/01/2023 14:00:00.
