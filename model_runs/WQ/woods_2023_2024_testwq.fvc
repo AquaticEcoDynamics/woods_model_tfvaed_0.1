@@ -68,7 +68,12 @@ global vertical scalar diffusivity limits == 1.0e-06, 9999.
 
 !GEOMETRY
 !_________________________________________________________________
+GIS format == shp
+shp projection == ..\..\gis_repo\1_domain\projection\projection.prj
+
+
 geometry 2d == ..\..\gis_repo\1_domain\mesh\Woods_v2_b_WGS84.2dm
+Read GIS Mat == ..\..\gis_repo\2_benthic\materials\woods_7_zone_WGS84.shp
 
 vertical mesh type == z
 layer faces == ..\..\gis_repo\1_domain\layers\layers_WL.csv !High velocity error when running
