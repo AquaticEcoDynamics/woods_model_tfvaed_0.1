@@ -35,7 +35,7 @@
    !-- AED2 configuration flags
      solution_method = 1
      do_limiter = .true.
-     display_minmax = .true.
+     display_minmax = .false. !.true.
     !do_2d_atm_flux = .true.
     !do_particle_bgc = .false.
     !do_zone_averaging =
