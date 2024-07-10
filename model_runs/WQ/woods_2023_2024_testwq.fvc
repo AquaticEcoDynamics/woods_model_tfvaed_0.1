@@ -36,7 +36,7 @@ equation of state == UNESCO
 !_________________________________________________________________
 time format == ISODATE
 reference time == 01/01/2001
-start time == 02/01/2023 00:00:00
+start time == 02/10/2022 00:00:00
 end time == 01/04/2024 00:00:00
 cfl external == 0.80
 cfl internal == 0.80
