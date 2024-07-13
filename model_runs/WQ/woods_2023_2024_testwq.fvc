@@ -36,7 +36,7 @@ equation of state == UNESCO
 !_________________________________________________________________
 time format == ISODATE
 reference time == 01/01/2001
-start time == 02/10/2022 00:00:00
+start time == 02/01/2023 00:00:00
 end time == 01/04/2024 00:00:00
 cfl external == 0.80
 cfl internal == 0.80
@@ -143,23 +143,15 @@ include == ..\..\includes\bc\1_weather\met_BOM_CFSR_20221101_20240501.fvc
 ! ______________________________________________________________Met
 
 !! Inflows___________________________________________________________
-!
-!bc == QC, 476513.0,5362187.0, ..\BCs\Inflows\tfv_liawenee_inflow_20140101_20170701.csv
-!  bc header ==  ISOTime,Flow,Sal,Temp,ss1,ss2,ret,oxy,sil,amm,nit,frp,frp_ads,doc,poc,don,pon,dop,pop,grn
-!  bc scale == 1.75,1,1,1,1,1
-!end bc
-!
-!bc == QC,480265.0,5356051.0, ..\BCs\Inflows\tfv_tods_inflow_20140101_20170701.csv
-!  bc header ==  ISOTime,Flow,Sal,Temp,ss1,ss2,ret,oxy,sil,amm,nit,frp,frp_ads,doc,poc,don,pon,dop,pop,grn
-!  bc scale == 1,1,1,1,1,1
-!end bc
-!!! ___________________________________________________________Inflows
-!
+
+include == ..\..\includes\bc\4_rivers\LakeRiver-Inflow_20230101_20240303.fvc
+
+!   ___________________________________________________________Inflows
+
 !! Outflows_______________________________________________________
-!bc == QC,475075.0,5352837.0, ..\BCs\Outflows\tfv_Poatina_outflow_20140101_20170701.csv
-!  bc header ==  ISOTime,Flow,Sal,Temp
-!  bc scale == 1,1,1
-!end bc
+
+include == ..\..\includes\bc\3_dam\Dam-Spillway_20230101_20240303.fvc
+
 ! _______________________________________________________Outflows
 
 !!!  Waves___________________________________________________________
@@ -190,9 +182,10 @@ end output
 output == netcdf
   suffix == WQ
   output parameters == h, d, sal, temp, wq_all, wq_diag_all
-  output interval == 7200
+  output interval == 10800
   output compression == 1
 end output
+
 !output == netcdf
 !  suffix == MET
 !  output parameters == h, d, temp, air_temp, precip, sw_rad, mslp, w10, evap
