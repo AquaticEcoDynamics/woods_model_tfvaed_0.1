@@ -8,7 +8,7 @@ end bc
 
 bc == W10, ..\..\..\bc_repo\1_weather\BOM\BOM_met_liawenee_2023_2024.csv
   bc header == ISOTime,Wx,Wy
-!bc scale == 1.2,1.2
+  bc scale == 0.8,0.8
 end bc
 
 

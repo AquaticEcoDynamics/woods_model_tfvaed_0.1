@@ -1,0 +1,7 @@
+! Woods Lake @ Dam Spillway  
+bc == Q, 2  ,  ../../../bc_repo/3_dam/outflow_woods_dam-spillway_19990311-20240416.csv
+  bc header == Date,FLOW
+  bc scale ==  1.  ,  1.
+end bc
+
+

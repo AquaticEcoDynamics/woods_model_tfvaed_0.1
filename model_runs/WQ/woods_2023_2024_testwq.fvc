@@ -77,9 +77,9 @@ Read GIS Mat == ..\..\gis_repo\2_benthic\materials\woods_7_zone_WGS84.shp
 
 vertical mesh type == z
 layer faces == ..\..\gis_repo\1_domain\layers\layers_WL.csv !High velocity error when running
-sigma layers == 3
+sigma layers == 6
 min bottom layer thickness == 0.1
-cell 3d depth == 5.0e-1
+cell 3d depth == 1.0e-1
 
 !vertical mesh type == sigma
 !layer faces == ..\..\gis_repo\1_domain\layers\layers_sigma.csv   !High velocity error when running
@@ -119,11 +119,11 @@ Ntracer == 1
 
 ! INITIAL CONDITIONS
 !_________________________________________________________________
-initial water level == 738.166      ! mAHD
+initial water level == 737.81       ! mAHD
 initial salinity    == 0.02         ! psu
 initial temperature == 14.69        ! deg C
 initial tracer concentration == 0.0 ! -
-initial wq concentration == 1,	300,	10,	10,	1,	1,	300,	100,	20,	20,	5,	5,	10,	1,	0.1,	10,	1,	0.1,	10,	1,	0.1,	10,	1,	0.1,	0 
+initial wq concentration == 2,	280,	3,	1,	0.1,	0.2,	30,	10,	35,	25,	0.5,	0.5,	10,	1,	0.1,	10,	1,	0.1,	10,	1,	0.1,	15,	1,	0.1,	0 
 
 
 !BOUNDARY CONDITIONS

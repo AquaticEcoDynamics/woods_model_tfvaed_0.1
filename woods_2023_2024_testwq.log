@@ -1,0 +1,53 @@
+
+***************************** TUFLOWFV *****************************
+
+Build version: 2023.1.1-dev
+Build date: 01/12/2023 10:15
+Git branch: dev
+Git hash: 7994ec3
+Build platform: Linux
+Build architecture:  x86-64
+Compiler version: Ifort 2021.3.0
+Build precision: single
+NVidia GPU enabled: Cuda v11.8.89 sm_50
+GIS Module Version: 2020-07-PD
+
+********************************************************************
+
+Computer name: rosella
+User name: hydro
+Execution timestamp: 28/05/2024 17:49:41
+
+
+Initialising TUFLOW Licence Settings...
+
+No TUFLOW licence Settings files found.  Default settings applied.
+WIBU Retry Time == 60  ! Seconds.  Values less than 1 are set to 1.  Default = 60.
+WIBU Retry Count == 0  ! Number of times to retry for a licence at start of simulation.  Use -1 for indefinitely.  Default = 0.
+WIBU Dongles Only == OFF  ! If set to ON, searches for WIBU dongles only.  Default is OFF.
+
+Attempting to process input control file:
+Trying to open file: woods_2023_2024_testwq.fvc ...NOT OK
+
+ERROR: Unable to open file: woods_2023_2024_testwq.fvc
+
+ERROR-STACK:fvctrl_construct:fvopen:Unable to open file: woods_2023_2024_testwq.fvc
+
+
+Simulation Summary:
+
+Input File: /Development/matt/woods_model_tfvaed_0.1/woods_2023_2024_testwq.fvc
+Log File: /Development/matt/woods_model_tfvaed_0.1/woods_2023_2024_testwq.log
+
+Computer name: rosella
+User name: hydro
+Execution Timestamp: 28/05/2024 17:49:41
+Execution Completed: 28/05/2024 17:49:42
+
+Number of warnings = 0
+
+Fatal Error Encountered!
+
+
+Exiting TUFLOWFV
+
