@@ -123,7 +123,7 @@ initial water level == 737.81       ! mAHD
 initial salinity    == 0.02         ! psu
 initial temperature == 14.69        ! deg C
 initial tracer concentration == 0.0 ! -
-initial wq concentration == 2,	280,	3,	1,	0.1,	0.2,	30,	10,	35,	25,	0.5,	0.5,	10,	1,	0.1,	10,	1,	0.1,	10,	1,	0.1,	15,	1,	0.1,	0 
+initial wq concentration == 8,	280,	3,	1,	0.2,	0.2,	300,	100,	35,	25,	0.5,	0.5,	10,	1,	0.1,	10,	1,	0.1,	10,	1,	0.1,	15,	1,	0.1,	0 
 
 
 !BOUNDARY CONDITIONS

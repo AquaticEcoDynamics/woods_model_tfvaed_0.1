@@ -16,7 +16,7 @@ GIS Module Version: 2020-07-PD
 
 Computer name: rosella
 User name: hydro
-Execution timestamp: 14/07/2024 11:44:07
+Execution timestamp: 16/07/2024 21:30:15
 
 
 Initialising TUFLOW Licence Settings...
@@ -113,7 +113,7 @@ INITIAL WATER LEVEL ==    737.8100
 INITIAL SALINITY ==   0.2000000E-01
 INITIAL TEMPERATURE ==    14.69000
 INITIAL TRACER CONCENTRATION ==    0.000000
-INITIAL WQ CONCENTRATION ==    2.000000,   280.0000,   3.000000,   1.000000,  0.1000000,  0.2000000,   30.00000,   10.00000,   35.00000,   25.00000,  0.5000000,  0.5000000,   10.00000,   1.000000,  0.1000000,   10.00000,   1.000
+INITIAL WQ CONCENTRATION ==    8.000000,   280.0000,   3.000000,   1.000000,  0.2000000,  0.2000000,   300.0000,   100.0000,   35.00000,   25.00000,  0.5000000,  0.5000000,   10.00000,   1.000000,  0.1000000,   10.00000,   1.000
 Trying to open file: ../../includes/bc/1_weather/met_BOM_CFSR_20221101_20240501.fvc ... OK. File unit: 102
 BC == AIR_TEMP, ../../includes/bc/1_weather/../../../bc_repo/1_weather/BOM/BOM_met_liawenee_2023_2024.csv
   BC HEADER ==  ISOTime, ATemp
@@ -148,9 +148,9 @@ BC REFERENCE TIME == 01/01/1990 00:00:00
 END BC
 Closing file unit: 102
 Trying to open file: ../../includes/bc/4_rivers/LakeRiver-Inflow_20230101_20240303.fvc ... OK. File unit: 102
-BC == Q, 1, ../../includes/bc/4_rivers/../../../bc_repo/4_rivers/LAKE_RIVER/inflow_woods_dam_20170908-20240514.csv
+BC == Q, 1, ../../includes/bc/4_rivers/../../../bc_repo/4_rivers/LAKE_RIVER/inflow_woods_dam_20160107-20240514.csv
   BC HEADER ==  Date, FLOW, SAL, TEMP, ONES, SS, OXY, NH4, NO3, FRP, FRP, OC, OC, ON, ON, OP, OP, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, ZEROS
-  BC SCALE ==    1.000000,  0.1000000,   1.000000,   1.000000,   1.000000,   1.000000,   1.000000,   1.000000,  0.6000000,  0.4000000,   1.000000,  0.5000000,   1.000000,  0.5000000,   1.000000,  0.5000000,  0.2500
+  BC SCALE ==    1.000000,   1.000000,   1.000000,   1.000000,   1.000000,   1.000000,   1.000000,   1.000000,  0.6000000,  0.4000000,   1.000000,  0.5000000,   1.000000,  0.5000000,   1.000000,  0.5000000,  0.2500
 END BC
 Closing file unit: 102
 Trying to open file: ../../includes/bc/3_dam/Dam-Spillway_20230101_20240303.fvc ... OK. File unit: 102
@@ -186,17 +186,17 @@ Initialising TUFLOW FV engine license:
 
 Searching for a BMT WIBU Hardware Licence...
 
-TUFLOW FV Engine            Dongle 3793274  Expiry 2025/04/09  LAN   1 of   10 (9 remaining)
+TUFLOW FV Engine            Dongle 3793274  Expiry 2025/04/09  LAN   2 of   10 (8 remaining)
 Successfully found WIBU TUFLOW FV engine licence
 
 Initialising TUFLOW FV simulation threads:
-TUFLOW FV Threads (1)       Dongle 3793274  Expiry 2025/04/09  LAN   1 of   40 (39 remaining)
+TUFLOW FV Threads (1)       Dongle 3793274  Expiry 2025/04/09  LAN   2 of   40 (38 remaining)
 Successfully initialised 1 threads.
 
 Initialising requested TUFLOW FV module license/s:
-TUFLOW FV 3D Module         Dongle 3793274  Expiry 2025/04/09  LAN   1 of   10 (9 remaining)
-TUFLOW FV AD Module         Dongle 3793274  Expiry 2025/04/09  LAN   1 of   10 (9 remaining)
-TUFLOW FV GPU Cards (1)     Dongle 3793274  Expiry 2025/04/09  LAN   1 of   10 (9 remaining)
+TUFLOW FV 3D Module         Dongle 3793274  Expiry 2025/04/09  LAN   2 of   10 (8 remaining)
+TUFLOW FV AD Module         Dongle 3793274  Expiry 2025/04/09  LAN   2 of   10 (8 remaining)
+TUFLOW FV GPU Cards (1)     Dongle 3793274  Expiry 2025/04/09  LAN   2 of   10 (8 remaining)
 Successful.
 
 GIS Projection being extracted from ../../gis_repo/1_domain/projection/projection.prj
@@ -359,10 +359,10 @@ BC file header/s = Date, FLOW, SAL, TEMP, ONES, SS, OXY, NH4, NO3, FRP, FRP, OC,
 BC reference time = 01/01/2001 00:00:00
 BC time units = ISOTIME
 BC variable offset/s =   0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00
-BC variable scale/s =   1.00E+00, 1.00E-01, 1.00E+00, 1.00E+00, 1.00E+00, 1.00E+00, 1.00E+00, 1.00E+00, 6.00E-01, 4.00E-01, 1.00E+00, 5.00E-01, 1.00E+00, 5.00E-01, 1.00E+00, 5.00E-01, 2.50E-01, 2.00E-02, 5.00E-03, 2.50E-01, 2.00E-02, 5.00E-03, 2.50E-01, 2.00E-02, 5.00E-03, 2.50E-01, 2.00E-02, 5.00E-03, 1.00E+00
+BC variable scale/s =   1.00E+00, 1.00E+00, 1.00E+00, 1.00E+00, 1.00E+00, 1.00E+00, 1.00E+00, 1.00E+00, 6.00E-01, 4.00E-01, 1.00E+00, 5.00E-01, 1.00E+00, 5.00E-01, 1.00E+00, 5.00E-01, 2.50E-01, 2.00E-02, 5.00E-03, 2.50E-01, 2.00E-02, 5.00E-03, 2.50E-01, 2.00E-02, 5.00E-03, 2.50E-01, 2.00E-02, 5.00E-03, 1.00E+00
 BC variable default/s =   NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN
-Trying to open file: ../../includes/bc/4_rivers/../../../bc_repo/4_rivers/LAKE_RIVER/inflow_woods_dam_20170908-20240514.csv ... OK. File unit: 101
-Date, FLOW, SAL, TEMP, ONES, SS, OXY, NH4, NO3, FRP, FRP, OC, OC, ON, ON, OP, OP, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, ZEROS columns read from csvfile. 234189 lines successfully read.
+Trying to open file: ../../includes/bc/4_rivers/../../../bc_repo/4_rivers/LAKE_RIVER/inflow_woods_dam_20160107-20240514.csv ... OK. File unit: 101
+Date, FLOW, SAL, TEMP, ONES, SS, OXY, NH4, NO3, FRP, FRP, OC, OC, ON, ON, OP, OP, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, ZEROS columns read from csvfile. 292753 lines successfully read.
 Closing file unit: 101
 BC 7 is OK
 
@@ -657,14 +657,14 @@ END OF WATER QUALITY MODEL INITIALISATION
 Attempting to generate model initial conditions:
 Correct number of WQ initial conditions has been provided.
 WQ initial conditions (see list of constituent numbers above if using TUFLOW WQ Module):
-      WQ initial condition for constituent 1 =    2.000000
+      WQ initial condition for constituent 1 =    8.000000
       WQ initial condition for constituent 2 =    280.0000
       WQ initial condition for constituent 3 =    3.000000
       WQ initial condition for constituent 4 =    1.000000
-      WQ initial condition for constituent 5 =   0.1000000
+      WQ initial condition for constituent 5 =   0.2000000
       WQ initial condition for constituent 6 =   0.2000000
-      WQ initial condition for constituent 7 =    30.00000
-      WQ initial condition for constituent 8 =    10.00000
+      WQ initial condition for constituent 7 =    300.0000
+      WQ initial condition for constituent 8 =    100.0000
       WQ initial condition for constituent 9 =    35.00000
       WQ initial condition for constituent 10 =    25.00000
       WQ initial condition for constituent 11 =   0.5000000
@@ -752,7 +752,7 @@ FVC[0]: autoweir_b = 0.556000
 FVC[0]: autoweir_Csfmin = 0.700000
 FVC[0]: alpha_bar = 1.000000
 FVC[0]: alpha_m = 1.000000
-FVC[0]: Device 0 total GPU memory = 24149 Mb, free memory = 23819 Mb
+FVC[0]: Device 0 total GPU memory = 24149 Mb, free memory = 23834 Mb
 FVC[0]: Loading module FVC_kernels.ptx
 FVC[0]: Full module path: /opt/bin/tuflowfv_uwa/bin/FVC_kernels.ptx
 Running simulation
@@ -767,11 +767,11 @@ t = 02/01/2023 00:00:00.  dt =   0.000 /  0.000 s.  elapsed time =       0.0 s.
 t = 02/01/2023 00:10:10.  dt =  14.846 /  0.928 s.  elapsed time =       0.6 s.
     Calling AED. t = 02/01/2023 00:15:07.
     Returning from AED.
-t = 02/01/2023 00:20:03.  dt =  14.822 /  0.926 s.  elapsed time =       1.1 s.
-t = 02/01/2023 00:30:10.  dt =  14.788 /  0.924 s.  elapsed time =       1.3 s.
+t = 02/01/2023 00:20:03.  dt =  14.822 /  0.926 s.  elapsed time =       1.3 s.
+t = 02/01/2023 00:30:10.  dt =  14.788 /  0.924 s.  elapsed time =       1.5 s.
     Calling AED. t = 02/01/2023 00:30:10.
     Returning from AED.
-t = 02/01/2023 00:40:01.  dt =  14.732 /  0.921 s.  elapsed time =       1.8 s.
+t = 02/01/2023 00:40:01.  dt =  14.732 /  0.921 s.  elapsed time =       2.0 s.
     Calling AED. t = 02/01/2023 00:45:10.
     Returning from AED.
 t = 02/01/2023 00:50:04.  dt =  14.712 /  0.919 s.  elapsed time =       2.5 s.
@@ -779,57 +779,57 @@ t = 02/01/2023 01:00:06.  dt =  14.661 /  0.916 s.  elapsed time =       2.7 s.
     Calling AED. t = 02/01/2023 01:00:06.
     Returning from AED.
     Writing NETCDF output. t = 02/01/2023 01:00:00.
-t = 02/01/2023 01:10:06.  dt =  14.617 /  0.914 s.  elapsed time =       3.3 s.
+t = 02/01/2023 01:10:06.  dt =  14.617 /  0.914 s.  elapsed time =       3.4 s.
     Calling AED. t = 02/01/2023 01:15:13.
     Returning from AED.
-t = 02/01/2023 01:20:05.  dt =  14.599 /  0.912 s.  elapsed time =       3.8 s.
-t = 02/01/2023 01:30:03.  dt =  14.562 /  0.910 s.  elapsed time =       4.0 s.
+t = 02/01/2023 01:20:05.  dt =  14.599 /  0.912 s.  elapsed time =       3.9 s.
+t = 02/01/2023 01:30:03.  dt =  14.562 /  0.910 s.  elapsed time =       4.1 s.
     Calling AED. t = 02/01/2023 01:30:03.
     Returning from AED.
-t = 02/01/2023 01:40:00.  dt =  14.568 /  0.910 s.  elapsed time =       4.5 s.
+t = 02/01/2023 01:40:00.  dt =  14.568 /  0.910 s.  elapsed time =       4.6 s.
     Calling AED. t = 02/01/2023 01:45:06.
     Returning from AED.
-t = 02/01/2023 01:50:12.  dt =  14.565 /  0.910 s.  elapsed time =       5.0 s.
-t = 02/01/2023 02:00:09.  dt =  14.583 /  0.911 s.  elapsed time =       5.2 s.
+t = 02/01/2023 01:50:12.  dt =  14.565 /  0.910 s.  elapsed time =       5.1 s.
+t = 02/01/2023 02:00:09.  dt =  14.583 /  0.911 s.  elapsed time =       5.3 s.
     Calling AED. t = 02/01/2023 02:00:09.
     Returning from AED.
     Writing NETCDF output. t = 02/01/2023 02:00:00.
-t = 02/01/2023 02:10:08.  dt =  14.608 /  0.913 s.  elapsed time =       5.8 s.
+t = 02/01/2023 02:10:08.  dt =  14.608 /  0.913 s.  elapsed time =       6.0 s.
     Calling AED. t = 02/01/2023 02:15:00.
     Returning from AED.
-t = 02/01/2023 02:20:07.  dt =  14.649 /  0.916 s.  elapsed time =       6.3 s.
-t = 02/01/2023 02:30:09.  dt =  14.675 /  0.917 s.  elapsed time =       6.5 s.
+t = 02/01/2023 02:20:07.  dt =  14.649 /  0.916 s.  elapsed time =       6.6 s.
+t = 02/01/2023 02:30:09.  dt =  14.675 /  0.917 s.  elapsed time =       6.7 s.
     Calling AED. t = 02/01/2023 02:30:09.
     Returning from AED.
-t = 02/01/2023 02:40:11.  dt =  14.693 /  0.918 s.  elapsed time =       7.1 s.
+t = 02/01/2023 02:40:11.  dt =  14.693 /  0.918 s.  elapsed time =       7.3 s.
     Calling AED. t = 02/01/2023 02:45:05.
     Returning from AED.
-t = 02/01/2023 02:50:13.  dt =  14.701 /  0.919 s.  elapsed time =       7.6 s.
-t = 02/01/2023 03:00:01.  dt =  14.681 /  0.918 s.  elapsed time =       7.8 s.
+t = 02/01/2023 02:50:13.  dt =  14.701 /  0.919 s.  elapsed time =       7.9 s.
+t = 02/01/2023 03:00:01.  dt =  14.681 /  0.918 s.  elapsed time =       8.0 s.
     Calling AED. t = 02/01/2023 03:00:01.
     Returning from AED.
     Writing NETCDF output. t = 02/01/2023 03:00:00.
     Writing NETCDF output. t = 02/01/2023 03:00:00.
-t = 02/01/2023 03:10:03.  dt =  14.684 /  0.918 s.  elapsed time =       8.9 s.
+t = 02/01/2023 03:10:03.  dt =  14.684 /  0.918 s.  elapsed time =       9.2 s.
     Calling AED. t = 02/01/2023 03:15:11.
     Returning from AED.
-t = 02/01/2023 03:20:04.  dt =  14.645 /  0.915 s.  elapsed time =       9.5 s.
-t = 02/01/2023 03:30:05.  dt =  14.627 /  0.914 s.  elapsed time =       9.6 s.
+t = 02/01/2023 03:20:04.  dt =  14.645 /  0.915 s.  elapsed time =       9.7 s.
+t = 02/01/2023 03:30:05.  dt =  14.627 /  0.914 s.  elapsed time =       9.9 s.
     Calling AED. t = 02/01/2023 03:30:05.
     Returning from AED.
-t = 02/01/2023 03:40:04.  dt =  14.606 /  0.913 s.  elapsed time =      10.2 s.
+t = 02/01/2023 03:40:04.  dt =  14.606 /  0.913 s.  elapsed time =      10.5 s.
     Calling AED. t = 02/01/2023 03:45:10.
     Returning from AED.
-t = 02/01/2023 03:50:02.  dt =  14.578 /  0.911 s.  elapsed time =      10.7 s.
-t = 02/01/2023 04:00:14.  dt =  14.560 /  0.910 s.  elapsed time =      10.9 s.
+t = 02/01/2023 03:50:02.  dt =  14.578 /  0.911 s.  elapsed time =      11.1 s.
+t = 02/01/2023 04:00:14.  dt =  14.560 /  0.910 s.  elapsed time =      11.3 s.
     Calling AED. t = 02/01/2023 04:00:14.
     Returning from AED.
     Writing NETCDF output. t = 02/01/2023 04:00:00.
-t = 02/01/2023 04:10:10.  dt =  14.532 /  0.908 s.  elapsed time =      11.5 s.
+t = 02/01/2023 04:10:10.  dt =  14.532 /  0.908 s.  elapsed time =      11.9 s.
     Calling AED. t = 02/01/2023 04:15:01.
     Returning from AED.
-t = 02/01/2023 04:20:06.  dt =  14.506 /  0.907 s.  elapsed time =      12.1 s.
-t = 02/01/2023 04:30:14.  dt =  14.489 /  0.906 s.  elapsed time =      12.7 s.
+t = 02/01/2023 04:20:06.  dt =  14.506 /  0.907 s.  elapsed time =      12.4 s.
+t = 02/01/2023 04:30:14.  dt =  14.489 /  0.906 s.  elapsed time =      12.6 s.
     Calling AED. t = 02/01/2023 04:30:14.
     Returning from AED.
 t = 02/01/2023 04:40:08.  dt =  14.467 /  0.904 s.  elapsed time =      13.2 s.
@@ -843,758 +843,874 @@ t = 02/01/2023 05:00:07.  dt =  14.441 /  0.903 s.  elapsed time =      14.0 s.
 t = 02/01/2023 05:10:14.  dt =  14.421 /  0.901 s.  elapsed time =      14.6 s.
     Calling AED. t = 02/01/2023 05:15:02.
     Returning from AED.
-t = 02/01/2023 05:20:05.  dt =  14.417 /  0.901 s.  elapsed time =      15.1 s.
-t = 02/01/2023 05:30:10.  dt =  14.404 /  0.900 s.  elapsed time =      15.3 s.
+t = 02/01/2023 05:20:05.  dt =  14.417 /  0.901 s.  elapsed time =      15.2 s.
+t = 02/01/2023 05:30:10.  dt =  14.404 /  0.900 s.  elapsed time =      15.4 s.
     Calling AED. t = 02/01/2023 05:30:10.
     Returning from AED.
-t = 02/01/2023 05:40:00.  dt =  14.387 /  0.899 s.  elapsed time =      15.8 s.
+t = 02/01/2023 05:40:00.  dt =  14.387 /  0.899 s.  elapsed time =      15.9 s.
     Calling AED. t = 02/01/2023 05:45:02.
     Returning from AED.
-t = 02/01/2023 05:50:04.  dt =  14.382 /  0.899 s.  elapsed time =      16.4 s.
-t = 02/01/2023 06:00:08.  dt =  14.362 /  0.898 s.  elapsed time =      16.6 s.
+t = 02/01/2023 05:50:04.  dt =  14.382 /  0.899 s.  elapsed time =      16.5 s.
+t = 02/01/2023 06:00:08.  dt =  14.362 /  0.898 s.  elapsed time =      16.7 s.
     Calling AED. t = 02/01/2023 06:00:08.
     Returning from AED.
     Writing NETCDF output. t = 02/01/2023 06:00:00.
     Writing NETCDF output. t = 02/01/2023 06:00:00.
-t = 02/01/2023 06:10:11.  dt =  14.353 /  0.897 s.  elapsed time =      17.7 s.
+t = 02/01/2023 06:10:11.  dt =  14.353 /  0.897 s.  elapsed time =      17.8 s.
     Calling AED. t = 02/01/2023 06:15:12.
     Returning from AED.
-t = 02/01/2023 06:20:14.  dt =  14.344 /  0.896 s.  elapsed time =      18.2 s.
-t = 02/01/2023 06:30:01.  dt =  14.333 /  0.896 s.  elapsed time =      18.4 s.
+t = 02/01/2023 06:20:14.  dt =  14.344 /  0.896 s.  elapsed time =      18.3 s.
+t = 02/01/2023 06:30:01.  dt =  14.332 /  0.896 s.  elapsed time =      18.5 s.
     Calling AED. t = 02/01/2023 06:30:01.
     Returning from AED.
-t = 02/01/2023 06:40:03.  dt =  14.327 /  0.895 s.  elapsed time =      19.0 s.
+t = 02/01/2023 06:40:03.  dt =  14.327 /  0.895 s.  elapsed time =      19.1 s.
     Calling AED. t = 02/01/2023 06:45:04.
     Returning from AED.
-t = 02/01/2023 06:50:05.  dt =  14.324 /  0.895 s.  elapsed time =      19.5 s.
-t = 02/01/2023 07:00:06.  dt =  14.314 /  0.895 s.  elapsed time =      19.7 s.
+t = 02/01/2023 06:50:05.  dt =  14.324 /  0.895 s.  elapsed time =      19.6 s.
+t = 02/01/2023 07:00:06.  dt =  14.314 /  0.895 s.  elapsed time =      19.8 s.
     Calling AED. t = 02/01/2023 07:00:06.
     Returning from AED.
     Writing NETCDF output. t = 02/01/2023 07:00:00.
-t = 02/01/2023 07:10:08.  dt =  14.322 /  0.895 s.  elapsed time =      20.3 s.
+t = 02/01/2023 07:10:08.  dt =  14.322 /  0.895 s.  elapsed time =      20.5 s.
     Calling AED. t = 02/01/2023 07:15:08.
     Returning from AED.
-t = 02/01/2023 07:20:09.  dt =  14.311 /  0.894 s.  elapsed time =      20.9 s.
-t = 02/01/2023 07:30:10.  dt =  14.311 /  0.894 s.  elapsed time =      21.0 s.
+t = 02/01/2023 07:20:09.  dt =  14.312 /  0.894 s.  elapsed time =      21.2 s.
+t = 02/01/2023 07:30:10.  dt =  14.315 /  0.895 s.  elapsed time =      21.4 s.
     Calling AED. t = 02/01/2023 07:30:10.
     Returning from AED.
-t = 02/01/2023 07:40:11.  dt =  14.310 /  0.894 s.  elapsed time =      21.6 s.
+t = 02/01/2023 07:40:11.  dt =  14.317 /  0.895 s.  elapsed time =      21.9 s.
     Calling AED. t = 02/01/2023 07:45:12.
     Returning from AED.
-t = 02/01/2023 07:50:12.  dt =  14.301 /  0.894 s.  elapsed time =      22.1 s.
-t = 02/01/2023 08:00:13.  dt =  14.299 /  0.894 s.  elapsed time =      22.3 s.
-    Calling AED. t = 02/01/2023 08:00:13.
+t = 02/01/2023 07:50:13.  dt =  14.312 /  0.895 s.  elapsed time =      22.5 s.
+t = 02/01/2023 08:00:14.  dt =  14.316 /  0.895 s.  elapsed time =      22.7 s.
+    Calling AED. t = 02/01/2023 08:00:14.
     Returning from AED.
     Writing NETCDF output. t = 02/01/2023 08:00:00.
-t = 02/01/2023 08:10:13.  dt =  14.293 /  0.893 s.  elapsed time =      22.9 s.
-    Calling AED. t = 02/01/2023 08:15:13.
+t = 02/01/2023 08:10:01.  dt =  14.315 /  0.895 s.  elapsed time =      23.3 s.
+    Calling AED. t = 02/01/2023 08:15:01.
     Returning from AED.
-t = 02/01/2023 08:20:13.  dt =  14.287 /  0.893 s.  elapsed time =      23.5 s.
-t = 02/01/2023 08:30:13.  dt =  14.287 /  0.893 s.  elapsed time =      23.6 s.
-    Calling AED. t = 02/01/2023 08:30:13.
+t = 02/01/2023 08:20:02.  dt =  14.314 /  0.895 s.  elapsed time =      23.9 s.
+t = 02/01/2023 08:30:03.  dt =  14.318 /  0.895 s.  elapsed time =      24.0 s.
+    Calling AED. t = 02/01/2023 08:30:03.
     Returning from AED.
-t = 02/01/2023 08:40:13.  dt =  14.281 /  0.893 s.  elapsed time =      24.2 s.
-    Calling AED. t = 02/01/2023 08:45:13.
+t = 02/01/2023 08:40:04.  dt =  14.315 /  0.895 s.  elapsed time =      24.7 s.
+    Calling AED. t = 02/01/2023 08:45:05.
     Returning from AED.
-t = 02/01/2023 08:50:13.  dt =  14.280 /  0.893 s.  elapsed time =      24.8 s.
-t = 02/01/2023 09:00:13.  dt =  14.281 /  0.893 s.  elapsed time =      24.9 s.
-    Calling AED. t = 02/01/2023 09:00:13.
+t = 02/01/2023 08:50:06.  dt =  14.317 /  0.895 s.  elapsed time =      25.2 s.
+t = 02/01/2023 09:00:07.  dt =  14.318 /  0.895 s.  elapsed time =      25.4 s.
+    Calling AED. t = 02/01/2023 09:00:07.
     Returning from AED.
     Writing NETCDF output. t = 02/01/2023 09:00:00.
     Writing NETCDF output. t = 02/01/2023 09:00:00.
-t = 02/01/2023 09:10:12.  dt =  14.278 /  0.892 s.  elapsed time =      26.1 s.
-    Calling AED. t = 02/01/2023 09:15:12.
+t = 02/01/2023 09:10:08.  dt =  14.316 /  0.895 s.  elapsed time =      26.5 s.
+    Calling AED. t = 02/01/2023 09:15:09.
     Returning from AED.
-t = 02/01/2023 09:20:12.  dt =  14.280 /  0.892 s.  elapsed time =      26.6 s.
-t = 02/01/2023 09:30:12.  dt =  14.280 /  0.893 s.  elapsed time =      26.8 s.
-    Calling AED. t = 02/01/2023 09:30:12.
+t = 02/01/2023 09:20:10.  dt =  14.318 /  0.895 s.  elapsed time =      27.2 s.
+t = 02/01/2023 09:30:11.  dt =  14.320 /  0.895 s.  elapsed time =      27.4 s.
+    Calling AED. t = 02/01/2023 09:30:11.
     Returning from AED.
-t = 02/01/2023 09:40:12.  dt =  14.280 /  0.893 s.  elapsed time =      27.4 s.
-    Calling AED. t = 02/01/2023 09:45:12.
+t = 02/01/2023 09:40:13.  dt =  14.320 /  0.895 s.  elapsed time =      27.9 s.
+    Calling AED. t = 02/01/2023 09:45:13.
     Returning from AED.
-t = 02/01/2023 09:50:12.  dt =  14.285 /  0.893 s.  elapsed time =      28.7 s.
-t = 02/01/2023 10:00:12.  dt =  14.288 /  0.893 s.  elapsed time =      28.8 s.
-    Calling AED. t = 02/01/2023 10:00:12.
+t = 02/01/2023 09:50:14.  dt =  14.325 /  0.895 s.  elapsed time =      28.5 s.
+t = 02/01/2023 10:00:01.  dt =  14.327 /  0.895 s.  elapsed time =      28.7 s.
+    Calling AED. t = 02/01/2023 10:00:01.
     Returning from AED.
     Writing NETCDF output. t = 02/01/2023 10:00:00.
-t = 02/01/2023 10:10:12.  dt =  14.287 /  0.893 s.  elapsed time =      29.4 s.
-    Calling AED. t = 02/01/2023 10:15:12.
+t = 02/01/2023 10:10:03.  dt =  14.327 /  0.895 s.  elapsed time =      29.3 s.
+    Calling AED. t = 02/01/2023 10:15:04.
     Returning from AED.
-t = 02/01/2023 10:20:12.  dt =  14.297 /  0.894 s.  elapsed time =      30.0 s.
-t = 02/01/2023 10:30:12.  dt =  14.296 /  0.894 s.  elapsed time =      30.2 s.
-    Calling AED. t = 02/01/2023 10:30:12.
+t = 02/01/2023 10:20:05.  dt =  14.336 /  0.896 s.  elapsed time =      29.9 s.
+t = 02/01/2023 10:30:07.  dt =  14.336 /  0.896 s.  elapsed time =      30.0 s.
+    Calling AED. t = 02/01/2023 10:30:07.
     Returning from AED.
-t = 02/01/2023 10:40:13.  dt =  14.300 /  0.894 s.  elapsed time =      30.7 s.
-    Calling AED. t = 02/01/2023 10:45:13.
+t = 02/01/2023 10:40:10.  dt =  14.339 /  0.896 s.  elapsed time =      30.6 s.
+    Calling AED. t = 02/01/2023 10:45:11.
     Returning from AED.
-t = 02/01/2023 10:50:14.  dt =  14.305 /  0.894 s.  elapsed time =      31.3 s.
-t = 02/01/2023 11:00:00.  dt =  14.301 /  0.894 s.  elapsed time =      31.5 s.
-    Calling AED. t = 02/01/2023 11:00:00.
+t = 02/01/2023 10:50:12.  dt =  14.345 /  0.897 s.  elapsed time =      31.2 s.
+t = 02/01/2023 11:00:14.  dt =  14.340 /  0.896 s.  elapsed time =      31.4 s.
+    Calling AED. t = 02/01/2023 11:00:14.
     Returning from AED.
     Writing NETCDF output. t = 02/01/2023 11:00:00.
-t = 02/01/2023 11:10:01.  dt =  14.314 /  0.895 s.  elapsed time =      32.1 s.
-    Calling AED. t = 02/01/2023 11:15:02.
+t = 02/01/2023 11:10:02.  dt =  14.353 /  0.897 s.  elapsed time =      32.0 s.
+    Calling AED. t = 02/01/2023 11:15:04.
     Returning from AED.
-t = 02/01/2023 11:20:02.  dt =  14.305 /  0.894 s.  elapsed time =      32.6 s.
-t = 02/01/2023 11:30:03.  dt =  14.311 /  0.894 s.  elapsed time =      32.8 s.
-    Calling AED. t = 02/01/2023 11:30:03.
+t = 02/01/2023 11:20:05.  dt =  14.344 /  0.896 s.  elapsed time =      32.6 s.
+t = 02/01/2023 11:30:08.  dt =  14.350 /  0.897 s.  elapsed time =      32.7 s.
+    Calling AED. t = 02/01/2023 11:30:08.
     Returning from AED.
-t = 02/01/2023 11:40:04.  dt =  14.307 /  0.894 s.  elapsed time =      33.4 s.
-    Calling AED. t = 02/01/2023 11:45:04.
+t = 02/01/2023 11:40:10.  dt =  14.345 /  0.897 s.  elapsed time =      33.3 s.
+    Calling AED. t = 02/01/2023 11:45:11.
     Returning from AED.
-t = 02/01/2023 11:50:05.  dt =  14.300 /  0.894 s.  elapsed time =      33.9 s.
-t = 02/01/2023 12:00:05.  dt =  14.304 /  0.894 s.  elapsed time =      34.1 s.
-    Calling AED. t = 02/01/2023 12:00:05.
+t = 02/01/2023 11:50:13.  dt =  14.338 /  0.896 s.  elapsed time =      33.9 s.
+t = 02/01/2023 12:00:00.  dt =  14.341 /  0.896 s.  elapsed time =      34.1 s.
+    Calling AED. t = 02/01/2023 12:00:00.
     Returning from AED.
     Writing NETCDF output. t = 02/01/2023 12:00:00.
     Writing NETCDF output. t = 02/01/2023 12:00:00.
-t = 02/01/2023 12:10:05.  dt =  14.282 /  0.893 s.  elapsed time =      35.2 s.
-    Calling AED. t = 02/01/2023 12:15:06.
+t = 02/01/2023 12:10:02.  dt =  14.320 /  0.895 s.  elapsed time =      36.2 s.
+    Calling AED. t = 02/01/2023 12:15:03.
     Returning from AED.
-t = 02/01/2023 12:20:06.  dt =  14.283 /  0.893 s.  elapsed time =      35.8 s.
-t = 02/01/2023 12:30:05.  dt =  14.275 /  0.892 s.  elapsed time =      36.0 s.
+t = 02/01/2023 12:20:04.  dt =  14.320 /  0.895 s.  elapsed time =      36.8 s.
+t = 02/01/2023 12:30:05.  dt =  14.312 /  0.894 s.  elapsed time =      37.0 s.
     Calling AED. t = 02/01/2023 12:30:05.
     Returning from AED.
-t = 02/01/2023 12:40:04.  dt =  14.256 /  0.891 s.  elapsed time =      36.6 s.
-    Calling AED. t = 02/01/2023 12:45:04.
+t = 02/01/2023 12:40:06.  dt =  14.291 /  0.893 s.  elapsed time =      37.5 s.
+    Calling AED. t = 02/01/2023 12:45:06.
     Returning from AED.
-t = 02/01/2023 12:50:03.  dt =  14.255 /  0.891 s.  elapsed time =      37.1 s.
-t = 02/01/2023 13:00:01.  dt =  14.239 /  0.890 s.  elapsed time =      37.3 s.
-    Calling AED. t = 02/01/2023 13:00:01.
+t = 02/01/2023 12:50:06.  dt =  14.292 /  0.893 s.  elapsed time =      38.1 s.
+t = 02/01/2023 13:00:06.  dt =  14.275 /  0.892 s.  elapsed time =      38.3 s.
+    Calling AED. t = 02/01/2023 13:00:06.
     Returning from AED.
     Writing NETCDF output. t = 02/01/2023 13:00:00.
-t = 02/01/2023 13:10:13.  dt =  14.226 /  0.889 s.  elapsed time =      37.9 s.
-    Calling AED. t = 02/01/2023 13:15:12.
+t = 02/01/2023 13:10:05.  dt =  14.263 /  0.891 s.  elapsed time =      38.9 s.
+    Calling AED. t = 02/01/2023 13:15:05.
     Returning from AED.
-t = 02/01/2023 13:20:11.  dt =  14.224 /  0.889 s.  elapsed time =      38.5 s.
-t = 02/01/2023 13:30:08.  dt =  14.205 /  0.888 s.  elapsed time =      38.6 s.
-    Calling AED. t = 02/01/2023 13:30:08.
+t = 02/01/2023 13:20:04.  dt =  14.260 /  0.891 s.  elapsed time =      39.5 s.
+t = 02/01/2023 13:30:03.  dt =  14.242 /  0.890 s.  elapsed time =      39.7 s.
+    Calling AED. t = 02/01/2023 13:30:03.
     Returning from AED.
-t = 02/01/2023 13:40:05.  dt =  14.206 /  0.888 s.  elapsed time =      39.2 s.
-    Calling AED. t = 02/01/2023 13:45:03.
+t = 02/01/2023 13:40:01.  dt =  14.243 /  0.890 s.  elapsed time =      40.2 s.
+    Calling AED. t = 02/01/2023 13:45:14.
     Returning from AED.
-t = 02/01/2023 13:50:01.  dt =  14.198 /  0.887 s.  elapsed time =      39.8 s.
-t = 02/01/2023 14:00:11.  dt =  14.188 /  0.887 s.  elapsed time =      39.9 s.
+t = 02/01/2023 13:50:13.  dt =  14.235 /  0.890 s.  elapsed time =      40.8 s.
+t = 02/01/2023 14:00:11.  dt =  14.224 /  0.889 s.  elapsed time =      41.0 s.
     Calling AED. t = 02/01/2023 14:00:11.
     Returning from AED.
     Writing NETCDF output. t = 02/01/2023 14:00:00.
-t = 02/01/2023 14:10:07.  dt =  14.195 /  0.887 s.  elapsed time =      40.5 s.
-    Calling AED. t = 02/01/2023 14:15:05.
+t = 02/01/2023 14:10:08.  dt =  14.232 /  0.889 s.  elapsed time =      41.6 s.
+    Calling AED. t = 02/01/2023 14:15:07.
     Returning from AED.
-t = 02/01/2023 14:20:03.  dt =  14.186 /  0.887 s.  elapsed time =      41.1 s.
-t = 02/01/2023 14:30:13.  dt =  14.185 /  0.887 s.  elapsed time =      41.3 s.
-    Calling AED. t = 02/01/2023 14:30:13.
+t = 02/01/2023 14:20:06.  dt =  14.222 /  0.889 s.  elapsed time =      42.2 s.
+t = 02/01/2023 14:30:03.  dt =  14.222 /  0.889 s.  elapsed time =      42.4 s.
+    Calling AED. t = 02/01/2023 14:30:03.
     Returning from AED.
-t = 02/01/2023 14:40:09.  dt =  14.194 /  0.887 s.  elapsed time =      41.8 s.
-    Calling AED. t = 02/01/2023 14:45:07.
+t = 02/01/2023 14:40:01.  dt =  14.229 /  0.889 s.  elapsed time =      43.0 s.
+    Calling AED. t = 02/01/2023 14:45:14.
     Returning from AED.
-t = 02/01/2023 14:50:05.  dt =  14.186 /  0.887 s.  elapsed time =      42.4 s.
-t = 02/01/2023 15:00:01.  dt =  14.194 /  0.887 s.  elapsed time =      42.6 s.
-    Calling AED. t = 02/01/2023 15:00:01.
+t = 02/01/2023 14:50:12.  dt =  14.223 /  0.889 s.  elapsed time =      43.5 s.
+t = 02/01/2023 15:00:10.  dt =  14.230 /  0.889 s.  elapsed time =      43.7 s.
+    Calling AED. t = 02/01/2023 15:00:10.
     Returning from AED.
     Writing NETCDF output. t = 02/01/2023 15:00:00.
     Writing NETCDF output. t = 02/01/2023 15:00:00.
-t = 02/01/2023 15:10:12.  dt =  14.199 /  0.887 s.  elapsed time =      43.7 s.
-    Calling AED. t = 02/01/2023 15:15:10.
+t = 02/01/2023 15:10:08.  dt =  14.235 /  0.890 s.  elapsed time =      44.9 s.
+    Calling AED. t = 02/01/2023 15:15:07.
     Returning from AED.
-t = 02/01/2023 15:20:08.  dt =  14.194 /  0.887 s.  elapsed time =      44.3 s.
-t = 02/01/2023 15:30:04.  dt =  14.199 /  0.887 s.  elapsed time =      44.5 s.
-    Calling AED. t = 02/01/2023 15:30:04.
+t = 02/01/2023 15:20:05.  dt =  14.230 /  0.889 s.  elapsed time =      45.4 s.
+t = 02/01/2023 15:30:03.  dt =  14.236 /  0.890 s.  elapsed time =      45.7 s.
+    Calling AED. t = 02/01/2023 15:30:03.
     Returning from AED.
-t = 02/01/2023 15:40:00.  dt =  14.195 /  0.887 s.  elapsed time =      45.0 s.
-    Calling AED. t = 02/01/2023 15:45:13.
+t = 02/01/2023 15:40:01.  dt =  14.230 /  0.889 s.  elapsed time =      46.3 s.
+    Calling AED. t = 02/01/2023 15:45:14.
     Returning from AED.
-t = 02/01/2023 15:50:11.  dt =  14.187 /  0.887 s.  elapsed time =      45.6 s.
-t = 02/01/2023 16:00:07.  dt =  14.187 /  0.887 s.  elapsed time =      45.7 s.
-    Calling AED. t = 02/01/2023 16:00:07.
+t = 02/01/2023 15:50:13.  dt =  14.223 /  0.889 s.  elapsed time =      46.8 s.
+t = 02/01/2023 16:00:10.  dt =  14.222 /  0.889 s.  elapsed time =      47.0 s.
+    Calling AED. t = 02/01/2023 16:00:10.
     Returning from AED.
     Writing NETCDF output. t = 02/01/2023 16:00:00.
-t = 02/01/2023 16:10:02.  dt =  14.173 /  0.886 s.  elapsed time =      46.3 s.
-    Calling AED. t = 02/01/2023 16:15:14.
+t = 02/01/2023 16:10:07.  dt =  14.210 /  0.888 s.  elapsed time =      47.6 s.
+    Calling AED. t = 02/01/2023 16:15:05.
     Returning from AED.
-t = 02/01/2023 16:20:12.  dt =  14.176 /  0.886 s.  elapsed time =      46.9 s.
-t = 02/01/2023 16:30:07.  dt =  14.170 /  0.886 s.  elapsed time =      47.1 s.
-    Calling AED. t = 02/01/2023 16:30:07.
+t = 02/01/2023 16:20:04.  dt =  14.211 /  0.888 s.  elapsed time =      48.3 s.
+t = 02/01/2023 16:30:00.  dt =  14.206 /  0.888 s.  elapsed time =      48.4 s.
+    Calling AED. t = 02/01/2023 16:30:00.
     Returning from AED.
-t = 02/01/2023 16:40:02.  dt =  14.180 /  0.886 s.  elapsed time =      47.6 s.
-    Calling AED. t = 02/01/2023 16:45:14.
+t = 02/01/2023 16:40:12.  dt =  14.214 /  0.888 s.  elapsed time =      49.0 s.
+    Calling AED. t = 02/01/2023 16:45:10.
     Returning from AED.
-t = 02/01/2023 16:50:12.  dt =  14.184 /  0.887 s.  elapsed time =      48.2 s.
-t = 02/01/2023 17:00:08.  dt =  14.196 /  0.887 s.  elapsed time =      48.4 s.
-    Calling AED. t = 02/01/2023 17:00:08.
+t = 02/01/2023 16:50:09.  dt =  14.221 /  0.889 s.  elapsed time =      49.6 s.
+t = 02/01/2023 17:00:06.  dt =  14.234 /  0.890 s.  elapsed time =      49.7 s.
+    Calling AED. t = 02/01/2023 17:00:06.
     Returning from AED.
     Writing NETCDF output. t = 02/01/2023 17:00:00.
-t = 02/01/2023 17:10:04.  dt =  14.206 /  0.888 s.  elapsed time =      49.0 s.
-    Calling AED. t = 02/01/2023 17:15:03.
+t = 02/01/2023 17:10:04.  dt =  14.245 /  0.890 s.  elapsed time =      50.3 s.
+    Calling AED. t = 02/01/2023 17:15:04.
     Returning from AED.
-t = 02/01/2023 17:20:01.  dt =  14.219 /  0.889 s.  elapsed time =      49.5 s.
-t = 02/01/2023 17:30:13.  dt =  14.225 /  0.889 s.  elapsed time =      49.7 s.
-    Calling AED. t = 02/01/2023 17:30:13.
+t = 02/01/2023 17:20:03.  dt =  14.259 /  0.891 s.  elapsed time =      50.9 s.
+t = 02/01/2023 17:30:02.  dt =  14.264 /  0.892 s.  elapsed time =      51.1 s.
+    Calling AED. t = 02/01/2023 17:30:02.
     Returning from AED.
-t = 02/01/2023 17:40:11.  dt =  14.244 /  0.890 s.  elapsed time =      50.3 s.
-    Calling AED. t = 02/01/2023 17:45:10.
+t = 02/01/2023 17:40:01.  dt =  14.284 /  0.893 s.  elapsed time =      51.6 s.
+    Calling AED. t = 02/01/2023 17:45:01.
     Returning from AED.
-t = 02/01/2023 17:50:09.  dt =  14.247 /  0.890 s.  elapsed time =      50.8 s.
-t = 02/01/2023 18:00:08.  dt =  14.258 /  0.891 s.  elapsed time =      51.0 s.
-    Calling AED. t = 02/01/2023 18:00:08.
+t = 02/01/2023 17:50:01.  dt =  14.287 /  0.893 s.  elapsed time =      52.3 s.
+t = 02/01/2023 18:00:02.  dt =  14.299 /  0.894 s.  elapsed time =      52.5 s.
+    Calling AED. t = 02/01/2023 18:00:02.
     Returning from AED.
     Writing NETCDF output. t = 02/01/2023 18:00:00.
     Writing NETCDF output. t = 02/01/2023 18:00:00.
-t = 02/01/2023 18:10:07.  dt =  14.271 /  0.892 s.  elapsed time =      52.2 s.
-    Calling AED. t = 02/01/2023 18:15:07.
+t = 02/01/2023 18:10:03.  dt =  14.313 /  0.895 s.  elapsed time =      53.6 s.
+    Calling AED. t = 02/01/2023 18:15:03.
     Returning from AED.
-t = 02/01/2023 18:20:06.  dt =  14.272 /  0.892 s.  elapsed time =      52.7 s.
-t = 02/01/2023 18:30:06.  dt =  14.284 /  0.893 s.  elapsed time =      52.9 s.
-    Calling AED. t = 02/01/2023 18:30:06.
+t = 02/01/2023 18:20:04.  dt =  14.314 /  0.895 s.  elapsed time =      54.2 s.
+t = 02/01/2023 18:30:05.  dt =  14.326 /  0.895 s.  elapsed time =      54.4 s.
+    Calling AED. t = 02/01/2023 18:30:05.
     Returning from AED.
-t = 02/01/2023 18:40:06.  dt =  14.283 /  0.893 s.  elapsed time =      53.5 s.
-    Calling AED. t = 02/01/2023 18:45:06.
+t = 02/01/2023 18:40:07.  dt =  14.326 /  0.895 s.  elapsed time =      55.0 s.
+    Calling AED. t = 02/01/2023 18:45:08.
     Returning from AED.
-t = 02/01/2023 18:50:06.  dt =  14.283 /  0.893 s.  elapsed time =      54.0 s.
-t = 02/01/2023 19:00:06.  dt =  14.290 /  0.893 s.  elapsed time =      54.2 s.
-    Calling AED. t = 02/01/2023 19:00:06.
+t = 02/01/2023 18:50:09.  dt =  14.326 /  0.895 s.  elapsed time =      55.7 s.
+t = 02/01/2023 19:00:11.  dt =  14.334 /  0.896 s.  elapsed time =      55.8 s.
+    Calling AED. t = 02/01/2023 19:00:11.
     Returning from AED.
     Writing NETCDF output. t = 02/01/2023 19:00:00.
-t = 02/01/2023 19:10:05.  dt =  14.277 /  0.892 s.  elapsed time =      54.8 s.
-    Calling AED. t = 02/01/2023 19:15:05.
+t = 02/01/2023 19:10:12.  dt =  14.321 /  0.895 s.  elapsed time =      56.4 s.
+    Calling AED. t = 02/01/2023 19:15:13.
     Returning from AED.
-t = 02/01/2023 19:20:05.  dt =  14.281 /  0.893 s.  elapsed time =      55.4 s.
-t = 02/01/2023 19:30:05.  dt =  14.279 /  0.892 s.  elapsed time =      55.5 s.
-    Calling AED. t = 02/01/2023 19:30:05.
+t = 02/01/2023 19:20:14.  dt =  14.326 /  0.895 s.  elapsed time =      57.0 s.
+t = 02/01/2023 19:30:01.  dt =  14.323 /  0.895 s.  elapsed time =      57.2 s.
+    Calling AED. t = 02/01/2023 19:30:01.
     Returning from AED.
-t = 02/01/2023 19:40:05.  dt =  14.268 /  0.892 s.  elapsed time =      56.1 s.
-    Calling AED. t = 02/01/2023 19:45:04.
+t = 02/01/2023 19:40:03.  dt =  14.314 /  0.895 s.  elapsed time =      57.8 s.
+    Calling AED. t = 02/01/2023 19:45:03.
     Returning from AED.
-t = 02/01/2023 19:50:04.  dt =  14.272 /  0.892 s.  elapsed time =      56.7 s.
-t = 02/01/2023 20:00:03.  dt =  14.265 /  0.892 s.  elapsed time =      56.8 s.
-    Calling AED. t = 02/01/2023 20:00:03.
+t = 02/01/2023 19:50:04.  dt =  14.317 /  0.895 s.  elapsed time =      58.3 s.
+t = 02/01/2023 20:00:05.  dt =  14.311 /  0.894 s.  elapsed time =      58.5 s.
+    Calling AED. t = 02/01/2023 20:00:05.
     Returning from AED.
     Writing NETCDF output. t = 02/01/2023 20:00:00.
-t = 02/01/2023 20:10:02.  dt =  14.257 /  0.891 s.  elapsed time =      57.4 s.
-    Calling AED. t = 02/01/2023 20:15:01.
+t = 02/01/2023 20:10:06.  dt =  14.302 /  0.894 s.  elapsed time =      59.2 s.
+    Calling AED. t = 02/01/2023 20:15:06.
     Returning from AED.
-t = 02/01/2023 20:20:01.  dt =  14.267 /  0.892 s.  elapsed time =      58.0 s.
-t = 02/01/2023 20:30:14.  dt =  14.255 /  0.891 s.  elapsed time =      58.2 s.
-    Calling AED. t = 02/01/2023 20:30:14.
+t = 02/01/2023 20:20:07.  dt =  14.314 /  0.895 s.  elapsed time =      59.7 s.
+t = 02/01/2023 20:30:08.  dt =  14.300 /  0.894 s.  elapsed time =      59.9 s.
+    Calling AED. t = 02/01/2023 20:30:08.
     Returning from AED.
-t = 02/01/2023 20:40:13.  dt =  14.271 /  0.892 s.  elapsed time =      58.7 s.
-    Calling AED. t = 02/01/2023 20:45:13.
+t = 02/01/2023 20:40:09.  dt =  14.318 /  0.895 s.  elapsed time =      60.8 s.
+    Calling AED. t = 02/01/2023 20:45:09.
     Returning from AED.
-t = 02/01/2023 20:50:13.  dt =  14.273 /  0.892 s.  elapsed time =      59.3 s.
-t = 02/01/2023 21:00:12.  dt =  14.276 /  0.892 s.  elapsed time =      59.4 s.
+t = 02/01/2023 20:50:10.  dt =  14.319 /  0.895 s.  elapsed time =      61.4 s.
+t = 02/01/2023 21:00:12.  dt =  14.323 /  0.895 s.  elapsed time =      61.6 s.
     Calling AED. t = 02/01/2023 21:00:12.
     Returning from AED.
     Writing NETCDF output. t = 02/01/2023 21:00:00.
     Writing NETCDF output. t = 02/01/2023 21:00:00.
-t = 02/01/2023 21:10:12.  dt =  14.299 /  0.894 s.  elapsed time =      60.6 s.
-    Calling AED. t = 02/01/2023 21:15:13.
+t = 02/01/2023 21:10:14.  dt =  14.345 /  0.897 s.  elapsed time =      62.7 s.
+    Calling AED. t = 02/01/2023 21:15:00.
     Returning from AED.
-t = 02/01/2023 21:20:13.  dt =  14.300 /  0.894 s.  elapsed time =      61.1 s.
-t = 02/01/2023 21:30:14.  dt =  14.312 /  0.894 s.  elapsed time =      61.3 s.
-    Calling AED. t = 02/01/2023 21:30:14.
+t = 02/01/2023 21:20:02.  dt =  14.347 /  0.897 s.  elapsed time =      63.4 s.
+t = 02/01/2023 21:30:05.  dt =  14.359 /  0.897 s.  elapsed time =      63.5 s.
+    Calling AED. t = 02/01/2023 21:30:05.
     Returning from AED.
-t = 02/01/2023 21:40:01.  dt =  14.334 /  0.896 s.  elapsed time =      61.9 s.
-    Calling AED. t = 02/01/2023 21:45:02.
+t = 02/01/2023 21:40:08.  dt =  14.382 /  0.899 s.  elapsed time =      64.1 s.
+    Calling AED. t = 02/01/2023 21:45:10.
     Returning from AED.
-t = 02/01/2023 21:50:03.  dt =  14.335 /  0.896 s.  elapsed time =      62.4 s.
-t = 02/01/2023 22:00:06.  dt =  14.356 /  0.897 s.  elapsed time =      62.6 s.
-    Calling AED. t = 02/01/2023 22:00:06.
+t = 02/01/2023 21:50:12.  dt =  14.383 /  0.899 s.  elapsed time =      64.7 s.
+t = 02/01/2023 22:00:03.  dt =  14.404 /  0.900 s.  elapsed time =      64.8 s.
+    Calling AED. t = 02/01/2023 22:00:03.
     Returning from AED.
     Writing NETCDF output. t = 02/01/2023 22:00:00.
-t = 02/01/2023 22:10:09.  dt =  14.369 /  0.898 s.  elapsed time =      63.2 s.
-    Calling AED. t = 02/01/2023 22:15:11.
+t = 02/01/2023 22:10:08.  dt =  14.416 /  0.901 s.  elapsed time =      65.4 s.
+    Calling AED. t = 02/01/2023 22:15:10.
     Returning from AED.
-t = 02/01/2023 22:20:12.  dt =  14.373 /  0.898 s.  elapsed time =      63.8 s.
-t = 02/01/2023 22:30:02.  dt =  14.393 /  0.900 s.  elapsed time =      63.9 s.
-    Calling AED. t = 02/01/2023 22:30:02.
+t = 02/01/2023 22:20:13.  dt =  14.422 /  0.901 s.  elapsed time =      66.0 s.
+t = 02/01/2023 22:30:05.  dt =  14.441 /  0.903 s.  elapsed time =      66.2 s.
+    Calling AED. t = 02/01/2023 22:30:05.
     Returning from AED.
-t = 02/01/2023 22:40:07.  dt =  14.394 /  0.900 s.  elapsed time =      64.5 s.
-    Calling AED. t = 02/01/2023 22:45:09.
+t = 02/01/2023 22:40:11.  dt =  14.442 /  0.903 s.  elapsed time =      66.8 s.
+    Calling AED. t = 02/01/2023 22:45:00.
     Returning from AED.
-t = 02/01/2023 22:50:12.  dt =  14.403 /  0.900 s.  elapsed time =      65.1 s.
-t = 02/01/2023 23:00:02.  dt =  14.412 /  0.901 s.  elapsed time =      65.2 s.
-    Calling AED. t = 02/01/2023 23:00:02.
+t = 02/01/2023 22:50:04.  dt =  14.451 /  0.903 s.  elapsed time =      67.4 s.
+t = 02/01/2023 23:00:11.  dt =  14.460 /  0.904 s.  elapsed time =      67.5 s.
+    Calling AED. t = 02/01/2023 23:00:11.
     Returning from AED.
     Writing NETCDF output. t = 02/01/2023 23:00:00.
-t = 02/01/2023 23:10:07.  dt =  14.411 /  0.901 s.  elapsed time =      65.8 s.
-    Calling AED. t = 02/01/2023 23:15:10.
+t = 02/01/2023 23:10:04.  dt =  14.459 /  0.904 s.  elapsed time =      68.1 s.
+    Calling AED. t = 02/01/2023 23:15:07.
     Returning from AED.
-t = 02/01/2023 23:20:13.  dt =  14.417 /  0.901 s.  elapsed time =      66.4 s.
-t = 02/01/2023 23:30:04.  dt =  14.419 /  0.901 s.  elapsed time =      66.5 s.
+t = 02/01/2023 23:20:11.  dt =  14.465 /  0.904 s.  elapsed time =      68.7 s.
+t = 02/01/2023 23:30:04.  dt =  14.466 /  0.904 s.  elapsed time =      68.9 s.
     Calling AED. t = 02/01/2023 23:30:04.
     Returning from AED.
-t = 02/01/2023 23:40:10.  dt =  14.414 /  0.901 s.  elapsed time =      67.1 s.
-    Calling AED. t = 02/01/2023 23:45:12.
+t = 02/01/2023 23:40:12.  dt =  14.461 /  0.904 s.  elapsed time =      69.4 s.
+    Calling AED. t = 02/01/2023 23:45:01.
     Returning from AED.
-t = 02/01/2023 23:50:01.  dt =  14.416 /  0.901 s.  elapsed time =      67.6 s.
-t = 03/01/2023 00:00:06.  dt =  14.409 /  0.901 s.  elapsed time =      67.8 s.
-    Calling AED. t = 03/01/2023 00:00:06.
+t = 02/01/2023 23:50:05.  dt =  14.462 /  0.904 s.  elapsed time =      70.0 s.
+t = 03/01/2023 00:00:12.  dt =  14.456 /  0.903 s.  elapsed time =      70.2 s.
+    Calling AED. t = 03/01/2023 00:00:12.
     Returning from AED.
     Writing NETCDF output. t = 03/01/2023 00:00:00.
     Writing NETCDF output. t = 03/01/2023 00:00:00.
-t = 03/01/2023 00:10:11.  dt =  14.401 /  0.900 s.  elapsed time =      69.3 s.
-    Calling AED. t = 03/01/2023 00:15:13.
+t = 03/01/2023 00:10:05.  dt =  14.448 /  0.903 s.  elapsed time =      71.4 s.
+    Calling AED. t = 03/01/2023 00:15:08.
     Returning from AED.
-t = 03/01/2023 00:20:01.  dt =  14.395 /  0.900 s.  elapsed time =      69.9 s.
-t = 03/01/2023 00:30:05.  dt =  14.382 /  0.899 s.  elapsed time =      70.0 s.
-    Calling AED. t = 03/01/2023 00:30:05.
+t = 03/01/2023 00:20:11.  dt =  14.442 /  0.903 s.  elapsed time =      71.9 s.
+t = 03/01/2023 00:30:03.  dt =  14.428 /  0.902 s.  elapsed time =      72.1 s.
+    Calling AED. t = 03/01/2023 00:30:03.
     Returning from AED.
-t = 03/01/2023 00:40:09.  dt =  14.369 /  0.898 s.  elapsed time =      70.6 s.
+t = 03/01/2023 00:40:09.  dt =  14.416 /  0.901 s.  elapsed time =      72.6 s.
     Calling AED. t = 03/01/2023 00:45:11.
     Returning from AED.
-t = 03/01/2023 00:50:12.  dt =  14.353 /  0.897 s.  elapsed time =      71.1 s.
-t = 03/01/2023 01:00:00.  dt =  14.335 /  0.896 s.  elapsed time =      71.3 s.
-    Calling AED. t = 03/01/2023 01:00:00.
+t = 03/01/2023 00:50:14.  dt =  14.397 /  0.900 s.  elapsed time =      73.1 s.
+t = 03/01/2023 01:00:04.  dt =  14.381 /  0.899 s.  elapsed time =      73.3 s.
+    Calling AED. t = 03/01/2023 01:00:04.
     Returning from AED.
     Writing NETCDF output. t = 03/01/2023 01:00:00.
-t = 03/01/2023 01:10:02.  dt =  14.316 /  0.895 s.  elapsed time =      71.8 s.
-    Calling AED. t = 03/01/2023 01:15:03.
+t = 03/01/2023 01:10:07.  dt =  14.359 /  0.897 s.  elapsed time =      73.9 s.
+    Calling AED. t = 03/01/2023 01:15:09.
     Returning from AED.
-t = 03/01/2023 01:20:03.  dt =  14.304 /  0.894 s.  elapsed time =      72.4 s.
-t = 03/01/2023 01:30:03.  dt =  14.291 /  0.893 s.  elapsed time =      72.6 s.
-    Calling AED. t = 03/01/2023 01:30:03.
+t = 03/01/2023 01:20:10.  dt =  14.348 /  0.897 s.  elapsed time =      74.5 s.
+t = 03/01/2023 01:30:12.  dt =  14.333 /  0.896 s.  elapsed time =      74.7 s.
+    Calling AED. t = 03/01/2023 01:30:12.
     Returning from AED.
-t = 03/01/2023 01:40:04.  dt =  14.296 /  0.894 s.  elapsed time =      73.1 s.
-    Calling AED. t = 03/01/2023 01:45:04.
+t = 03/01/2023 01:40:00.  dt =  14.341 /  0.896 s.  elapsed time =      75.3 s.
+    Calling AED. t = 03/01/2023 01:45:01.
     Returning from AED.
-t = 03/01/2023 01:50:04.  dt =  14.294 /  0.893 s.  elapsed time =      73.7 s.
-t = 03/01/2023 02:00:05.  dt =  14.304 /  0.894 s.  elapsed time =      73.9 s.
+t = 03/01/2023 01:50:02.  dt =  14.336 /  0.896 s.  elapsed time =      75.9 s.
+t = 03/01/2023 02:00:05.  dt =  14.348 /  0.897 s.  elapsed time =      76.1 s.
     Calling AED. t = 03/01/2023 02:00:05.
     Returning from AED.
     Writing NETCDF output. t = 03/01/2023 02:00:00.
-t = 03/01/2023 02:10:06.  dt =  14.311 /  0.894 s.  elapsed time =      74.5 s.
-    Calling AED. t = 03/01/2023 02:15:06.
+t = 03/01/2023 02:10:07.  dt =  14.353 /  0.897 s.  elapsed time =      76.7 s.
+    Calling AED. t = 03/01/2023 02:15:09.
     Returning from AED.
-t = 03/01/2023 02:20:07.  dt =  14.313 /  0.895 s.  elapsed time =      75.0 s.
-t = 03/01/2023 02:30:08.  dt =  14.318 /  0.895 s.  elapsed time =      75.2 s.
-    Calling AED. t = 03/01/2023 02:30:08.
+t = 03/01/2023 02:20:10.  dt =  14.357 /  0.897 s.  elapsed time =      77.2 s.
+t = 03/01/2023 02:30:14.  dt =  14.360 /  0.897 s.  elapsed time =      77.4 s.
+    Calling AED. t = 03/01/2023 02:30:14.
     Returning from AED.
-t = 03/01/2023 02:40:09.  dt =  14.313 /  0.895 s.  elapsed time =      75.8 s.
-    Calling AED. t = 03/01/2023 02:45:10.
+t = 03/01/2023 02:40:02.  dt =  14.357 /  0.897 s.  elapsed time =      78.0 s.
+    Calling AED. t = 03/01/2023 02:45:04.
     Returning from AED.
-t = 03/01/2023 02:50:10.  dt =  14.306 /  0.894 s.  elapsed time =      76.3 s.
-t = 03/01/2023 03:00:11.  dt =  14.295 /  0.893 s.  elapsed time =      76.5 s.
-    Calling AED. t = 03/01/2023 03:00:11.
+t = 03/01/2023 02:50:05.  dt =  14.347 /  0.897 s.  elapsed time =      78.6 s.
+t = 03/01/2023 03:00:07.  dt =  14.338 /  0.896 s.  elapsed time =      78.7 s.
+    Calling AED. t = 03/01/2023 03:00:07.
     Returning from AED.
     Writing NETCDF output. t = 03/01/2023 03:00:00.
     Writing NETCDF output. t = 03/01/2023 03:00:00.
-t = 03/01/2023 03:10:11.  dt =  14.287 /  0.893 s.  elapsed time =      77.6 s.
-    Calling AED. t = 03/01/2023 03:15:11.
+t = 03/01/2023 03:10:09.  dt =  14.328 /  0.895 s.  elapsed time =      79.9 s.
+    Calling AED. t = 03/01/2023 03:15:10.
     Returning from AED.
-t = 03/01/2023 03:20:11.  dt =  14.273 /  0.892 s.  elapsed time =      78.2 s.
-t = 03/01/2023 03:30:10.  dt =  14.269 /  0.892 s.  elapsed time =      78.4 s.
-    Calling AED. t = 03/01/2023 03:30:10.
+t = 03/01/2023 03:20:11.  dt =  14.316 /  0.895 s.  elapsed time =      80.4 s.
+t = 03/01/2023 03:30:12.  dt =  14.309 /  0.894 s.  elapsed time =      80.6 s.
+    Calling AED. t = 03/01/2023 03:30:12.
     Returning from AED.
-t = 03/01/2023 03:40:09.  dt =  14.263 /  0.891 s.  elapsed time =      78.9 s.
-    Calling AED. t = 03/01/2023 03:45:09.
+t = 03/01/2023 03:40:13.  dt =  14.306 /  0.894 s.  elapsed time =      81.3 s.
+    Calling AED. t = 03/01/2023 03:45:13.
     Returning from AED.
-t = 03/01/2023 03:50:08.  dt =  14.262 /  0.891 s.  elapsed time =      79.5 s.
-t = 03/01/2023 04:00:07.  dt =  14.263 /  0.891 s.  elapsed time =      79.7 s.
-    Calling AED. t = 03/01/2023 04:00:07.
+t = 03/01/2023 03:50:14.  dt =  14.302 /  0.894 s.  elapsed time =      81.8 s.
+t = 03/01/2023 04:00:14.  dt =  14.306 /  0.894 s.  elapsed time =      82.0 s.
+    Calling AED. t = 03/01/2023 04:00:14.
     Returning from AED.
     Writing NETCDF output. t = 03/01/2023 04:00:00.
-t = 03/01/2023 04:10:06.  dt =  14.259 /  0.891 s.  elapsed time =      80.3 s.
-    Calling AED. t = 03/01/2023 04:15:06.
+t = 03/01/2023 04:10:01.  dt =  14.299 /  0.894 s.  elapsed time =      82.6 s.
+    Calling AED. t = 03/01/2023 04:15:01.
     Returning from AED.
-t = 03/01/2023 04:20:05.  dt =  14.258 /  0.891 s.  elapsed time =      80.8 s.
-t = 03/01/2023 04:30:04.  dt =  14.259 /  0.891 s.  elapsed time =      81.0 s.
-    Calling AED. t = 03/01/2023 04:30:04.
+t = 03/01/2023 04:20:01.  dt =  14.302 /  0.894 s.  elapsed time =      83.2 s.
+t = 03/01/2023 04:30:02.  dt =  14.297 /  0.894 s.  elapsed time =      83.4 s.
+    Calling AED. t = 03/01/2023 04:30:02.
     Returning from AED.
-t = 03/01/2023 04:40:03.  dt =  14.250 /  0.891 s.  elapsed time =      81.5 s.
+t = 03/01/2023 04:40:02.  dt =  14.294 /  0.893 s.  elapsed time =      83.9 s.
     Calling AED. t = 03/01/2023 04:45:02.
     Returning from AED.
-t = 03/01/2023 04:50:01.  dt =  14.250 /  0.891 s.  elapsed time =      82.1 s.
-t = 03/01/2023 05:00:14.  dt =  14.240 /  0.890 s.  elapsed time =      82.3 s.
-    Calling AED. t = 03/01/2023 05:00:14.
+t = 03/01/2023 04:50:03.  dt =  14.289 /  0.893 s.  elapsed time =      84.6 s.
+t = 03/01/2023 05:00:02.  dt =  14.284 /  0.893 s.  elapsed time =      84.8 s.
+    Calling AED. t = 03/01/2023 05:00:02.
     Returning from AED.
     Writing NETCDF output. t = 03/01/2023 05:00:00.
-t = 03/01/2023 05:10:12.  dt =  14.238 /  0.890 s.  elapsed time =      82.9 s.
-    Calling AED. t = 03/01/2023 05:15:11.
+t = 03/01/2023 05:10:02.  dt =  14.276 /  0.892 s.  elapsed time =      85.4 s.
+    Calling AED. t = 03/01/2023 05:15:02.
     Returning from AED.
-t = 03/01/2023 05:20:10.  dt =  14.234 /  0.890 s.  elapsed time =      83.4 s.
-t = 03/01/2023 05:30:07.  dt =  14.231 /  0.889 s.  elapsed time =      83.6 s.
-    Calling AED. t = 03/01/2023 05:30:07.
+t = 03/01/2023 05:20:02.  dt =  14.277 /  0.892 s.  elapsed time =      86.3 s.
+t = 03/01/2023 05:30:01.  dt =  14.270 /  0.892 s.  elapsed time =      86.5 s.
+    Calling AED. t = 03/01/2023 05:30:01.
     Returning from AED.
-t = 03/01/2023 05:40:05.  dt =  14.230 /  0.889 s.  elapsed time =      84.2 s.
-    Calling AED. t = 03/01/2023 05:45:04.
+t = 03/01/2023 05:40:01.  dt =  14.274 /  0.892 s.  elapsed time =      87.1 s.
+    Calling AED. t = 03/01/2023 05:45:01.
     Returning from AED.
-t = 03/01/2023 05:50:03.  dt =  14.234 /  0.890 s.  elapsed time =      84.7 s.
-t = 03/01/2023 06:00:01.  dt =  14.233 /  0.890 s.  elapsed time =      84.9 s.
-    Calling AED. t = 03/01/2023 06:00:01.
+t = 03/01/2023 05:50:00.  dt =  14.273 /  0.892 s.  elapsed time =      87.7 s.
+t = 03/01/2023 06:00:14.  dt =  14.276 /  0.892 s.  elapsed time =      87.9 s.
+    Calling AED. t = 03/01/2023 06:00:14.
     Returning from AED.
     Writing NETCDF output. t = 03/01/2023 06:00:00.
     Writing NETCDF output. t = 03/01/2023 06:00:00.
-t = 03/01/2023 06:10:13.  dt =  14.240 /  0.890 s.  elapsed time =      86.1 s.
-    Calling AED. t = 03/01/2023 06:15:12.
+t = 03/01/2023 06:10:14.  dt =  14.279 /  0.892 s.  elapsed time =      89.0 s.
+    Calling AED. t = 03/01/2023 06:15:14.
     Returning from AED.
-t = 03/01/2023 06:20:11.  dt =  14.245 /  0.890 s.  elapsed time =      86.6 s.
-t = 03/01/2023 06:30:10.  dt =  14.254 /  0.891 s.  elapsed time =      86.8 s.
-    Calling AED. t = 03/01/2023 06:30:10.
+t = 03/01/2023 06:20:14.  dt =  14.288 /  0.893 s.  elapsed time =      89.6 s.
+t = 03/01/2023 06:30:14.  dt =  14.294 /  0.893 s.  elapsed time =      89.8 s.
+    Calling AED. t = 03/01/2023 06:30:14.
     Returning from AED.
-t = 03/01/2023 06:40:09.  dt =  14.269 /  0.892 s.  elapsed time =      87.4 s.
-    Calling AED. t = 03/01/2023 06:45:08.
+t = 03/01/2023 06:40:00.  dt =  14.312 /  0.895 s.  elapsed time =      90.3 s.
+    Calling AED. t = 03/01/2023 06:45:01.
     Returning from AED.
-t = 03/01/2023 06:50:08.  dt =  14.283 /  0.893 s.  elapsed time =      87.9 s.
-t = 03/01/2023 07:00:08.  dt =  14.297 /  0.894 s.  elapsed time =      88.1 s.
-    Calling AED. t = 03/01/2023 07:00:08.
+t = 03/01/2023 06:50:02.  dt =  14.323 /  0.895 s.  elapsed time =      91.0 s.
+t = 03/01/2023 07:00:04.  dt =  14.340 /  0.896 s.  elapsed time =      91.3 s.
+    Calling AED. t = 03/01/2023 07:00:04.
     Returning from AED.
     Writing NETCDF output. t = 03/01/2023 07:00:00.
-t = 03/01/2023 07:10:09.  dt =  14.317 /  0.895 s.  elapsed time =      88.7 s.
-    Calling AED. t = 03/01/2023 07:15:10.
+t = 03/01/2023 07:10:06.  dt =  14.358 /  0.897 s.  elapsed time =      92.0 s.
+    Calling AED. t = 03/01/2023 07:15:08.
     Returning from AED.
-t = 03/01/2023 07:20:11.  dt =  14.322 /  0.895 s.  elapsed time =      89.2 s.
-t = 03/01/2023 07:30:13.  dt =  14.336 /  0.896 s.  elapsed time =      89.4 s.
+t = 03/01/2023 07:20:09.  dt =  14.366 /  0.898 s.  elapsed time =      92.6 s.
+t = 03/01/2023 07:30:13.  dt =  14.377 /  0.899 s.  elapsed time =      92.8 s.
     Calling AED. t = 03/01/2023 07:30:13.
     Returning from AED.
-t = 03/01/2023 07:40:00.  dt =  14.333 /  0.896 s.  elapsed time =      90.0 s.
-    Calling AED. t = 03/01/2023 07:45:01.
+t = 03/01/2023 07:40:02.  dt =  14.376 /  0.899 s.  elapsed time =      93.4 s.
+    Calling AED. t = 03/01/2023 07:45:04.
     Returning from AED.
-t = 03/01/2023 07:50:02.  dt =  14.333 /  0.896 s.  elapsed time =      90.5 s.
-t = 03/01/2023 08:00:04.  dt =  14.327 /  0.895 s.  elapsed time =      90.7 s.
-    Calling AED. t = 03/01/2023 08:00:04.
+t = 03/01/2023 07:50:06.  dt =  14.374 /  0.898 s.  elapsed time =      93.9 s.
+t = 03/01/2023 08:00:10.  dt =  14.369 /  0.898 s.  elapsed time =      94.1 s.
+    Calling AED. t = 03/01/2023 08:00:10.
     Returning from AED.
     Writing NETCDF output. t = 03/01/2023 08:00:00.
-t = 03/01/2023 08:10:06.  dt =  14.321 /  0.895 s.  elapsed time =      91.3 s.
-    Calling AED. t = 03/01/2023 08:15:06.
+t = 03/01/2023 08:10:13.  dt =  14.361 /  0.898 s.  elapsed time =      94.7 s.
+    Calling AED. t = 03/01/2023 08:15:00.
     Returning from AED.
-t = 03/01/2023 08:20:07.  dt =  14.307 /  0.894 s.  elapsed time =      91.9 s.
-t = 03/01/2023 08:30:08.  dt =  14.303 /  0.894 s.  elapsed time =      92.0 s.
-    Calling AED. t = 03/01/2023 08:30:08.
+t = 03/01/2023 08:20:02.  dt =  14.350 /  0.897 s.  elapsed time =      95.3 s.
+t = 03/01/2023 08:30:04.  dt =  14.343 /  0.896 s.  elapsed time =      95.5 s.
+    Calling AED. t = 03/01/2023 08:30:04.
     Returning from AED.
-t = 03/01/2023 08:40:08.  dt =  14.284 /  0.893 s.  elapsed time =      92.6 s.
-    Calling AED. t = 03/01/2023 08:45:08.
+t = 03/01/2023 08:40:06.  dt =  14.326 /  0.895 s.  elapsed time =      96.1 s.
+    Calling AED. t = 03/01/2023 08:45:07.
     Returning from AED.
-t = 03/01/2023 08:50:08.  dt =  14.275 /  0.892 s.  elapsed time =      93.2 s.
-t = 03/01/2023 09:00:07.  dt =  14.261 /  0.891 s.  elapsed time =      93.3 s.
-    Calling AED. t = 03/01/2023 09:00:07.
+t = 03/01/2023 08:50:08.  dt =  14.315 /  0.895 s.  elapsed time =      96.7 s.
+t = 03/01/2023 09:00:09.  dt =  14.303 /  0.894 s.  elapsed time =      96.8 s.
+    Calling AED. t = 03/01/2023 09:00:09.
     Returning from AED.
     Writing NETCDF output. t = 03/01/2023 09:00:00.
     Writing NETCDF output. t = 03/01/2023 09:00:00.
-t = 03/01/2023 09:10:06.  dt =  14.243 /  0.890 s.  elapsed time =      95.1 s.
-    Calling AED. t = 03/01/2023 09:15:05.
+t = 03/01/2023 09:10:09.  dt =  14.282 /  0.893 s.  elapsed time =      98.0 s.
+    Calling AED. t = 03/01/2023 09:15:09.
     Returning from AED.
-t = 03/01/2023 09:20:04.  dt =  14.240 /  0.890 s.  elapsed time =      95.7 s.
-t = 03/01/2023 09:30:01.  dt =  14.229 /  0.889 s.  elapsed time =      95.8 s.
-    Calling AED. t = 03/01/2023 09:30:01.
+t = 03/01/2023 09:20:09.  dt =  14.281 /  0.893 s.  elapsed time =      98.6 s.
+t = 03/01/2023 09:30:08.  dt =  14.268 /  0.892 s.  elapsed time =      98.8 s.
+    Calling AED. t = 03/01/2023 09:30:08.
     Returning from AED.
-t = 03/01/2023 09:40:14.  dt =  14.236 /  0.890 s.  elapsed time =      96.4 s.
-    Calling AED. t = 03/01/2023 09:45:13.
+t = 03/01/2023 09:40:08.  dt =  14.277 /  0.892 s.  elapsed time =      99.4 s.
+    Calling AED. t = 03/01/2023 09:45:08.
     Returning from AED.
-t = 03/01/2023 09:50:12.  dt =  14.239 /  0.890 s.  elapsed time =      96.9 s.
-t = 03/01/2023 10:00:10.  dt =  14.245 /  0.890 s.  elapsed time =      97.1 s.
-    Calling AED. t = 03/01/2023 10:00:10.
+t = 03/01/2023 09:50:07.  dt =  14.279 /  0.892 s.  elapsed time =      99.9 s.
+t = 03/01/2023 10:00:07.  dt =  14.286 /  0.893 s.  elapsed time =     100.1 s.
+    Calling AED. t = 03/01/2023 10:00:07.
     Returning from AED.
     Writing NETCDF output. t = 03/01/2023 10:00:00.
-t = 03/01/2023 10:10:08.  dt =  14.257 /  0.891 s.  elapsed time =      97.7 s.
+t = 03/01/2023 10:10:08.  dt =  14.297 /  0.894 s.  elapsed time =     100.7 s.
     Calling AED. t = 03/01/2023 10:15:08.
     Returning from AED.
-t = 03/01/2023 10:20:07.  dt =  14.261 /  0.891 s.  elapsed time =      98.3 s.
-t = 03/01/2023 10:30:06.  dt =  14.267 /  0.892 s.  elapsed time =      98.5 s.
-    Calling AED. t = 03/01/2023 10:30:06.
+t = 03/01/2023 10:20:08.  dt =  14.302 /  0.894 s.  elapsed time =     101.3 s.
+t = 03/01/2023 10:30:09.  dt =  14.307 /  0.894 s.  elapsed time =     101.4 s.
+    Calling AED. t = 03/01/2023 10:30:09.
     Returning from AED.
-t = 03/01/2023 10:40:06.  dt =  14.276 /  0.892 s.  elapsed time =      99.0 s.
-    Calling AED. t = 03/01/2023 10:45:06.
+t = 03/01/2023 10:40:10.  dt =  14.317 /  0.895 s.  elapsed time =     102.1 s.
+    Calling AED. t = 03/01/2023 10:45:11.
     Returning from AED.
-t = 03/01/2023 10:50:05.  dt =  14.277 /  0.892 s.  elapsed time =      99.6 s.
-t = 03/01/2023 11:00:05.  dt =  14.282 /  0.893 s.  elapsed time =      99.8 s.
-    Calling AED. t = 03/01/2023 11:00:05.
+t = 03/01/2023 10:50:11.  dt =  14.318 /  0.895 s.  elapsed time =     102.6 s.
+t = 03/01/2023 11:00:13.  dt =  14.322 /  0.895 s.  elapsed time =     102.8 s.
+    Calling AED. t = 03/01/2023 11:00:13.
     Returning from AED.
     Writing NETCDF output. t = 03/01/2023 11:00:00.
-t = 03/01/2023 11:10:05.  dt =  14.287 /  0.893 s.  elapsed time =     100.3 s.
-    Calling AED. t = 03/01/2023 11:15:05.
+t = 03/01/2023 11:10:00.  dt =  14.328 /  0.896 s.  elapsed time =     103.4 s.
+    Calling AED. t = 03/01/2023 11:15:01.
     Returning from AED.
-t = 03/01/2023 11:20:05.  dt =  14.279 /  0.892 s.  elapsed time =     100.9 s.
-t = 03/01/2023 11:30:05.  dt =  14.282 /  0.893 s.  elapsed time =     101.1 s.
-    Calling AED. t = 03/01/2023 11:30:05.
+t = 03/01/2023 11:20:02.  dt =  14.320 /  0.895 s.  elapsed time =     104.0 s.
+t = 03/01/2023 11:30:03.  dt =  14.323 /  0.895 s.  elapsed time =     104.1 s.
+    Calling AED. t = 03/01/2023 11:30:03.
     Returning from AED.
-t = 03/01/2023 11:40:04.  dt =  14.260 /  0.891 s.  elapsed time =     101.6 s.
-    Calling AED. t = 03/01/2023 11:45:04.
+t = 03/01/2023 11:40:04.  dt =  14.300 /  0.894 s.  elapsed time =     104.7 s.
+    Calling AED. t = 03/01/2023 11:45:05.
     Returning from AED.
-t = 03/01/2023 11:50:03.  dt =  14.247 /  0.890 s.  elapsed time =     102.2 s.
-t = 03/01/2023 12:00:01.  dt =  14.227 /  0.889 s.  elapsed time =     102.4 s.
-    Calling AED. t = 03/01/2023 12:00:01.
+t = 03/01/2023 11:50:05.  dt =  14.288 /  0.893 s.  elapsed time =     105.4 s.
+t = 03/01/2023 12:00:04.  dt =  14.266 /  0.892 s.  elapsed time =     105.5 s.
+    Calling AED. t = 03/01/2023 12:00:04.
     Returning from AED.
     Writing NETCDF output. t = 03/01/2023 12:00:00.
     Writing NETCDF output. t = 03/01/2023 12:00:00.
-t = 03/01/2023 12:10:12.  dt =  14.201 /  0.888 s.  elapsed time =     103.5 s.
-    Calling AED. t = 03/01/2023 12:15:10.
+t = 03/01/2023 12:10:03.  dt =  14.242 /  0.890 s.  elapsed time =     106.7 s.
+    Calling AED. t = 03/01/2023 12:15:02.
     Returning from AED.
-t = 03/01/2023 12:20:08.  dt =  14.191 /  0.887 s.  elapsed time =     104.1 s.
-t = 03/01/2023 12:30:03.  dt =  14.176 /  0.886 s.  elapsed time =     104.3 s.
-    Calling AED. t = 03/01/2023 12:30:03.
+t = 03/01/2023 12:20:01.  dt =  14.229 /  0.889 s.  elapsed time =     107.3 s.
+t = 03/01/2023 12:30:12.  dt =  14.211 /  0.888 s.  elapsed time =     107.5 s.
+    Calling AED. t = 03/01/2023 12:30:12.
     Returning from AED.
-t = 03/01/2023 12:40:13.  dt =  14.185 /  0.887 s.  elapsed time =     104.8 s.
-    Calling AED. t = 03/01/2023 12:45:11.
+t = 03/01/2023 12:40:05.  dt =  14.218 /  0.889 s.  elapsed time =     108.0 s.
+    Calling AED. t = 03/01/2023 12:45:01.
     Returning from AED.
-t = 03/01/2023 12:50:09.  dt =  14.191 /  0.887 s.  elapsed time =     105.4 s.
-t = 03/01/2023 13:00:06.  dt =  14.210 /  0.888 s.  elapsed time =     105.6 s.
-    Calling AED. t = 03/01/2023 13:00:06.
+t = 03/01/2023 12:50:12.  dt =  14.219 /  0.889 s.  elapsed time =     108.7 s.
+t = 03/01/2023 13:00:10.  dt =  14.246 /  0.890 s.  elapsed time =     108.9 s.
+    Calling AED. t = 03/01/2023 13:00:10.
     Returning from AED.
     Writing NETCDF output. t = 03/01/2023 13:00:00.
-t = 03/01/2023 13:10:03.  dt =  14.219 /  0.889 s.  elapsed time =     106.2 s.
-    Calling AED. t = 03/01/2023 13:15:01.
+t = 03/01/2023 13:10:09.  dt =  14.261 /  0.891 s.  elapsed time =     109.5 s.
+    Calling AED. t = 03/01/2023 13:15:09.
     Returning from AED.
-t = 03/01/2023 13:20:00.  dt =  14.237 /  0.890 s.  elapsed time =     106.7 s.
-t = 03/01/2023 13:30:13.  dt =  14.243 /  0.890 s.  elapsed time =     106.9 s.
-    Calling AED. t = 03/01/2023 13:30:13.
+t = 03/01/2023 13:20:08.  dt =  14.275 /  0.892 s.  elapsed time =     110.1 s.
+t = 03/01/2023 13:30:08.  dt =  14.285 /  0.893 s.  elapsed time =     110.3 s.
+    Calling AED. t = 03/01/2023 13:30:08.
     Returning from AED.
-t = 03/01/2023 13:40:11.  dt =  14.257 /  0.891 s.  elapsed time =     107.5 s.
-    Calling AED. t = 03/01/2023 13:45:11.
+t = 03/01/2023 13:40:08.  dt =  14.294 /  0.893 s.  elapsed time =     110.8 s.
+    Calling AED. t = 03/01/2023 13:45:08.
     Returning from AED.
-t = 03/01/2023 13:50:10.  dt =  14.259 /  0.891 s.  elapsed time =     108.1 s.
-t = 03/01/2023 14:00:09.  dt =  14.265 /  0.892 s.  elapsed time =     108.2 s.
+t = 03/01/2023 13:50:09.  dt =  14.301 /  0.894 s.  elapsed time =     111.4 s.
+t = 03/01/2023 14:00:09.  dt =  14.303 /  0.894 s.  elapsed time =     112.1 s.
     Calling AED. t = 03/01/2023 14:00:09.
     Returning from AED.
     Writing NETCDF output. t = 03/01/2023 14:00:00.
-t = 03/01/2023 14:10:08.  dt =  14.270 /  0.892 s.  elapsed time =     108.8 s.
-    Calling AED. t = 03/01/2023 14:15:08.
+t = 03/01/2023 14:10:10.  dt =  14.313 /  0.895 s.  elapsed time =     112.8 s.
+    Calling AED. t = 03/01/2023 14:15:11.
     Returning from AED.
-t = 03/01/2023 14:20:08.  dt =  14.274 /  0.892 s.  elapsed time =     109.4 s.
-t = 03/01/2023 14:30:07.  dt =  14.279 /  0.892 s.  elapsed time =     109.6 s.
-    Calling AED. t = 03/01/2023 14:30:07.
+t = 03/01/2023 14:20:11.  dt =  14.312 /  0.894 s.  elapsed time =     113.5 s.
+t = 03/01/2023 14:30:13.  dt =  14.322 /  0.895 s.  elapsed time =     113.6 s.
+    Calling AED. t = 03/01/2023 14:30:13.
     Returning from AED.
-t = 03/01/2023 14:40:07.  dt =  14.280 /  0.892 s.  elapsed time =     110.1 s.
-    Calling AED. t = 03/01/2023 14:45:07.
+t = 03/01/2023 14:40:14.  dt =  14.317 /  0.895 s.  elapsed time =     114.2 s.
+    Calling AED. t = 03/01/2023 14:45:01.
     Returning from AED.
-t = 03/01/2023 14:50:07.  dt =  14.284 /  0.893 s.  elapsed time =     110.7 s.
-t = 03/01/2023 15:00:07.  dt =  14.288 /  0.893 s.  elapsed time =     110.9 s.
-    Calling AED. t = 03/01/2023 15:00:07.
+t = 03/01/2023 14:50:02.  dt =  14.328 /  0.895 s.  elapsed time =     114.7 s.
+t = 03/01/2023 15:00:03.  dt =  14.327 /  0.895 s.  elapsed time =     114.9 s.
+    Calling AED. t = 03/01/2023 15:00:03.
     Returning from AED.
     Writing NETCDF output. t = 03/01/2023 15:00:00.
     Writing NETCDF output. t = 03/01/2023 15:00:00.
-t = 03/01/2023 15:10:07.  dt =  14.283 /  0.893 s.  elapsed time =     112.0 s.
-    Calling AED. t = 03/01/2023 15:15:07.
+t = 03/01/2023 15:10:05.  dt =  14.328 /  0.896 s.  elapsed time =     116.1 s.
+    Calling AED. t = 03/01/2023 15:15:06.
     Returning from AED.
-t = 03/01/2023 15:20:07.  dt =  14.287 /  0.893 s.  elapsed time =     112.6 s.
-t = 03/01/2023 15:30:07.  dt =  14.286 /  0.893 s.  elapsed time =     112.7 s.
-    Calling AED. t = 03/01/2023 15:30:07.
+t = 03/01/2023 15:20:07.  dt =  14.328 /  0.896 s.  elapsed time =     116.6 s.
+t = 03/01/2023 15:30:09.  dt =  14.335 /  0.896 s.  elapsed time =     116.8 s.
+    Calling AED. t = 03/01/2023 15:30:09.
     Returning from AED.
-t = 03/01/2023 15:40:07.  dt =  14.282 /  0.893 s.  elapsed time =     113.3 s.
-    Calling AED. t = 03/01/2023 15:45:07.
+t = 03/01/2023 15:40:11.  dt =  14.330 /  0.896 s.  elapsed time =     117.4 s.
+    Calling AED. t = 03/01/2023 15:45:12.
     Returning from AED.
-t = 03/01/2023 15:50:07.  dt =  14.282 /  0.893 s.  elapsed time =     113.9 s.
-t = 03/01/2023 16:00:06.  dt =  14.281 /  0.893 s.  elapsed time =     114.0 s.
-    Calling AED. t = 03/01/2023 16:00:06.
+t = 03/01/2023 15:50:13.  dt =  14.337 /  0.896 s.  elapsed time =     118.0 s.
+t = 03/01/2023 16:00:00.  dt =  14.336 /  0.896 s.  elapsed time =     118.1 s.
+    Calling AED. t = 03/01/2023 16:00:00.
     Returning from AED.
     Writing NETCDF output. t = 03/01/2023 16:00:00.
-t = 03/01/2023 16:10:06.  dt =  14.267 /  0.892 s.  elapsed time =     115.2 s.
-    Calling AED. t = 03/01/2023 16:15:06.
+t = 03/01/2023 16:10:02.  dt =  14.331 /  0.896 s.  elapsed time =     118.7 s.
+    Calling AED. t = 03/01/2023 16:15:03.
     Returning from AED.
-t = 03/01/2023 16:20:05.  dt =  14.273 /  0.892 s.  elapsed time =     115.8 s.
-t = 03/01/2023 16:30:04.  dt =  14.261 /  0.891 s.  elapsed time =     116.0 s.
-    Calling AED. t = 03/01/2023 16:30:04.
+t = 03/01/2023 16:20:04.  dt =  14.336 /  0.896 s.  elapsed time =     119.4 s.
+t = 03/01/2023 16:30:06.  dt =  14.331 /  0.896 s.  elapsed time =     119.6 s.
+    Calling AED. t = 03/01/2023 16:30:06.
     Returning from AED.
-t = 03/01/2023 16:40:03.  dt =  14.259 /  0.891 s.  elapsed time =     116.5 s.
-    Calling AED. t = 03/01/2023 16:45:03.
+t = 03/01/2023 16:40:08.  dt =  14.327 /  0.895 s.  elapsed time =     120.1 s.
+    Calling AED. t = 03/01/2023 16:45:09.
     Returning from AED.
-t = 03/01/2023 16:50:02.  dt =  14.254 /  0.891 s.  elapsed time =     117.1 s.
-t = 03/01/2023 17:00:01.  dt =  14.248 /  0.891 s.  elapsed time =     117.3 s.
-    Calling AED. t = 03/01/2023 17:00:01.
+t = 03/01/2023 16:50:10.  dt =  14.329 /  0.896 s.  elapsed time =     120.7 s.
+t = 03/01/2023 17:00:12.  dt =  14.319 /  0.895 s.  elapsed time =     120.9 s.
+    Calling AED. t = 03/01/2023 17:00:12.
     Returning from AED.
     Writing NETCDF output. t = 03/01/2023 17:00:00.
-t = 03/01/2023 17:10:13.  dt =  14.244 /  0.890 s.  elapsed time =     117.9 s.
-    Calling AED. t = 03/01/2023 17:15:12.
+t = 03/01/2023 17:10:13.  dt =  14.322 /  0.895 s.  elapsed time =     121.5 s.
+    Calling AED. t = 03/01/2023 17:15:14.
     Returning from AED.
-t = 03/01/2023 17:20:12.  dt =  14.244 /  0.890 s.  elapsed time =     118.4 s.
-t = 03/01/2023 17:30:10.  dt =  14.240 /  0.890 s.  elapsed time =     118.6 s.
-    Calling AED. t = 03/01/2023 17:30:10.
+t = 03/01/2023 17:20:00.  dt =  14.317 /  0.895 s.  elapsed time =     122.0 s.
+t = 03/01/2023 17:30:02.  dt =  14.320 /  0.895 s.  elapsed time =     122.2 s.
+    Calling AED. t = 03/01/2023 17:30:02.
     Returning from AED.
-t = 03/01/2023 17:40:08.  dt =  14.249 /  0.891 s.  elapsed time =     119.2 s.
-    Calling AED. t = 03/01/2023 17:45:07.
+t = 03/01/2023 17:40:03.  dt =  14.324 /  0.895 s.  elapsed time =     122.8 s.
+    Calling AED. t = 03/01/2023 17:45:04.
     Returning from AED.
-t = 03/01/2023 17:50:06.  dt =  14.246 /  0.890 s.  elapsed time =     119.7 s.
-t = 03/01/2023 18:00:05.  dt =  14.258 /  0.891 s.  elapsed time =     119.9 s.
-    Calling AED. t = 03/01/2023 18:00:05.
+t = 03/01/2023 17:50:05.  dt =  14.326 /  0.895 s.  elapsed time =     123.4 s.
+t = 03/01/2023 18:00:07.  dt =  14.334 /  0.896 s.  elapsed time =     123.5 s.
+    Calling AED. t = 03/01/2023 18:00:07.
     Returning from AED.
     Writing NETCDF output. t = 03/01/2023 18:00:00.
     Writing NETCDF output. t = 03/01/2023 18:00:00.
-t = 03/01/2023 18:10:04.  dt =  14.250 /  0.891 s.  elapsed time =     121.0 s.
-    Calling AED. t = 03/01/2023 18:15:03.
+t = 03/01/2023 18:10:09.  dt =  14.332 /  0.896 s.  elapsed time =     124.7 s.
+    Calling AED. t = 03/01/2023 18:15:10.
     Returning from AED.
-t = 03/01/2023 18:20:02.  dt =  14.256 /  0.891 s.  elapsed time =     121.6 s.
-t = 03/01/2023 18:30:01.  dt =  14.253 /  0.891 s.  elapsed time =     121.8 s.
-    Calling AED. t = 03/01/2023 18:30:01.
+t = 03/01/2023 18:20:11.  dt =  14.334 /  0.896 s.  elapsed time =     125.2 s.
+t = 03/01/2023 18:30:13.  dt =  14.337 /  0.896 s.  elapsed time =     125.4 s.
+    Calling AED. t = 03/01/2023 18:30:13.
     Returning from AED.
-t = 03/01/2023 18:40:13.  dt =  14.238 /  0.890 s.  elapsed time =     122.3 s.
-    Calling AED. t = 03/01/2023 18:45:12.
+t = 03/01/2023 18:40:00.  dt =  14.319 /  0.895 s.  elapsed time =     126.0 s.
+    Calling AED. t = 03/01/2023 18:45:01.
     Returning from AED.
-t = 03/01/2023 18:50:11.  dt =  14.230 /  0.889 s.  elapsed time =     122.9 s.
-t = 03/01/2023 19:00:09.  dt =  14.210 /  0.888 s.  elapsed time =     123.1 s.
-    Calling AED. t = 03/01/2023 19:00:09.
+t = 03/01/2023 18:50:02.  dt =  14.318 /  0.895 s.  elapsed time =     126.5 s.
+t = 03/01/2023 19:00:02.  dt =  14.297 /  0.894 s.  elapsed time =     126.7 s.
+    Calling AED. t = 03/01/2023 19:00:02.
     Returning from AED.
     Writing NETCDF output. t = 03/01/2023 19:00:00.
-t = 03/01/2023 19:10:05.  dt =  14.193 /  0.887 s.  elapsed time =     123.7 s.
+t = 03/01/2023 19:10:03.  dt =  14.286 /  0.893 s.  elapsed time =     127.3 s.
     Calling AED. t = 03/01/2023 19:15:03.
     Returning from AED.
-t = 03/01/2023 19:20:01.  dt =  14.181 /  0.886 s.  elapsed time =     124.2 s.
-t = 03/01/2023 19:30:10.  dt =  14.166 /  0.885 s.  elapsed time =     124.4 s.
-    Calling AED. t = 03/01/2023 19:30:10.
+t = 03/01/2023 19:20:02.  dt =  14.272 /  0.892 s.  elapsed time =     127.9 s.
+t = 03/01/2023 19:30:01.  dt =  14.262 /  0.891 s.  elapsed time =     128.1 s.
+    Calling AED. t = 03/01/2023 19:30:01.
     Returning from AED.
-t = 03/01/2023 19:40:05.  dt =  14.164 /  0.885 s.  elapsed time =     125.0 s.
-    Calling AED. t = 03/01/2023 19:45:03.
+t = 03/01/2023 19:40:00.  dt =  14.258 /  0.891 s.  elapsed time =     128.6 s.
+    Calling AED. t = 03/01/2023 19:45:14.
     Returning from AED.
-t = 03/01/2023 19:50:14.  dt =  14.159 /  0.885 s.  elapsed time =     125.6 s.
-t = 03/01/2023 20:00:09.  dt =  14.161 /  0.885 s.  elapsed time =     125.7 s.
-    Calling AED. t = 03/01/2023 20:00:09.
+t = 03/01/2023 19:50:13.  dt =  14.257 /  0.891 s.  elapsed time =     129.2 s.
+t = 03/01/2023 20:00:12.  dt =  14.257 /  0.891 s.  elapsed time =     129.4 s.
+    Calling AED. t = 03/01/2023 20:00:12.
     Returning from AED.
     Writing NETCDF output. t = 03/01/2023 20:00:00.
-t = 03/01/2023 20:10:04.  dt =  14.158 /  0.885 s.  elapsed time =     126.3 s.
-    Calling AED. t = 03/01/2023 20:15:01.
+t = 03/01/2023 20:10:11.  dt =  14.258 /  0.891 s.  elapsed time =     130.0 s.
+    Calling AED. t = 03/01/2023 20:15:11.
     Returning from AED.
-t = 03/01/2023 20:20:13.  dt =  14.167 /  0.885 s.  elapsed time =     126.9 s.
-t = 03/01/2023 20:30:08.  dt =  14.164 /  0.885 s.  elapsed time =     127.1 s.
-    Calling AED. t = 03/01/2023 20:30:08.
+t = 03/01/2023 20:20:10.  dt =  14.263 /  0.891 s.  elapsed time =     130.5 s.
+t = 03/01/2023 20:30:09.  dt =  14.265 /  0.892 s.  elapsed time =     130.7 s.
+    Calling AED. t = 03/01/2023 20:30:09.
     Returning from AED.
-t = 03/01/2023 20:40:03.  dt =  14.176 /  0.886 s.  elapsed time =     127.6 s.
-    Calling AED. t = 03/01/2023 20:45:00.
+t = 03/01/2023 20:40:09.  dt =  14.274 /  0.892 s.  elapsed time =     131.3 s.
+    Calling AED. t = 03/01/2023 20:45:08.
     Returning from AED.
-t = 03/01/2023 20:50:12.  dt =  14.178 /  0.886 s.  elapsed time =     128.2 s.
-t = 03/01/2023 21:00:08.  dt =  14.180 /  0.886 s.  elapsed time =     128.4 s.
+t = 03/01/2023 20:50:08.  dt =  14.280 /  0.893 s.  elapsed time =     131.8 s.
+t = 03/01/2023 21:00:08.  dt =  14.281 /  0.893 s.  elapsed time =     132.0 s.
     Calling AED. t = 03/01/2023 21:00:08.
     Returning from AED.
     Writing NETCDF output. t = 03/01/2023 21:00:00.
     Writing NETCDF output. t = 03/01/2023 21:00:00.
-t = 03/01/2023 21:10:04.  dt =  14.194 /  0.887 s.  elapsed time =     129.5 s.
-    Calling AED. t = 03/01/2023 21:15:02.
+t = 03/01/2023 21:10:08.  dt =  14.299 /  0.894 s.  elapsed time =     133.5 s.
+    Calling AED. t = 03/01/2023 21:15:08.
     Returning from AED.
-t = 03/01/2023 21:20:14.  dt =  14.188 /  0.887 s.  elapsed time =     130.1 s.
-t = 03/01/2023 21:30:10.  dt =  14.193 /  0.887 s.  elapsed time =     130.3 s.
-    Calling AED. t = 03/01/2023 21:30:10.
+t = 03/01/2023 21:20:08.  dt =  14.291 /  0.893 s.  elapsed time =     134.1 s.
+t = 03/01/2023 21:30:09.  dt =  14.300 /  0.894 s.  elapsed time =     134.3 s.
+    Calling AED. t = 03/01/2023 21:30:09.
     Returning from AED.
-t = 03/01/2023 21:40:06.  dt =  14.186 /  0.887 s.  elapsed time =     130.8 s.
-    Calling AED. t = 03/01/2023 21:45:04.
+t = 03/01/2023 21:40:09.  dt =  14.291 /  0.893 s.  elapsed time =     134.9 s.
+    Calling AED. t = 03/01/2023 21:45:09.
     Returning from AED.
-t = 03/01/2023 21:50:01.  dt =  14.175 /  0.886 s.  elapsed time =     131.4 s.
-t = 03/01/2023 22:00:11.  dt =  14.169 /  0.886 s.  elapsed time =     131.6 s.
-    Calling AED. t = 03/01/2023 22:00:11.
+t = 03/01/2023 21:50:09.  dt =  14.282 /  0.893 s.  elapsed time =     135.4 s.
+t = 03/01/2023 22:00:09.  dt =  14.275 /  0.892 s.  elapsed time =     135.6 s.
+    Calling AED. t = 03/01/2023 22:00:09.
     Returning from AED.
     Writing NETCDF output. t = 03/01/2023 22:00:00.
-t = 03/01/2023 22:10:05.  dt =  14.151 /  0.884 s.  elapsed time =     132.2 s.
-    Calling AED. t = 03/01/2023 22:15:03.
+t = 03/01/2023 22:10:08.  dt =  14.258 /  0.891 s.  elapsed time =     136.2 s.
+    Calling AED. t = 03/01/2023 22:15:08.
     Returning from AED.
-t = 03/01/2023 22:20:14.  dt =  14.150 /  0.884 s.  elapsed time =     132.8 s.
-t = 03/01/2023 22:30:08.  dt =  14.148 /  0.884 s.  elapsed time =     132.9 s.
-    Calling AED. t = 03/01/2023 22:30:08.
+t = 03/01/2023 22:20:07.  dt =  14.256 /  0.891 s.  elapsed time =     136.8 s.
+t = 03/01/2023 22:30:06.  dt =  14.255 /  0.891 s.  elapsed time =     137.0 s.
+    Calling AED. t = 03/01/2023 22:30:06.
     Returning from AED.
-t = 03/01/2023 22:40:03.  dt =  14.158 /  0.885 s.  elapsed time =     133.5 s.
-    Calling AED. t = 03/01/2023 22:45:14.
+t = 03/01/2023 22:40:05.  dt =  14.265 /  0.892 s.  elapsed time =     137.5 s.
+    Calling AED. t = 03/01/2023 22:45:04.
     Returning from AED.
-t = 03/01/2023 22:50:12.  dt =  14.172 /  0.886 s.  elapsed time =     134.1 s.
-t = 03/01/2023 23:00:07.  dt =  14.187 /  0.887 s.  elapsed time =     134.3 s.
-    Calling AED. t = 03/01/2023 23:00:07.
+t = 03/01/2023 22:50:04.  dt =  14.281 /  0.893 s.  elapsed time =     138.1 s.
+t = 03/01/2023 23:00:04.  dt =  14.296 /  0.894 s.  elapsed time =     138.3 s.
+    Calling AED. t = 03/01/2023 23:00:04.
     Returning from AED.
     Writing NETCDF output. t = 03/01/2023 23:00:00.
-t = 03/01/2023 23:10:04.  dt =  14.207 /  0.888 s.  elapsed time =     134.9 s.
-    Calling AED. t = 03/01/2023 23:15:02.
+t = 03/01/2023 23:10:05.  dt =  14.317 /  0.895 s.  elapsed time =     138.9 s.
+    Calling AED. t = 03/01/2023 23:15:06.
     Returning from AED.
-t = 03/01/2023 23:20:00.  dt =  14.217 /  0.889 s.  elapsed time =     135.4 s.
-t = 03/01/2023 23:30:12.  dt =  14.228 /  0.889 s.  elapsed time =     135.6 s.
-    Calling AED. t = 03/01/2023 23:30:12.
+t = 03/01/2023 23:20:07.  dt =  14.329 /  0.896 s.  elapsed time =     139.5 s.
+t = 03/01/2023 23:30:09.  dt =  14.340 /  0.896 s.  elapsed time =     139.6 s.
+    Calling AED. t = 03/01/2023 23:30:09.
     Returning from AED.
-t = 03/01/2023 23:40:10.  dt =  14.232 /  0.889 s.  elapsed time =     136.1 s.
-    Calling AED. t = 03/01/2023 23:45:09.
+t = 03/01/2023 23:40:11.  dt =  14.346 /  0.897 s.  elapsed time =     140.2 s.
+    Calling AED. t = 03/01/2023 23:45:12.
     Returning from AED.
-t = 03/01/2023 23:50:07.  dt =  14.229 /  0.889 s.  elapsed time =     136.6 s.
-t = 04/01/2023 00:00:05.  dt =  14.222 /  0.889 s.  elapsed time =     136.8 s.
-    Calling AED. t = 04/01/2023 00:00:05.
+t = 03/01/2023 23:50:14.  dt =  14.342 /  0.896 s.  elapsed time =     140.8 s.
+t = 04/01/2023 00:00:02.  dt =  14.339 /  0.896 s.  elapsed time =     141.0 s.
+    Calling AED. t = 04/01/2023 00:00:02.
     Returning from AED.
     Writing NETCDF output. t = 04/01/2023 00:00:00.
     Writing NETCDF output. t = 04/01/2023 00:00:00.
-t = 04/01/2023 00:10:02.  dt =  14.213 /  0.888 s.  elapsed time =     137.9 s.
-    Calling AED. t = 04/01/2023 00:15:00.
+t = 04/01/2023 00:10:04.  dt =  14.329 /  0.896 s.  elapsed time =     142.1 s.
+    Calling AED. t = 04/01/2023 00:15:04.
     Returning from AED.
-t = 04/01/2023 00:20:13.  dt =  14.204 /  0.888 s.  elapsed time =     138.4 s.
-t = 04/01/2023 00:30:09.  dt =  14.201 /  0.888 s.  elapsed time =     138.6 s.
-    Calling AED. t = 04/01/2023 00:30:09.
+t = 04/01/2023 00:20:05.  dt =  14.322 /  0.895 s.  elapsed time =     142.7 s.
+t = 04/01/2023 00:30:07.  dt =  14.317 /  0.895 s.  elapsed time =     142.8 s.
+    Calling AED. t = 04/01/2023 00:30:07.
     Returning from AED.
-t = 04/01/2023 00:40:06.  dt =  14.191 /  0.887 s.  elapsed time =     139.2 s.
-    Calling AED. t = 04/01/2023 00:45:04.
+t = 04/01/2023 00:40:08.  dt =  14.309 /  0.894 s.  elapsed time =     143.4 s.
+    Calling AED. t = 04/01/2023 00:45:08.
     Returning from AED.
-t = 04/01/2023 00:50:02.  dt =  14.193 /  0.887 s.  elapsed time =     139.7 s.
-t = 04/01/2023 01:00:12.  dt =  14.187 /  0.887 s.  elapsed time =     139.9 s.
-    Calling AED. t = 04/01/2023 01:00:12.
+t = 04/01/2023 00:50:09.  dt =  14.309 /  0.894 s.  elapsed time =     143.9 s.
+t = 04/01/2023 01:00:10.  dt =  14.305 /  0.894 s.  elapsed time =     144.1 s.
+    Calling AED. t = 04/01/2023 01:00:10.
     Returning from AED.
     Writing NETCDF output. t = 04/01/2023 01:00:00.
-t = 04/01/2023 01:10:08.  dt =  14.189 /  0.887 s.  elapsed time =     140.9 s.
-    Calling AED. t = 04/01/2023 01:15:06.
+t = 04/01/2023 01:10:10.  dt =  14.306 /  0.894 s.  elapsed time =     144.7 s.
+    Calling AED. t = 04/01/2023 01:15:11.
     Returning from AED.
-t = 04/01/2023 01:20:04.  dt =  14.187 /  0.887 s.  elapsed time =     141.4 s.
-t = 04/01/2023 01:30:14.  dt =  14.189 /  0.887 s.  elapsed time =     141.6 s.
-    Calling AED. t = 04/01/2023 01:30:14.
+t = 04/01/2023 01:20:11.  dt =  14.305 /  0.894 s.  elapsed time =     145.3 s.
+t = 04/01/2023 01:30:12.  dt =  14.308 /  0.894 s.  elapsed time =     145.4 s.
+    Calling AED. t = 04/01/2023 01:30:12.
     Returning from AED.
-t = 04/01/2023 01:40:10.  dt =  14.196 /  0.887 s.  elapsed time =     142.1 s.
-    Calling AED. t = 04/01/2023 01:45:08.
+t = 04/01/2023 01:40:13.  dt =  14.317 /  0.895 s.  elapsed time =     146.1 s.
+    Calling AED. t = 04/01/2023 01:45:14.
     Returning from AED.
-t = 04/01/2023 01:50:06.  dt =  14.199 /  0.887 s.  elapsed time =     142.7 s.
-t = 04/01/2023 02:00:03.  dt =  14.204 /  0.888 s.  elapsed time =     142.8 s.
-    Calling AED. t = 04/01/2023 02:00:03.
+t = 04/01/2023 01:50:00.  dt =  14.322 /  0.895 s.  elapsed time =     146.6 s.
+t = 04/01/2023 02:00:02.  dt =  14.331 /  0.896 s.  elapsed time =     146.8 s.
+    Calling AED. t = 04/01/2023 02:00:02.
     Returning from AED.
     Writing NETCDF output. t = 04/01/2023 02:00:00.
-t = 04/01/2023 02:10:14.  dt =  14.212 /  0.888 s.  elapsed time =     143.4 s.
-    Calling AED. t = 04/01/2023 02:15:12.
+t = 04/01/2023 02:10:04.  dt =  14.341 /  0.896 s.  elapsed time =     147.4 s.
+    Calling AED. t = 04/01/2023 02:15:05.
     Returning from AED.
-t = 04/01/2023 02:20:11.  dt =  14.216 /  0.888 s.  elapsed time =     144.0 s.
-t = 04/01/2023 02:30:08.  dt =  14.223 /  0.889 s.  elapsed time =     144.1 s.
-    Calling AED. t = 04/01/2023 02:30:08.
+t = 04/01/2023 02:20:07.  dt =  14.348 /  0.897 s.  elapsed time =     147.9 s.
+t = 04/01/2023 02:30:10.  dt =  14.357 /  0.897 s.  elapsed time =     148.1 s.
+    Calling AED. t = 04/01/2023 02:30:10.
     Returning from AED.
-t = 04/01/2023 02:40:05.  dt =  14.225 /  0.889 s.  elapsed time =     144.7 s.
-    Calling AED. t = 04/01/2023 02:45:04.
+t = 04/01/2023 02:40:13.  dt =  14.362 /  0.898 s.  elapsed time =     148.7 s.
+    Calling AED. t = 04/01/2023 02:45:14.
     Returning from AED.
-t = 04/01/2023 02:50:03.  dt =  14.229 /  0.889 s.  elapsed time =     145.2 s.
-t = 04/01/2023 03:00:01.  dt =  14.232 /  0.889 s.  elapsed time =     145.4 s.
-    Calling AED. t = 04/01/2023 03:00:01.
+t = 04/01/2023 02:50:02.  dt =  14.368 /  0.898 s.  elapsed time =     149.2 s.
+t = 04/01/2023 03:00:05.  dt =  14.372 /  0.898 s.  elapsed time =     149.4 s.
+    Calling AED. t = 04/01/2023 03:00:05.
     Returning from AED.
     Writing NETCDF output. t = 04/01/2023 03:00:00.
     Writing NETCDF output. t = 04/01/2023 03:00:00.
-t = 04/01/2023 03:10:13.  dt =  14.235 /  0.890 s.  elapsed time =     146.5 s.
-    Calling AED. t = 04/01/2023 03:15:12.
+t = 04/01/2023 03:10:09.  dt =  14.377 /  0.899 s.  elapsed time =     150.5 s.
+    Calling AED. t = 04/01/2023 03:15:11.
     Returning from AED.
-t = 04/01/2023 03:20:11.  dt =  14.240 /  0.890 s.  elapsed time =     147.0 s.
-t = 04/01/2023 03:30:09.  dt =  14.245 /  0.890 s.  elapsed time =     147.2 s.
-    Calling AED. t = 04/01/2023 03:30:09.
+t = 04/01/2023 03:20:13.  dt =  14.384 /  0.899 s.  elapsed time =     151.0 s.
+t = 04/01/2023 03:30:03.  dt =  14.389 /  0.899 s.  elapsed time =     151.2 s.
+    Calling AED. t = 04/01/2023 03:30:03.
     Returning from AED.
-t = 04/01/2023 03:40:07.  dt =  14.254 /  0.891 s.  elapsed time =     147.7 s.
-    Calling AED. t = 04/01/2023 03:45:07.
+t = 04/01/2023 03:40:07.  dt =  14.400 /  0.900 s.  elapsed time =     151.7 s.
+    Calling AED. t = 04/01/2023 03:45:10.
     Returning from AED.
-t = 04/01/2023 03:50:06.  dt =  14.262 /  0.891 s.  elapsed time =     148.3 s.
-t = 04/01/2023 04:00:05.  dt =  14.269 /  0.892 s.  elapsed time =     148.5 s.
-    Calling AED. t = 04/01/2023 04:00:05.
+t = 04/01/2023 03:50:12.  dt =  14.409 /  0.901 s.  elapsed time =     152.3 s.
+t = 04/01/2023 04:00:03.  dt =  14.417 /  0.901 s.  elapsed time =     152.5 s.
+    Calling AED. t = 04/01/2023 04:00:03.
     Returning from AED.
     Writing NETCDF output. t = 04/01/2023 04:00:00.
-t = 04/01/2023 04:10:05.  dt =  14.282 /  0.893 s.  elapsed time =     149.0 s.
-    Calling AED. t = 04/01/2023 04:15:05.
+t = 04/01/2023 04:10:09.  dt =  14.431 /  0.902 s.  elapsed time =     153.0 s.
+    Calling AED. t = 04/01/2023 04:15:12.
     Returning from AED.
-t = 04/01/2023 04:20:05.  dt =  14.279 /  0.892 s.  elapsed time =     149.6 s.
-t = 04/01/2023 04:30:04.  dt =  14.282 /  0.893 s.  elapsed time =     149.8 s.
-    Calling AED. t = 04/01/2023 04:30:04.
+t = 04/01/2023 04:20:01.  dt =  14.430 /  0.902 s.  elapsed time =     153.6 s.
+t = 04/01/2023 04:30:07.  dt =  14.436 /  0.902 s.  elapsed time =     153.8 s.
+    Calling AED. t = 04/01/2023 04:30:07.
     Returning from AED.
-t = 04/01/2023 04:40:04.  dt =  14.269 /  0.892 s.  elapsed time =     150.3 s.
-    Calling AED. t = 04/01/2023 04:45:03.
+t = 04/01/2023 04:40:13.  dt =  14.425 /  0.902 s.  elapsed time =     154.3 s.
+    Calling AED. t = 04/01/2023 04:45:01.
     Returning from AED.
-t = 04/01/2023 04:50:03.  dt =  14.250 /  0.891 s.  elapsed time =     150.9 s.
-t = 04/01/2023 05:00:01.  dt =  14.233 /  0.890 s.  elapsed time =     151.1 s.
-    Calling AED. t = 04/01/2023 05:00:01.
+t = 04/01/2023 04:50:04.  dt =  14.409 /  0.901 s.  elapsed time =     154.9 s.
+t = 04/01/2023 05:00:09.  dt =  14.395 /  0.900 s.  elapsed time =     155.1 s.
+    Calling AED. t = 04/01/2023 05:00:09.
     Returning from AED.
     Writing NETCDF output. t = 04/01/2023 05:00:00.
-t = 04/01/2023 05:10:12.  dt =  14.199 /  0.887 s.  elapsed time =     151.7 s.
-    Calling AED. t = 04/01/2023 05:15:10.
+t = 04/01/2023 05:10:13.  dt =  14.364 /  0.898 s.  elapsed time =     155.7 s.
+    Calling AED. t = 04/01/2023 05:15:00.
     Returning from AED.
-t = 04/01/2023 05:20:08.  dt =  14.171 /  0.886 s.  elapsed time =     152.3 s.
-t = 04/01/2023 05:30:02.  dt =  14.147 /  0.884 s.  elapsed time =     152.4 s.
-    Calling AED. t = 04/01/2023 05:30:02.
+t = 04/01/2023 05:20:01.  dt =  14.340 /  0.896 s.  elapsed time =     156.3 s.
+t = 04/01/2023 05:30:03.  dt =  14.315 /  0.895 s.  elapsed time =     156.5 s.
+    Calling AED. t = 04/01/2023 05:30:03.
     Returning from AED.
-t = 04/01/2023 05:40:02.  dt =  14.995 /  0.882 s.  elapsed time =     153.0 s.
-    Calling AED. t = 04/01/2023 05:45:02.
+t = 04/01/2023 05:40:04.  dt =  14.283 /  0.893 s.  elapsed time =     157.1 s.
+    Calling AED. t = 04/01/2023 05:45:03.
     Returning from AED.
-t = 04/01/2023 05:50:01.  dt =  14.969 /  0.881 s.  elapsed time =     153.6 s.
-t = 04/01/2023 06:00:15.  dt =  14.943 /  0.879 s.  elapsed time =     153.7 s.
-    Calling AED. t = 04/01/2023 06:00:15.
+t = 04/01/2023 05:50:03.  dt =  14.258 /  0.891 s.  elapsed time =     157.7 s.
+t = 04/01/2023 06:00:01.  dt =  14.234 /  0.890 s.  elapsed time =     157.9 s.
+    Calling AED. t = 04/01/2023 06:00:01.
     Returning from AED.
     Writing NETCDF output. t = 04/01/2023 06:00:00.
     Writing NETCDF output. t = 04/01/2023 06:00:00.
-t = 04/01/2023 06:10:11.  dt =  14.905 /  0.877 s.  elapsed time =     154.9 s.
-    Calling AED. t = 04/01/2023 06:15:09.
+t = 04/01/2023 06:10:12.  dt =  14.197 /  0.887 s.  elapsed time =     159.0 s.
+    Calling AED. t = 04/01/2023 06:15:10.
     Returning from AED.
-t = 04/01/2023 06:20:05.  dt =  14.886 /  0.876 s.  elapsed time =     155.5 s.
-t = 04/01/2023 06:30:10.  dt =  13.977 /  0.874 s.  elapsed time =     155.7 s.
-    Calling AED. t = 04/01/2023 06:30:10.
+t = 04/01/2023 06:20:08.  dt =  14.188 /  0.887 s.  elapsed time =     159.6 s.
+t = 04/01/2023 06:30:04.  dt =  14.150 /  0.884 s.  elapsed time =     159.8 s.
+    Calling AED. t = 04/01/2023 06:30:04.
+    Returning from AED.
+t = 04/01/2023 06:40:02.  dt =  13.267 /  0.884 s.  elapsed time =     160.3 s.
+    Calling AED. t = 04/01/2023 06:45:02.
+    Returning from AED.
+t = 04/01/2023 06:50:01.  dt =  13.258 /  0.884 s.  elapsed time =     160.9 s.
+t = 04/01/2023 07:00:06.  dt =  14.149 /  0.884 s.  elapsed time =     161.1 s.
+    Calling AED. t = 04/01/2023 07:00:06.
+    Returning from AED.
+    Writing NETCDF output. t = 04/01/2023 07:00:00.
+t = 04/01/2023 07:10:09.  dt =  14.158 /  0.885 s.  elapsed time =     161.7 s.
+    Calling AED. t = 04/01/2023 07:15:10.
+    Returning from AED.
+t = 04/01/2023 07:20:11.  dt =  14.158 /  0.885 s.  elapsed time =     162.3 s.
+t = 04/01/2023 07:30:09.  dt =  14.156 /  0.885 s.  elapsed time =     162.4 s.
+    Calling AED. t = 04/01/2023 07:30:09.
+    Returning from AED.
+t = 04/01/2023 07:40:05.  dt =  14.177 /  0.886 s.  elapsed time =     163.0 s.
+    Calling AED. t = 04/01/2023 07:45:02.
+    Returning from AED.
+t = 04/01/2023 07:50:13.  dt =  14.168 /  0.886 s.  elapsed time =     163.6 s.
+t = 04/01/2023 08:00:08.  dt =  14.179 /  0.886 s.  elapsed time =     163.7 s.
+    Calling AED. t = 04/01/2023 08:00:08.
+    Returning from AED.
+    Writing NETCDF output. t = 04/01/2023 08:00:00.
+t = 04/01/2023 08:10:03.  dt =  14.196 /  0.887 s.  elapsed time =     164.3 s.
+    Calling AED. t = 04/01/2023 08:15:02.
+    Returning from AED.
+t = 04/01/2023 08:20:00.  dt =  14.210 /  0.888 s.  elapsed time =     164.9 s.
+t = 04/01/2023 08:30:11.  dt =  14.223 /  0.889 s.  elapsed time =     165.1 s.
+    Calling AED. t = 04/01/2023 08:30:11.
+    Returning from AED.
+t = 04/01/2023 08:40:09.  dt =  14.239 /  0.890 s.  elapsed time =     165.7 s.
+    Calling AED. t = 04/01/2023 08:45:08.
+    Returning from AED.
+t = 04/01/2023 08:50:07.  dt =  14.253 /  0.891 s.  elapsed time =     166.2 s.
+t = 04/01/2023 09:00:07.  dt =  14.273 /  0.892 s.  elapsed time =     166.4 s.
+    Calling AED. t = 04/01/2023 09:00:07.
+    Returning from AED.
+    Writing NETCDF output. t = 04/01/2023 09:00:00.
+    Writing NETCDF output. t = 04/01/2023 09:00:00.
+t = 04/01/2023 09:10:06.  dt =  14.287 /  0.893 s.  elapsed time =     167.5 s.
+    Calling AED. t = 04/01/2023 09:15:06.
+    Returning from AED.
+t = 04/01/2023 09:20:07.  dt =  14.300 /  0.894 s.  elapsed time =     168.1 s.
+t = 04/01/2023 09:30:08.  dt =  14.314 /  0.895 s.  elapsed time =     168.3 s.
+    Calling AED. t = 04/01/2023 09:30:08.
+    Returning from AED.
+t = 04/01/2023 09:40:09.  dt =  14.311 /  0.894 s.  elapsed time =     168.8 s.
+    Calling AED. t = 04/01/2023 09:45:09.
+    Returning from AED.
+t = 04/01/2023 09:50:10.  dt =  14.297 /  0.894 s.  elapsed time =     169.4 s.
+t = 04/01/2023 10:00:10.  dt =  14.298 /  0.894 s.  elapsed time =     169.6 s.
+    Calling AED. t = 04/01/2023 10:00:10.
+    Returning from AED.
+    Writing NETCDF output. t = 04/01/2023 10:00:00.
+t = 04/01/2023 10:10:09.  dt =  14.239 /  0.890 s.  elapsed time =     170.2 s.
+    Calling AED. t = 04/01/2023 10:15:08.
+    Returning from AED.
+t = 04/01/2023 10:20:08.  dt =  14.264 /  0.891 s.  elapsed time =     170.7 s.
+t = 04/01/2023 10:30:05.  dt =  14.234 /  0.890 s.  elapsed time =     170.9 s.
+    Calling AED. t = 04/01/2023 10:30:05.
+    Returning from AED.
+t = 04/01/2023 10:40:05.  dt =  14.262 /  0.891 s.  elapsed time =     171.5 s.
+    Calling AED. t = 04/01/2023 10:45:04.
+    Returning from AED.
+t = 04/01/2023 10:50:04.  dt =  14.277 /  0.892 s.  elapsed time =     172.0 s.
+t = 04/01/2023 11:00:04.  dt =  14.293 /  0.893 s.  elapsed time =     172.2 s.
+    Calling AED. t = 04/01/2023 11:00:04.
+    Returning from AED.
+    Writing NETCDF output. t = 04/01/2023 11:00:00.
+t = 04/01/2023 11:10:05.  dt =  14.322 /  0.895 s.  elapsed time =     172.8 s.
+    Calling AED. t = 04/01/2023 11:15:05.
+    Returning from AED.
+t = 04/01/2023 11:20:06.  dt =  14.339 /  0.896 s.  elapsed time =     173.4 s.
+t = 04/01/2023 11:30:09.  dt =  14.346 /  0.897 s.  elapsed time =     173.6 s.
+    Calling AED. t = 04/01/2023 11:30:09.
+    Returning from AED.
+t = 04/01/2023 11:40:12.  dt =  14.381 /  0.899 s.  elapsed time =     174.1 s.
+    Calling AED. t = 04/01/2023 11:45:14.
+    Returning from AED.
+t = 04/01/2023 11:50:02.  dt =  14.374 /  0.898 s.  elapsed time =     174.7 s.
+t = 04/01/2023 12:00:06.  dt =  14.389 /  0.899 s.  elapsed time =     174.9 s.
+    Calling AED. t = 04/01/2023 12:00:06.
+    Returning from AED.
+    Writing NETCDF output. t = 04/01/2023 12:00:00.
+    Writing NETCDF output. t = 04/01/2023 12:00:00.
+t = 04/01/2023 12:10:10.  dt =  14.404 /  0.900 s.  elapsed time =     176.0 s.
+    Calling AED. t = 04/01/2023 12:15:13.
+    Returning from AED.
+t = 04/01/2023 12:20:01.  dt =  14.401 /  0.900 s.  elapsed time =     176.6 s.
+t = 04/01/2023 12:30:06.  dt =  14.424 /  0.902 s.  elapsed time =     176.7 s.
+    Calling AED. t = 04/01/2023 12:30:06.
+    Returning from AED.
+t = 04/01/2023 12:40:12.  dt =  14.425 /  0.902 s.  elapsed time =     177.3 s.
+    Calling AED. t = 04/01/2023 12:45:01.
+    Returning from AED.
+t = 04/01/2023 12:50:04.  dt =  14.438 /  0.902 s.  elapsed time =     177.9 s.
+t = 04/01/2023 13:00:11.  dt =  14.454 /  0.903 s.  elapsed time =     178.0 s.
+    Calling AED. t = 04/01/2023 13:00:11.
+    Returning from AED.
+    Writing NETCDF output. t = 04/01/2023 13:00:00.
+t = 04/01/2023 13:10:03.  dt =  14.457 /  0.904 s.  elapsed time =     179.1 s.
+    Calling AED. t = 04/01/2023 13:15:07.
+    Returning from AED.
+t = 04/01/2023 13:20:11.  dt =  14.468 /  0.904 s.  elapsed time =     179.7 s.
+t = 04/01/2023 13:30:04.  dt =  14.477 /  0.905 s.  elapsed time =     179.9 s.
+    Calling AED. t = 04/01/2023 13:30:04.
+    Returning from AED.
+t = 04/01/2023 13:40:12.  dt =  14.474 /  0.905 s.  elapsed time =     180.5 s.
+    Calling AED. t = 04/01/2023 13:45:02.
+    Returning from AED.
+t = 04/01/2023 13:50:06.  dt =  14.481 /  0.905 s.  elapsed time =     181.0 s.
+t = 04/01/2023 14:00:14.  dt =  14.475 /  0.905 s.  elapsed time =     181.2 s.
+    Calling AED. t = 04/01/2023 14:00:14.
+    Returning from AED.
+    Writing NETCDF output. t = 04/01/2023 14:00:00.
