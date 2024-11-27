@@ -1,0 +1,10 @@
+MAT
+MN	1	"material 01"
+MC	1	255	0	0
+MS	1	0
+MN	0	"Disable"
+MC	0	0	0	255
+MS	0	0
+MN	2	""
+MC	2	153	0	255
+MS	2	0

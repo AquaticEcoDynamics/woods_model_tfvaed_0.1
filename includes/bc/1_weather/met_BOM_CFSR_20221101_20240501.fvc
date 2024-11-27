@@ -4,16 +4,17 @@ end bc
 
 bc == REL_HUM, ..\..\..\bc_repo\1_weather\BOM\BOM_met_liawenee_2023_2024.csv
   bc header == ISOTime,Rel_Hum
+ 
 end bc
 
 bc == W10, ..\..\..\bc_repo\1_weather\BOM\BOM_met_liawenee_2023_2024.csv
   bc header == ISOTime,Wx,Wy
-  bc scale == 0.8,0.8
+  bc scale == 1.0,1.0
 end bc
 
 
-bc == PRECIP, ..\..\..\bc_repo\1_weather\BOM\BOM_rain_liawenee_2023_2024.csv
-  bc header == ISOTime,Precip
+bc == PRECIP, ..\..\..\bc_repo\1_weather\HT\Meteorology_rain_woods_2023_2024.csv !BOM_rain_liawenee_2023_2024.csv
+  bc header == Time,Precip
 end bc
 
 grid definition file == ..\..\..\bc_repo\1_weather\CFSR\CFSR_20230101_20240501.nc

@@ -1,0 +1,1799 @@
+
+***************************** TUFLOWFV *****************************
+
+Build version: 2023.1.1-dev
+Build date: 01/12/2023 10:15
+Git branch: dev
+Git hash: 7994ec3
+Build platform: Linux
+Build architecture:  x86-64
+Compiler version: Ifort 2021.3.0
+Build precision: single
+NVidia GPU enabled: Cuda v11.8.89 sm_50
+GIS Module Version: 2020-07-PD
+
+********************************************************************
+
+Computer name: rosella
+User name: hydro
+Execution timestamp: 04/11/2024 14:19:38
+
+
+Initialising TUFLOW Licence Settings...
+
+No TUFLOW licence Settings files found.  Default settings applied.
+WIBU Retry Time == 60
+WIBU Retry Count == 0
+WIBU Dongles Only == OFF  ! If set to ON, searches for WIBU dongles only.
+
+Attempting to process input control file:
+Trying to open file: woods_2023_2024_BASE.fvc ... OK. File unit: 101
+TIME FORMAT == ISO DATE & TIME
+REFERENCE TIME == 01/01/2001 00:00:00
+Trying to open file: ../../includes/bc/1_weather/met_BOM_CFSR_20221101_20240501.fvc ... OK. File unit: 102
+Closing file unit: 102
+Trying to open file: ../../includes/bc/4_rivers/LakeRiver-Inflow_20230101_20240303.fvc ... OK. File unit: 102
+Closing file unit: 102
+Trying to open file: ../../includes/bc/3_dam/Dam-Spillway_20230101_20240303.fvc ... OK. File unit: 102
+Closing file unit: 102
+Start echoing input file:
+HARDWARE TARGET == GPU
+SPHERICAL == .TRUE.
+INCLUDE SALINITY == .TRUE.
+COUPLE SALINITY DENSITY == .FALSE.
+INCLUDE TEMPERATURE == .TRUE.
+COUPLE TEMPERATURE DENSITY == .TRUE.
+INCLUDE SEDIMENT == .FALSE.
+INCLUDE HEAT == .TRUE.
+LONG WAVE RADIATION MODEL == 2
+SHORT WAVE RADIATION MODEL == 1
+MOMENTUM MIXING MODEL == SMAGORINSKY
+SCALAR MIXING MODEL == SMAGORINSKY
+VERTICAL MIXING MODEL == EXTERNAL
+EXTERNAL TURBULENCE MODEL DIR == ../../includes/turbulence/GOTM/
+VERTICALGRADIENTLIMITER == MC
+BOTTOM DRAG MODEL == KS
+EQUATION OF STATE == UNESCO
+BULK LATENT HEAT COEFFICIENT (CLN) ==   0.1300000E-02
+START TIME == 02/01/2023 00:00:00
+END TIME == 09/01/2023 00:00:00
+CFL EXTERNAL ==   0.8000000
+CFL INTERNAL ==   0.8000000
+TIMESTEP LIMITS ==   0.1000000    ,    15.00000
+TURBULENCE UPDATE DT ==    600.0000
+DISPLAY DT ==    600.0000
+STABILITY LIMITS ==    1050.000    ,    1050.000
+WARNING: Wet depth is less than dry depth. Momentum will never be switched off
+CELL DRY/WET DEPTHS ==   0.2000000E-01,   0.2000000E-01
+LATITUDE ==   -42.00000
+REFERENCE SALINITY ==    0.000000
+REFERENCE TEMPERATURE ==    10.00000
+REFERENCE DENSITY ==    1000.000
+DENSITY AIR ==    1.180000
+GLOBAL BOTTOM ROUGHNESS ==   0.2000000E-02
+GLOBAL HORIZONTAL EDDY VISCOSITY (SMAG COEFF) ==   0.2000000
+GLOBAL HORIZONTAL SCALAR DIFFUSIVITY (SMAG COEFF) ==   0.2000000
+DIFFUSIVITY LIMITER DT ==    30.00000
+KINEMATIC VISCOSITY ==   0.1000000E-05
+GLOBAL VERTICAL EDDY VISCOSITY LIMITS ==   0.1000000E-03,    9999.000
+GLOBAL VERTICAL SCALAR DIFFUSIVITY LIMITS ==   0.1000000E-05,    9999.000
+GIS FORMAT == SHP
+SHP PROJECTION == ../../gis_repo/1_domain/projection/projection.prj
+GEOMETRY2D == ../../gis_repo/1_domain/mesh/Woods_v6_b_WGS84.2dm
+READ GIS MAT == ../../gis_repo/2_benthic/materials/woods_7_zone_WGS84.shp
+VERTICAL MESH TYPE == Z
+LAYER FACE FILE == ../../gis_repo/1_domain/layers/layers_WL.csv
+SURFACE SIGMA LAYERS == 6
+MINIMUM LAYER THICKNESS ==   0.1000000
+CELL 3D DEPTH ==   0.1000000
+MATERIAL == 1
+  BOTTOM ROUGHNESS ==   0.5000000E-02
+END MATERIAL
+MATERIAL == 2
+  BOTTOM ROUGHNESS ==   0.5000000E-02
+END MATERIAL
+MATERIAL == 3
+  BOTTOM ROUGHNESS ==   0.5000000E-02
+END MATERIAL
+MATERIAL == 4
+  BOTTOM ROUGHNESS ==   0.5000000E-02
+END MATERIAL
+MATERIAL == 5
+  BOTTOM ROUGHNESS ==   0.5000000E-02
+END MATERIAL
+MATERIAL == 6
+END MATERIAL
+MATERIAL == 7
+  BOTTOM ROUGHNESS ==   0.5000000E-02
+END MATERIAL
+NTRACER == 1
+INITIAL WATER LEVEL ==    737.8100
+INITIAL SALINITY ==   0.3200000E-01
+INITIAL TEMPERATURE ==    14.69000
+INITIAL TRACER CONCENTRATION ==    0.000000
+INITIAL WQ CONCENTRATION ==    12.00000,   282.0000,  0.3570000,  0.1430000,  0.1940000,  0.1940000,   774.3000,   100.0000,   35.00000,   25.00000,  0.1000000,  0.1000000,  0.2800000,   1.000000,  0.1000000,   62.00000,   1.000
+Trying to open file: ../../includes/bc/1_weather/met_BOM_CFSR_20221101_20240501.fvc ... OK. File unit: 102
+BC == AIR_TEMP, ../../includes/bc/1_weather/../../../bc_repo/1_weather/BOM/BOM_met_liawenee_2023_2024.csv
+  BC HEADER ==  ISOTime, ATemp
+END BC
+BC == REL_HUM, ../../includes/bc/1_weather/../../../bc_repo/1_weather/BOM/BOM_met_liawenee_2023_2024.csv
+  BC HEADER ==  ISOTime, Rel_Hum
+END BC
+BC == W10, ../../includes/bc/1_weather/../../../bc_repo/1_weather/BOM/BOM_met_liawenee_2023_2024.csv
+  BC HEADER ==  ISOTime, Wx, Wy
+  BC SCALE ==    1.000000,   1.000000
+END BC
+GRID DEFINITION FILE == ../../includes/bc/1_weather/../../../bc_repo/1_weather/CFSR/CFSR_20230101_20240501.nc
+GRID DEFINITION VARIABLES ==  LONGITUDE, LATITUDE
+GRID DEFINITION LABEL == ATMOS
+END GRID
+BC == LW_RAD_GRID, ATMOS, ../../includes/bc/1_weather/../../../bc_repo/1_weather/CFSR/CFSR_20230101_20240501.nc
+  BC HEADER ==  local_time, downward_longwave
+  UPDATE DT ==    3600.000
+  BC TIME UNITS == HOURS
+BC REFERENCE TIME == 01/01/1990 00:00:00
+  BC DEFAULT ==             NaN
+END BC
+BC == SW_RAD_GRID, ATMOS, ../../includes/bc/1_weather/../../../bc_repo/1_weather/CFSR/CFSR_20230101_20240501.nc
+  BC HEADER ==  local_time, downward_shortwave
+  UPDATE DT ==    3600.000
+  BC TIME UNITS == HOURS
+BC REFERENCE TIME == 01/01/1990 00:00:00
+  BC DEFAULT ==             NaN
+END BC
+Closing file unit: 102
+Trying to open file: ../../includes/bc/4_rivers/LakeRiver-Inflow_20230101_20240303.fvc ... OK. File unit: 102
+BC == Q, 1, ../../includes/bc/4_rivers/../../../bc_repo/4_rivers/LAKE_RIVER/swift_inflow_woods_dam_20160107-20240514.csv
+  BC HEADER ==  Date, FLOW, SAL, TEMP, ONES, SS, OXY, NH4, NO3, FRP, FRP, OC, OC, ON, ON, OP, OP, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, ZEROS
+  BC SCALE ==    1.000000,   1.000000,   1.000000,   1.000000,   1.000000,   1.000000,   1.000000,  0.6000000,  0.4000000,   1.000000,  0.5000000,   1.000000,  0.5000000,   1.000000,  0.5000000,  0.2500000,  0.2000
+END BC
+BC == Q, 1, ../../includes/bc/4_rivers/../../../bc_repo/4_rivers/LAKE_RIVER/flowIntoLakeRiverArthurs_inflow_woods_dam_20160107-20240514.csv
+  BC HEADER ==  Date, FLOW, SAL, TEMP, ONES, SS, OXY, NH4, NO3, FRP, FRP, OC, OC, ON, ON, OP, OP, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, CHLA, ZEROS
+  BC SCALE ==    1.000000,   1.000000,   1.000000,   1.000000,   1.000000,   1.000000,   1.000000,  0.6000000,  0.4000000,   1.000000,  0.5000000,   1.000000,  0.5000000,   1.000000,  0.5000000,  0.2500000,  0.2000
+END BC
+Closing file unit: 102
+Trying to open file: ../../includes/bc/3_dam/Dam-Spillway_20230101_20240303.fvc ... OK. File unit: 102
+BC == Q, 2, ../../includes/bc/3_dam/../../../bc_repo/3_dam/outflow_woods_dam-spillway_19990311-20240416.csv
+  BC HEADER ==  Date, FLOW
+  BC SCALE ==   -1.000000
+END BC
+Closing file unit: 102
+OUTPUT DIR == ../../outputs/results/
+OUTPUT == NETCDF
+  SUFFIX == HD
+  OUTPUT PARAMETERS ==  H, D, V, TAUB, SAL, TEMP,
+  OUTPUT INTERVAL ==    7200.000
+  COMPRESSION == .TRUE.
+END OUTPUT
+OUTPUT == NETCDF
+  SUFFIX == MET
+  OUTPUT PARAMETERS ==  H, D, TEMP, AIR_TEMP, PRECIP, SW_RAD, MSLP, W10, EVAP, REL_HUM, LW_RAD,
+  OUTPUT INTERVAL ==    7200.000
+  COMPRESSION == .TRUE.
+END OUTPUT
+WRITE RESTART DT ==    86400.00
+RESTART OVERWRITE == .FALSE.
+Closing file unit: 101
+Finished echoing input file.
+
+Successfully processed input control files.
+
+Initialising TUFLOW FV engine license:
+
+Searching for a BMT WIBU Hardware Licence...
+
+TUFLOW FV Engine            Dongle 3793274  Expiry 2025/04/09  LAN   1 of   10 (9 remaining)
+Successfully found WIBU TUFLOW FV engine licence
+
+Initialising TUFLOW FV simulation threads:
+TUFLOW FV Threads (16)      Dongle 3793274  Expiry 2025/04/09  LAN   1 to   16 (24 remaining)
+Successfully initialised 16 threads.
+
+Initialising requested TUFLOW FV module license/s:
+TUFLOW FV 3D Module         Dongle 3793274  Expiry 2025/04/09  LAN   1 of   10 (9 remaining)
+TUFLOW FV AD Module         Dongle 3793274  Expiry 2025/04/09  LAN   1 of   10 (9 remaining)
+TUFLOW FV GPU Cards (1)     Dongle 3793274  Expiry 2025/04/09  LAN   1 of   10 (9 remaining)
+Successful.
+
+
+Trying to open (O) file log/woods_2023_2024_BASE.wor...OK.  File Unit:1001
+
+Trying to open (O) file log/woods_2023_2024_BASE.qgs...OK.  File Unit:1002
+GIS Projection being extracted from ../../gis_repo/1_domain/projection/projection.prj
+Trying to open file: ../../gis_repo/1_domain/projection/projection.prj ... OK. File unit: 101
+Closing file unit: 101
+Attempting to build model domain object/s:
+
+Processing mesh geometry file/s:
+Reading 2dm mesh file...
+Trying to open file: ../../gis_repo/1_domain/mesh/Woods_v6_b_WGS84.2dm ... OK. File unit: 101
+Closing file unit: 101
+Finished reading 2dm mesh file.
+
+Checking spherical coordinates...
+Finished checking spherical coordinates.
+Processing mesh face connections...
+Finished processing mesh face connections.
+
+Checking nodestring overlaps...
+Nodestring overlap checked.
+Opening GIS Layer: ../../gis_repo/2_benthic/materials/woods_7_zone_WGS84.shp
+GIS Layer assigned ID of 1
+
+Trying to open (I) file ../../gis_repo/2_benthic/materials/woods_7_zone_WGS84.prj...OK.  File Unit:1003
+...Closed File Unit:1003
+
+Trying to open (DI) file ../../gis_repo/2_benthic/materials/woods_7_zone_WGS84.shp...OK.  File Unit:1003
+
+Trying to open (DE) file ../../gis_repo/2_benthic/materials/woods_7_zone_WGS84.shp...OK.  File Unit:1004
+
+Trying to open (BI) file ../../gis_repo/2_benthic/materials/woods_7_zone_WGS84.shx...OK.  File Unit:1005
+
+Trying to open (BE) file ../../gis_repo/2_benthic/materials/woods_7_zone_WGS84.shx...OK.  File Unit:1006
+
+Trying to open (BI) file ../../gis_repo/2_benthic/materials/woods_7_zone_WGS84.dbf...OK.  File Unit:1007
+ShapefileX Code: 9994  Length: 78
+ShapefileX Version: 1000  Type: 5
+Shapefile Code: 9994  Length: 7894
+Shapefile Version: 1000  Type: 5
+...Closed File Unit:1004
+...Closed File Unit:1005
+DBF file contains 7 records.
+1 DBF Fields (Name [#/Type/Length]): Material [1/N/3]  
+
+Closing GIS Layer 1 [../../gis_repo/2_benthic/materials/woods_7_zone_WGS84.shp]...
+...Closed File Unit:1003
+...Closed File Unit:1006
+...Closed File Unit:1007
+Reading 3D layer specification file...
+Trying to open file: ../../gis_repo/1_domain/layers/layers_WL.csv ... OK. File unit: 101
+Closing file unit: 101
+Trying to open file: ../../gis_repo/1_domain/layers/layers_WL.csv ... OK. File unit: 101
+ Z columns read from csvfile. 16 lines successfully read.
+Closing file unit: 101
+Finished reading 3D layer specification file.
+
+Found 11382 nodes.
+Found 21977 2D cells.
+Found 2 nodestrings.
+Mesh geometry file/s succesfully processed.
+
+Constructing domain, comprising:
+ 21977 2D cells.
+ 337643 3D cells.
+ 512295 3D faces.
+Constructing node object...OK
+Constructing cell object...OK
+Constructing face object...OK
+Constructing gridmap object/s...
+  Extracting grid definition from ../../includes/bc/1_weather/../../../bc_repo/1_weather/CFSR/CFSR_20230101_20240501.nc
+Trying to open file: ../../includes/bc/1_weather/../../../bc_repo/1_weather/CFSR/CFSR_20230101_20240501.nc ...OK
+Closing file: ../../includes/bc/1_weather/../../../bc_repo/1_weather/CFSR/CFSR_20230101_20240501.nc
+    Constructing grid to mesh-cells map
+OK
+Constructing external mode objects...OK
+
+Successfully built model domain object/s.
+
+Attempting to initialise atmospheric module:
+Successfully initialised atmospheric module.
+
+Attempting to initialise external turbulence model:
+Initialising "GOTM" external turbulence module:
+    init_tridiagonal
+    init_turbulence: v4.1.0
+        reading turbulence namelists..
+        done.
+        allocation memory..
+        allocation memory..
+        allocation memory..
+        done.
+         
+        --------------------------------------------------------
+        You are using the generic two-equation model
+        with the following properties:
+         
+            exponent of k in psi-equation,    m  =  0.500000000000000     
+            exponent of l in psi-equation,    n  =  -1.00000000000000     
+            exponent of cm0 in psi-equation,  p  =  -1.00000000000000     
+            cpsi1                                =  0.555550000000000     
+            cpsi2                                =  0.833330000000000     
+            cpsi3minus                           = -0.637117021728016     
+            cpsi3plus                            =  0.000000000000000E+000
+            sig_k                                =   2.00000000000000     
+            sig_psi                              =   2.00000000000000     
+         
+            Value of the stability function
+            in the log-law,                   cm0 =  0.526464710835324     
+            in shear-free turbulence,        cmsf =  0.731006013490010     
+         
+            von Karman constant,           kappa =  0.392405196672221     
+            homogeneous decay rate,            d =  -1.20000480001920     
+            spatial decay rate (no shear), alpha =  -2.52753917233846     
+            length-scale slope (no shear),     L =  0.204110288567605     
+            steady-state Richardson-number, Ri_st=  0.250000000000000     
+        --------------------------------------------------------
+         
+Successful.
+
+Succesfully initialised external turbulence model.
+
+Attempting to initialise model structural configurations:
+Constructing struct object...
+Finished constructing struct object
+Successfully initialised model structural configurations.
+
+Attempting to initialise model boundary conditions:
+Constructing fvbc object...
+
+BC 1, Type=AIR_TEMP
+BC variable name/s = TIME, AIR_TEMP
+BC file header/s = ISOTime, ATemp
+BC reference time = 01/01/2001 00:00:00
+BC time units = ISOTIME
+BC variable offset/s =   0.00E+00
+BC variable scale/s =   1.00E+00
+BC variable default/s =   NaN
+Trying to open file: ../../includes/bc/1_weather/../../../bc_repo/1_weather/BOM/BOM_met_liawenee_2023_2024.csv ... OK. File unit: 101
+ISOTime, ATemp columns read from csvfile. 13129 lines successfully read.
+Closing file unit: 101
+BC 1 is OK
+
+BC 2, Type=REL_HUM
+BC variable name/s = TIME, REL_HUM
+BC file header/s = ISOTime, Rel_Hum
+BC reference time = 01/01/2001 00:00:00
+BC time units = ISOTIME
+BC variable offset/s =   0.00E+00
+BC variable scale/s =   1.00E+00
+BC variable default/s =   NaN
+Trying to open file: ../../includes/bc/1_weather/../../../bc_repo/1_weather/BOM/BOM_met_liawenee_2023_2024.csv ... OK. File unit: 101
+ISOTime, Rel_Hum columns read from csvfile. 13129 lines successfully read.
+Closing file unit: 101
+BC 2 is OK
+
+BC 3, Type=W10
+BC variable name/s = TIME, W10_X, W10_Y
+BC file header/s = ISOTime, Wx, Wy
+BC reference time = 01/01/2001 00:00:00
+BC time units = ISOTIME
+BC variable offset/s =   0.00E+00, 0.00E+00
+BC variable scale/s =   1.00E+00, 1.00E+00
+BC variable default/s =   NaN, NaN
+Trying to open file: ../../includes/bc/1_weather/../../../bc_repo/1_weather/BOM/BOM_met_liawenee_2023_2024.csv ... OK. File unit: 101
+ISOTime, Wx, Wy columns read from csvfile. 13129 lines successfully read.
+Closing file unit: 101
+BC 3 is OK
+
+BC 4, Type=LW_RAD_GRID, ID=ATMOS
+Update dt=   3600.000    s
+BC grid label = ATMOS
+BC grid id = 1
+BC reference time = 01/01/1990 00:00:00
+BC time units = HOURS
+BC variable offset/s =   0.00E+00
+BC variable scale/s =   1.00E+00
+BC default value/s =   NaN
+BC variable name/s =  TIME, LW_RAD
+BC file header/s =  LOCAL_TIME, DOWNWARD_LONGWAVE
+Trying to open file: ../../includes/bc/1_weather/../../../bc_repo/1_weather/CFSR/CFSR_20230101_20240501.nc ...OK
+LOCAL_TIME,DOWNWARD_LONGWAVE, variables found in netcdf file. 11664 timesteps successfully read.
+BC 4 is OK
+
+BC 5, Type=SW_RAD_GRID, ID=ATMOS
+Update dt=   3600.000    s
+BC grid label = ATMOS
+BC grid id = 1
+BC reference time = 01/01/1990 00:00:00
+BC time units = HOURS
+BC variable offset/s =   0.00E+00
+BC variable scale/s =   1.00E+00
+BC default value/s =   NaN
+BC variable name/s =  TIME, SW_RAD
+BC file header/s =  LOCAL_TIME, DOWNWARD_SHORTWAVE
+Trying to open file: ../../includes/bc/1_weather/../../../bc_repo/1_weather/CFSR/CFSR_20230101_20240501.nc ...OK
+LOCAL_TIME,DOWNWARD_SHORTWAVE, variables found in netcdf file. 11664 timesteps successfully read.
+BC 5 is OK
+
+BC 6, Type=Q, ID=1
+Subtype=1
+BC Nodestring id = 1
+BC variable name/s = TIME, Q, SAL, TEMP, TRACE_1
+BC file header/s = Date, FLOW, SAL, TEMP, ONES
+BC reference time = 01/01/2001 00:00:00
+BC time units = ISOTIME
+BC variable offset/s =   0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00
+BC variable scale/s =   1.00E+00, 1.00E+00, 1.00E+00, 1.00E+00
+BC variable default/s =   NaN, NaN, NaN, NaN
+Trying to open file: ../../includes/bc/4_rivers/../../../bc_repo/4_rivers/LAKE_RIVER/swift_inflow_woods_dam_20160107-20240514.csv ... OK. File unit: 101
+WARNING: SAL column not found in csv file. Assigning a value of             NaN
+WARNING: TEMP column not found in csv file. Assigning a value of             NaN
+WARNING: ONES column not found in csv file. Assigning a value of             NaN
+Date, FLOW columns read from csvfile. 47905 lines successfully read.
+Closing file unit: 101
+BC 6 is OK
+
+BC 7, Type=Q, ID=1
+Subtype=1
+BC Nodestring id = 1
+BC variable name/s = TIME, Q, SAL, TEMP, TRACE_1
+BC file header/s = Date, FLOW, SAL, TEMP, ONES
+BC reference time = 01/01/2001 00:00:00
+BC time units = ISOTIME
+BC variable offset/s =   0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00
+BC variable scale/s =   1.00E+00, 1.00E+00, 1.00E+00, 1.00E+00
+BC variable default/s =   NaN, NaN, NaN, NaN
+Trying to open file: ../../includes/bc/4_rivers/../../../bc_repo/4_rivers/LAKE_RIVER/flowIntoLakeRiverArthurs_inflow_woods_dam_20160107-20240514.csv ... OK. File unit: 101
+Date, FLOW, SAL, TEMP, ONES columns read from csvfile. 292753 lines successfully read.
+Closing file unit: 101
+BC 7 is OK
+
+BC 8, Type=Q, ID=2
+Subtype=1
+BC Nodestring id = 2
+BC variable name/s = TIME, Q, SAL, TEMP, TRACE_1
+BC file header/s = Date, FLOW, SAL, TEMP, TRACE_1
+BC reference time = 01/01/2001 00:00:00
+BC time units = ISOTIME
+BC variable offset/s =   0.00E+00, 0.00E+00, 0.00E+00, 0.00E+00
+BC variable scale/s =  -1.00E+00, 1.00E+00, 1.00E+00, 1.00E+00
+BC variable default/s =   NaN, NaN, NaN, NaN
+Trying to open file: ../../includes/bc/3_dam/../../../bc_repo/3_dam/outflow_woods_dam-spillway_19990311-20240416.csv ... OK. File unit: 101
+WARNING: SAL column not found in csv file. Assigning a value of             NaN
+WARNING: TEMP column not found in csv file. Assigning a value of             NaN
+WARNING: TRACE_1 column not found in csv file. Assigning a value of             NaN
+Date, FLOW columns read from csvfile. 880117 lines successfully read.
+Closing file unit: 101
+BC 8 is OK
+
+Finished constructing fvbc object.
+
+Initialising ghost cell boundary conditions...
+Finished initialising ghost cell boundary conditions.
+
+Initialising face object boundary conditions...
+Finished initialising face object boundary conditions.
+
+Successfully initialised model boundary conditions.
+
+Attempting to generate model initial conditions:
+Successfully generated model initial conditions.
+
+Attempting to initialise model output:
+
+Allocating output object memory:
+Memory allocation OK.
+
+Processing output requests:
+Processing request 1 is...
+OK.
+Processing request 2 is...
+OK.
+
+Opening output files...
+Trying to open file: ../../outputs/results/woods_2023_2024_BASE_HD.nc ...OK
+Trying to open file: ../../outputs/results/woods_2023_2024_BASE_MET.nc ...OK
+
+Successfully initialised model output.
+
+...Closed File Unit:1001
+...Closed File Unit:1002
+FVC[0]: TUFLOW FVC version 0.4.1 (Mar 20 2024 14:30:10) - single precision - win64
+FVC[0]: Interrogating CUDA enabled GPUs
+FVC[0]: CUDA driver version = 12060
+FVC[0]: Found 1 CUDA enabled device(s)
+FVC[0]: Device 0, NVIDIA GeForce RTX 3090 Ti, has compute capability = 8.6
+FVC[0]: Adding device 0 to list of available CUDA devices
+FVC[0]: Hardware option = GPU
+FVC[0]: Requested device 0 found in available device list
+FVC[0]: incl_mslp = 0
+FVC[0]: vert_mesh_typ = 1
+FVC[0]: limiter3 = 2
+FVC[0]: nSed = 0
+FVC[0]: jSed1 = 0
+FVC[0]: nTrace = 1
+FVC[0]: jTrace1 = 6
+FVC[0]: bot_drag_model = 2
+FVC[0]: g = 9.810000
+FVC[0]: rho0 = 1000.000000
+FVC[0]: sal0 = 0.000000
+FVC[0]: temp0 = 10.000000
+FVC[0]: hDry = 0.020000
+FVC[0]: hWet = 0.020000
+FVC[0]: h3d = 0.100000
+FVC[0]: theta_bar = 0.100000
+FVC[0]: theta_M = 1.000000
+FVC[0]: theta_S = 0.500000
+FVC[0]: kappa = 0.410000
+FVC[0]: fcor_ = -0.000097
+FVC[0]: mslpa = 101325.000000
+FVC[0]: dZmin = 0.100000
+FVC[0]: alphaR12 = 1.000000
+FVC[0]: alphaR22 = 1.000000
+FVC[0]: alphaR32 = 1.000000
+FVC[0]: alphaR23 = 1.000000
+FVC[0]: alphaR33 = 1.000000
+FVC[0]: sedMin = 0.000000
+FVC[0]: sedMax = 100000.000000
+FVC[0]: hTransp = 0.100000
+FVC[0]: prandtl_0 = 0.740000
+FVC[0]: vert_mix_par_c1 = 0.000000
+FVC[0]: vert_mix_par_c2 = 0.000000
+FVC[0]: nuw = 0.000001
+FVC[0]: wave_par_hmin = 0.010000
+FVC[0]: autoweir_hmin = 0.050000
+FVC[0]: autoweir_Cw = 1.705000
+FVC[0]: autoweir_Ex = 1.500000
+FVC[0]: autoweir_a = 8.550000
+FVC[0]: autoweir_b = 0.556000
+FVC[0]: autoweir_Csfmin = 0.700000
+FVC[0]: alpha_bar = 1.000000
+FVC[0]: alpha_m = 1.000000
+FVC[0]: Device 0 total GPU memory = 24142 Mb, free memory = 23847 Mb
+FVC[0]: Loading module FVC_kernels.ptx
+FVC[0]: Full module path: /opt/bin/tuflowfv_uwa/bin/FVC_kernels.ptx
+Running simulation
+Number of OpenMP threads=16
+Number of TUFLOW FV engine threads=1
+Thread stacksize=4194304
+
+Entering timestep loop
+t = 02/01/2023 00:00:00.  dt =   0.000 /  0.000 s.  elapsed time =       0.0 s.
+    Writing NETCDF output. t = 02/01/2023 00:00:00.
+    Writing NETCDF output. t = 02/01/2023 00:00:00.
+t = 02/01/2023 00:10:09.  dt =  14.824 /  0.371 s.  elapsed time =       0.6 s.
+t = 02/01/2023 00:20:01.  dt =  14.797 /  0.370 s.  elapsed time =       1.0 s.
+t = 02/01/2023 00:30:07.  dt =  14.772 /  0.369 s.  elapsed time =       1.4 s.
+t = 02/01/2023 00:40:13.  dt =  14.770 /  0.369 s.  elapsed time =       1.8 s.
+t = 02/01/2023 00:50:03.  dt =  14.750 /  0.369 s.  elapsed time =       2.2 s.
+t = 02/01/2023 01:00:08.  dt =  14.749 /  0.369 s.  elapsed time =       2.5 s.
+t = 02/01/2023 01:10:12.  dt =  14.733 /  0.368 s.  elapsed time =       2.9 s.
+t = 02/01/2023 01:20:01.  dt =  14.717 /  0.368 s.  elapsed time =       3.3 s.
+t = 02/01/2023 01:30:09.  dt =  13.616 /  0.368 s.  elapsed time =       3.7 s.
+t = 02/01/2023 01:40:01.  dt =  12.486 /  0.367 s.  elapsed time =       4.1 s.
+t = 02/01/2023 01:50:11.  dt =  11.384 /  0.367 s.  elapsed time =       4.6 s.
+t = 02/01/2023 02:00:02.  dt =  10.999 /  0.367 s.  elapsed time =       4.9 s.
+    Writing NETCDF output. t = 02/01/2023 02:00:00.
+    Writing NETCDF output. t = 02/01/2023 02:00:00.
+t = 02/01/2023 02:10:04.  dt =   9.891 /  0.366 s.  elapsed time =       5.6 s.
+t = 02/01/2023 02:20:07.  dt =   9.888 /  0.366 s.  elapsed time =       6.0 s.
+t = 02/01/2023 02:30:03.  dt =   9.510 /  0.366 s.  elapsed time =       6.4 s.
+t = 02/01/2023 02:40:08.  dt =   9.140 /  0.366 s.  elapsed time =       6.9 s.
+t = 02/01/2023 02:50:02.  dt =   9.134 /  0.365 s.  elapsed time =       7.4 s.
+t = 02/01/2023 03:00:07.  dt =   8.761 /  0.365 s.  elapsed time =       7.8 s.
+t = 02/01/2023 03:10:02.  dt =   8.760 /  0.365 s.  elapsed time =       8.3 s.
+t = 02/01/2023 03:20:08.  dt =   8.753 /  0.365 s.  elapsed time =       8.8 s.
+t = 02/01/2023 03:30:01.  dt =   9.123 /  0.365 s.  elapsed time =       9.3 s.
+t = 02/01/2023 03:40:03.  dt =   9.132 /  0.365 s.  elapsed time =       9.7 s.
+t = 02/01/2023 03:50:01.  dt =  10.957 /  0.365 s.  elapsed time =      10.2 s.
+t = 02/01/2023 04:00:04.  dt =  10.245 /  0.366 s.  elapsed time =      10.6 s.
+    Writing NETCDF output. t = 02/01/2023 04:00:00.
+    Writing NETCDF output. t = 02/01/2023 04:00:00.
+t = 02/01/2023 04:10:10.  dt =  11.713 /  0.366 s.  elapsed time =      11.2 s.
+t = 02/01/2023 04:20:03.  dt =  10.984 /  0.366 s.  elapsed time =      11.6 s.
+t = 02/01/2023 04:30:00.  dt =  12.090 /  0.366 s.  elapsed time =      12.0 s.
+t = 02/01/2023 04:40:01.  dt =  10.982 /  0.366 s.  elapsed time =      12.5 s.
+t = 02/01/2023 04:50:08.  dt =  12.088 /  0.366 s.  elapsed time =      12.9 s.
+t = 02/01/2023 05:00:10.  dt =  10.614 /  0.366 s.  elapsed time =      13.3 s.
+t = 02/01/2023 05:10:05.  dt =  11.707 /  0.366 s.  elapsed time =      13.7 s.
+t = 02/01/2023 05:20:05.  dt =  11.350 /  0.366 s.  elapsed time =      14.2 s.
+t = 02/01/2023 05:30:00.  dt =  12.075 /  0.366 s.  elapsed time =      14.5 s.
+t = 02/01/2023 05:40:06.  dt =  11.709 /  0.366 s.  elapsed time =      15.0 s.
+t = 02/01/2023 05:50:11.  dt =  13.188 /  0.366 s.  elapsed time =      15.4 s.
+t = 02/01/2023 06:00:02.  dt =  12.079 /  0.366 s.  elapsed time =      15.8 s.
+    Writing NETCDF output. t = 02/01/2023 06:00:00.
+    Writing NETCDF output. t = 02/01/2023 06:00:00.
+t = 02/01/2023 06:10:11.  dt =  12.813 /  0.366 s.  elapsed time =      16.3 s.
+t = 02/01/2023 06:20:03.  dt =  12.826 /  0.366 s.  elapsed time =      16.7 s.
+t = 02/01/2023 06:30:03.  dt =  14.288 /  0.366 s.  elapsed time =      17.1 s.
+t = 02/01/2023 06:40:13.  dt =  13.200 /  0.367 s.  elapsed time =      17.5 s.
+t = 02/01/2023 06:50:11.  dt =  13.937 /  0.367 s.  elapsed time =      17.9 s.
+t = 02/01/2023 07:00:09.  dt =  12.829 /  0.367 s.  elapsed time =      18.3 s.
+t = 02/01/2023 07:10:06.  dt =  14.684 /  0.367 s.  elapsed time =      18.7 s.
+t = 02/01/2023 07:20:04.  dt =  12.831 /  0.367 s.  elapsed time =      19.1 s.
+t = 02/01/2023 07:30:14.  dt =  13.570 /  0.367 s.  elapsed time =      19.5 s.
+t = 02/01/2023 07:40:09.  dt =  13.196 /  0.367 s.  elapsed time =      19.9 s.
+t = 02/01/2023 07:50:05.  dt =  11.716 /  0.366 s.  elapsed time =      20.3 s.
+t = 02/01/2023 08:00:00.  dt =  10.982 /  0.366 s.  elapsed time =      20.7 s.
+    Writing NETCDF output. t = 02/01/2023 08:00:00.
+    Writing NETCDF output. t = 02/01/2023 08:00:00.
+t = 02/01/2023 08:10:07.  dt =  11.707 /  0.366 s.  elapsed time =      21.2 s.
+t = 02/01/2023 08:20:12.  dt =  11.706 /  0.366 s.  elapsed time =      21.7 s.
+t = 02/01/2023 08:30:09.  dt =  11.712 /  0.366 s.  elapsed time =      22.1 s.
+t = 02/01/2023 08:40:00.  dt =  11.347 /  0.366 s.  elapsed time =      22.5 s.
+t = 02/01/2023 08:50:07.  dt =  11.714 /  0.366 s.  elapsed time =      23.0 s.
+t = 02/01/2023 09:00:06.  dt =  11.725 /  0.366 s.  elapsed time =      23.4 s.
+t = 02/01/2023 09:10:11.  dt =  11.724 /  0.366 s.  elapsed time =      23.8 s.
+t = 02/01/2023 09:20:04.  dt =  11.723 /  0.366 s.  elapsed time =      24.2 s.
+t = 02/01/2023 09:30:09.  dt =  12.463 /  0.367 s.  elapsed time =      24.7 s.
+t = 02/01/2023 09:40:03.  dt =  12.456 /  0.366 s.  elapsed time =      25.2 s.
+t = 02/01/2023 09:50:03.  dt =  13.203 /  0.367 s.  elapsed time =      25.6 s.
+t = 02/01/2023 10:00:10.  dt =  12.825 /  0.366 s.  elapsed time =      26.0 s.
+    Writing NETCDF output. t = 02/01/2023 10:00:00.
+    Writing NETCDF output. t = 02/01/2023 10:00:00.
+t = 02/01/2023 10:10:02.  dt =  13.196 /  0.367 s.  elapsed time =      26.5 s.
+t = 02/01/2023 10:20:08.  dt =  13.577 /  0.367 s.  elapsed time =      26.9 s.
+t = 02/01/2023 10:30:09.  dt =  12.462 /  0.367 s.  elapsed time =      27.3 s.
+t = 02/01/2023 10:40:07.  dt =  12.832 /  0.367 s.  elapsed time =      27.7 s.
+t = 02/01/2023 10:50:06.  dt =  13.938 /  0.367 s.  elapsed time =      28.2 s.
+t = 02/01/2023 11:00:12.  dt =  12.463 /  0.367 s.  elapsed time =      28.5 s.
+t = 02/01/2023 11:10:07.  dt =  13.943 /  0.367 s.  elapsed time =      29.0 s.
+t = 02/01/2023 11:20:02.  dt =  13.570 /  0.367 s.  elapsed time =      29.4 s.
+t = 02/01/2023 11:30:10.  dt =  13.572 /  0.367 s.  elapsed time =      29.7 s.
+t = 02/01/2023 11:40:12.  dt =  12.841 /  0.367 s.  elapsed time =      30.2 s.
+t = 02/01/2023 11:50:03.  dt =  13.200 /  0.367 s.  elapsed time =      30.6 s.
+t = 02/01/2023 12:00:03.  dt =  13.206 /  0.367 s.  elapsed time =      31.0 s.
+    Writing NETCDF output. t = 02/01/2023 12:00:00.
+    Writing NETCDF output. t = 02/01/2023 12:00:00.
+t = 02/01/2023 12:10:00.  dt =  11.733 /  0.367 s.  elapsed time =      31.5 s.
+t = 02/01/2023 12:20:01.  dt =  13.942 /  0.367 s.  elapsed time =      32.0 s.
+t = 02/01/2023 12:30:08.  dt =  13.575 /  0.367 s.  elapsed time =      32.3 s.
+t = 02/01/2023 12:40:09.  dt =  14.306 /  0.367 s.  elapsed time =      32.8 s.
+t = 02/01/2023 12:50:06.  dt =  13.577 /  0.367 s.  elapsed time =      33.2 s.
+t = 02/01/2023 13:00:10.  dt =  14.682 /  0.367 s.  elapsed time =      33.5 s.
+t = 02/01/2023 13:10:09.  dt =  12.104 /  0.367 s.  elapsed time =      34.0 s.
+t = 02/01/2023 13:20:07.  dt =  14.686 /  0.367 s.  elapsed time =      34.4 s.
+t = 02/01/2023 13:30:04.  dt =  13.942 /  0.367 s.  elapsed time =      34.7 s.
+t = 02/01/2023 13:40:10.  dt =  14.689 /  0.367 s.  elapsed time =      35.1 s.
+t = 02/01/2023 13:50:02.  dt =  13.576 /  0.367 s.  elapsed time =      35.6 s.
+t = 02/01/2023 14:00:02.  dt =  14.314 /  0.367 s.  elapsed time =      35.9 s.
+    Writing NETCDF output. t = 02/01/2023 14:00:00.
+    Writing NETCDF output. t = 02/01/2023 14:00:00.
+t = 02/01/2023 14:10:02.  dt =  12.481 /  0.367 s.  elapsed time =      36.5 s.
+t = 02/01/2023 14:20:06.  dt =  14.313 /  0.367 s.  elapsed time =      36.9 s.
+t = 02/01/2023 14:30:03.  dt =  13.955 /  0.367 s.  elapsed time =      37.2 s.
+t = 02/01/2023 14:40:14.  dt =  14.695 /  0.367 s.  elapsed time =      37.6 s.
+t = 02/01/2023 14:50:02.  dt =  14.701 /  0.368 s.  elapsed time =      38.0 s.
+t = 02/01/2023 15:00:05.  dt =  14.717 /  0.368 s.  elapsed time =      38.4 s.
+t = 02/01/2023 15:10:08.  dt =  14.710 /  0.368 s.  elapsed time =      38.8 s.
+t = 02/01/2023 15:20:12.  dt =  14.732 /  0.368 s.  elapsed time =      39.2 s.
+t = 02/01/2023 15:30:01.  dt =  14.726 /  0.368 s.  elapsed time =      39.6 s.
+t = 02/01/2023 15:40:05.  dt =  14.732 /  0.368 s.  elapsed time =      40.0 s.
+t = 02/01/2023 15:50:09.  dt =  14.740 /  0.369 s.  elapsed time =      40.4 s.
+t = 02/01/2023 16:00:13.  dt =  14.733 /  0.368 s.  elapsed time =      40.8 s.
+    Writing NETCDF output. t = 02/01/2023 16:00:00.
+    Writing NETCDF output. t = 02/01/2023 16:00:00.
+t = 02/01/2023 16:10:03.  dt =  14.744 /  0.369 s.  elapsed time =      41.2 s.
+t = 02/01/2023 16:20:07.  dt =  14.748 /  0.369 s.  elapsed time =      41.6 s.
+t = 02/01/2023 16:30:12.  dt =  14.743 /  0.369 s.  elapsed time =      42.0 s.
+t = 02/01/2023 16:40:02.  dt =  14.759 /  0.369 s.  elapsed time =      42.4 s.
+t = 02/01/2023 16:50:07.  dt =  14.754 /  0.369 s.  elapsed time =      42.8 s.
+t = 02/01/2023 17:00:12.  dt =  14.766 /  0.369 s.  elapsed time =      43.1 s.
+t = 02/01/2023 17:10:03.  dt =  14.768 /  0.369 s.  elapsed time =      43.5 s.
+t = 02/01/2023 17:20:08.  dt =  14.773 /  0.369 s.  elapsed time =      43.9 s.
+t = 02/01/2023 17:30:14.  dt =  14.784 /  0.370 s.  elapsed time =      44.3 s.
+t = 02/01/2023 17:40:06.  dt =  14.785 /  0.370 s.  elapsed time =      44.7 s.
+t = 02/01/2023 17:50:12.  dt =  14.801 /  0.370 s.  elapsed time =      45.1 s.
+t = 02/01/2023 18:00:04.  dt =  14.806 /  0.370 s.  elapsed time =      45.5 s.
+    Writing NETCDF output. t = 02/01/2023 18:00:00.
+    Writing NETCDF output. t = 02/01/2023 18:00:00.
+t = 02/01/2023 18:10:12.  dt =  14.812 /  0.370 s.  elapsed time =      46.0 s.
+t = 02/01/2023 18:20:05.  dt =  14.835 /  0.371 s.  elapsed time =      46.4 s.
+t = 02/01/2023 18:30:13.  dt =  14.831 /  0.371 s.  elapsed time =      46.8 s.
+t = 02/01/2023 18:40:06.  dt =  14.848 /  0.371 s.  elapsed time =      47.2 s.
+t = 02/01/2023 18:50:01.  dt =  14.867 /  0.372 s.  elapsed time =      47.5 s.
+t = 02/01/2023 19:00:10.  dt =  14.875 /  0.372 s.  elapsed time =      48.0 s.
+t = 02/01/2023 19:10:05.  dt =  14.868 /  0.372 s.  elapsed time =      48.4 s.
+t = 02/01/2023 19:20:00.  dt =  14.865 /  0.372 s.  elapsed time =      48.8 s.
+t = 02/01/2023 19:30:09.  dt =  14.838 /  0.371 s.  elapsed time =      49.1 s.
+t = 02/01/2023 19:40:02.  dt =  14.826 /  0.371 s.  elapsed time =      49.5 s.
+t = 02/01/2023 19:50:10.  dt =  14.808 /  0.370 s.  elapsed time =      49.9 s.
+t = 02/01/2023 20:00:01.  dt =  14.770 /  0.369 s.  elapsed time =      50.3 s.
+    Writing NETCDF output. t = 02/01/2023 20:00:00.
+    Writing NETCDF output. t = 02/01/2023 20:00:00.
+t = 02/01/2023 20:10:07.  dt =  14.765 /  0.369 s.  elapsed time =      50.8 s.
+t = 02/01/2023 20:20:11.  dt =  14.737 /  0.368 s.  elapsed time =      51.2 s.
+t = 02/01/2023 20:30:01.  dt =  14.729 /  0.368 s.  elapsed time =      51.6 s.
+t = 02/01/2023 20:40:05.  dt =  14.739 /  0.368 s.  elapsed time =      52.0 s.
+t = 02/01/2023 20:50:09.  dt =  14.733 /  0.368 s.  elapsed time =      52.4 s.
+t = 02/01/2023 21:00:13.  dt =  14.746 /  0.369 s.  elapsed time =      52.8 s.
+t = 02/01/2023 21:10:03.  dt =  14.745 /  0.369 s.  elapsed time =      53.2 s.
+t = 02/01/2023 21:20:08.  dt =  14.747 /  0.369 s.  elapsed time =      53.6 s.
+t = 02/01/2023 21:30:13.  dt =  14.759 /  0.369 s.  elapsed time =      53.9 s.
+t = 02/01/2023 21:40:03.  dt =  14.757 /  0.369 s.  elapsed time =      54.3 s.
+t = 02/01/2023 21:50:08.  dt =  14.761 /  0.369 s.  elapsed time =      54.7 s.
+t = 02/01/2023 22:00:13.  dt =  14.763 /  0.369 s.  elapsed time =      55.1 s.
+    Writing NETCDF output. t = 02/01/2023 22:00:00.
+    Writing NETCDF output. t = 02/01/2023 22:00:00.
+t = 02/01/2023 22:10:04.  dt =  14.764 /  0.369 s.  elapsed time =      55.6 s.
+t = 02/01/2023 22:20:09.  dt =  14.777 /  0.369 s.  elapsed time =      56.0 s.
+t = 02/01/2023 22:30:00.  dt =  14.766 /  0.369 s.  elapsed time =      56.4 s.
+t = 02/01/2023 22:40:06.  dt =  14.778 /  0.369 s.  elapsed time =      56.8 s.
+t = 02/01/2023 22:50:12.  dt =  14.788 /  0.370 s.  elapsed time =      57.2 s.
+t = 02/01/2023 23:00:03.  dt =  14.781 /  0.370 s.  elapsed time =      57.6 s.
+t = 02/01/2023 23:10:10.  dt =  14.800 /  0.370 s.  elapsed time =      58.0 s.
+t = 02/01/2023 23:20:02.  dt =  14.793 /  0.370 s.  elapsed time =      58.4 s.
+t = 02/01/2023 23:30:09.  dt =  14.804 /  0.370 s.  elapsed time =      58.7 s.
+t = 02/01/2023 23:40:01.  dt =  14.809 /  0.370 s.  elapsed time =      59.1 s.
+t = 02/01/2023 23:50:08.  dt =  14.805 /  0.370 s.  elapsed time =      59.5 s.
+t = 03/01/2023 00:00:00.  dt =  14.814 /  0.370 s.  elapsed time =      59.9 s.
+    Writing NETCDF output. t = 03/01/2023 00:00:00.
+    Writing NETCDF output. t = 03/01/2023 00:00:00.
+t = 03/01/2023 00:10:07.  dt =  14.817 /  0.370 s.  elapsed time =      60.4 s.
+t = 03/01/2023 00:20:00.  dt =  14.815 /  0.370 s.  elapsed time =      60.8 s.
+t = 03/01/2023 00:30:08.  dt =  14.824 /  0.371 s.  elapsed time =      61.1 s.
+t = 03/01/2023 00:40:01.  dt =  14.819 /  0.370 s.  elapsed time =      61.5 s.
+t = 03/01/2023 00:50:08.  dt =  14.826 /  0.371 s.  elapsed time =      61.9 s.
+t = 03/01/2023 01:00:01.  dt =  14.829 /  0.371 s.  elapsed time =      62.3 s.
+t = 03/01/2023 01:10:09.  dt =  14.823 /  0.371 s.  elapsed time =      62.7 s.
+t = 03/01/2023 01:20:03.  dt =  14.835 /  0.371 s.  elapsed time =      63.1 s.
+t = 03/01/2023 01:30:11.  dt =  14.829 /  0.371 s.  elapsed time =      63.4 s.
+t = 03/01/2023 01:40:04.  dt =  14.836 /  0.371 s.  elapsed time =      63.8 s.
+t = 03/01/2023 01:50:12.  dt =  14.838 /  0.371 s.  elapsed time =      64.2 s.
+t = 03/01/2023 02:00:06.  dt =  14.834 /  0.371 s.  elapsed time =      64.6 s.
+    Writing NETCDF output. t = 03/01/2023 02:00:00.
+    Writing NETCDF output. t = 03/01/2023 02:00:00.
+t = 03/01/2023 02:10:14.  dt =  14.843 /  0.371 s.  elapsed time =      65.1 s.
+t = 03/01/2023 02:20:08.  dt =  14.839 /  0.371 s.  elapsed time =      65.5 s.
+t = 03/01/2023 02:30:01.  dt =  14.837 /  0.371 s.  elapsed time =      65.9 s.
+t = 03/01/2023 02:40:10.  dt =  14.840 /  0.371 s.  elapsed time =      66.3 s.
+t = 03/01/2023 02:50:03.  dt =  14.829 /  0.371 s.  elapsed time =      66.7 s.
+t = 03/01/2023 03:00:11.  dt =  14.830 /  0.371 s.  elapsed time =      67.0 s.
+t = 03/01/2023 03:10:04.  dt =  14.823 /  0.371 s.  elapsed time =      67.4 s.
+t = 03/01/2023 03:20:12.  dt =  14.810 /  0.370 s.  elapsed time =      67.8 s.
+t = 03/01/2023 03:30:04.  dt =  14.818 /  0.370 s.  elapsed time =      68.2 s.
+t = 03/01/2023 03:40:11.  dt =  14.803 /  0.370 s.  elapsed time =      68.6 s.
+t = 03/01/2023 03:50:04.  dt =  14.805 /  0.370 s.  elapsed time =      69.0 s.
+t = 03/01/2023 04:00:10.  dt =  14.806 /  0.370 s.  elapsed time =      69.3 s.
+    Writing NETCDF output. t = 03/01/2023 04:00:00.
+    Writing NETCDF output. t = 03/01/2023 04:00:00.
+t = 03/01/2023 04:10:02.  dt =  14.795 /  0.370 s.  elapsed time =      69.9 s.
+t = 03/01/2023 04:20:09.  dt =  14.806 /  0.370 s.  elapsed time =      70.4 s.
+t = 03/01/2023 04:30:01.  dt =  14.804 /  0.370 s.  elapsed time =      70.7 s.
+t = 03/01/2023 04:40:09.  dt =  14.814 /  0.370 s.  elapsed time =      71.1 s.
+t = 03/01/2023 04:50:01.  dt =  14.829 /  0.371 s.  elapsed time =      71.5 s.
+t = 03/01/2023 05:00:09.  dt =  14.828 /  0.371 s.  elapsed time =      71.9 s.
+t = 03/01/2023 05:10:03.  dt =  14.845 /  0.371 s.  elapsed time =      72.3 s.
+t = 03/01/2023 05:20:12.  dt =  14.852 /  0.371 s.  elapsed time =      72.7 s.
+t = 03/01/2023 05:30:06.  dt =  14.848 /  0.371 s.  elapsed time =      73.1 s.
+t = 03/01/2023 05:40:15.  dt =  14.866 /  0.372 s.  elapsed time =      73.5 s.
+t = 03/01/2023 05:50:09.  dt =  14.855 /  0.371 s.  elapsed time =      73.9 s.
+t = 03/01/2023 06:00:04.  dt =  14.863 /  0.372 s.  elapsed time =      74.2 s.
+    Writing NETCDF output. t = 03/01/2023 06:00:00.
+    Writing NETCDF output. t = 03/01/2023 06:00:00.
+t = 03/01/2023 06:10:13.  dt =  14.867 /  0.372 s.  elapsed time =      74.7 s.
+t = 03/01/2023 06:20:07.  dt =  14.854 /  0.371 s.  elapsed time =      75.1 s.
+t = 03/01/2023 06:30:02.  dt =  14.866 /  0.372 s.  elapsed time =      75.4 s.
+t = 03/01/2023 06:40:11.  dt =  14.849 /  0.371 s.  elapsed time =      75.8 s.
+t = 03/01/2023 06:50:05.  dt =  14.844 /  0.371 s.  elapsed time =      76.2 s.
+t = 03/01/2023 07:00:13.  dt =  14.843 /  0.371 s.  elapsed time =      76.6 s.
+t = 03/01/2023 07:10:07.  dt =  14.823 /  0.371 s.  elapsed time =      77.0 s.
+t = 03/01/2023 07:20:15.  dt =  14.824 /  0.371 s.  elapsed time =      77.5 s.
+t = 03/01/2023 07:30:07.  dt =  14.820 /  0.371 s.  elapsed time =      77.8 s.
+t = 03/01/2023 07:40:00.  dt =  14.813 /  0.370 s.  elapsed time =      78.2 s.
+t = 03/01/2023 07:50:08.  dt =  14.827 /  0.371 s.  elapsed time =      78.6 s.
+t = 03/01/2023 08:00:01.  dt =  14.817 /  0.370 s.  elapsed time =      79.0 s.
+    Writing NETCDF output. t = 03/01/2023 08:00:00.
+    Writing NETCDF output. t = 03/01/2023 08:00:00.
+t = 03/01/2023 08:10:08.  dt =  14.824 /  0.371 s.  elapsed time =      79.5 s.
+t = 03/01/2023 08:20:01.  dt =  14.831 /  0.371 s.  elapsed time =      79.9 s.
+t = 03/01/2023 08:30:09.  dt =  14.822 /  0.371 s.  elapsed time =      80.2 s.
+t = 03/01/2023 08:40:02.  dt =  14.837 /  0.371 s.  elapsed time =      80.6 s.
+t = 03/01/2023 08:50:10.  dt =  14.828 /  0.371 s.  elapsed time =      81.0 s.
+t = 03/01/2023 09:00:04.  dt =  14.832 /  0.371 s.  elapsed time =      81.4 s.
+t = 03/01/2023 09:10:12.  dt =  14.838 /  0.371 s.  elapsed time =      81.8 s.
+t = 03/01/2023 09:20:05.  dt =  14.834 /  0.371 s.  elapsed time =      82.2 s.
+t = 03/01/2023 09:30:14.  dt =  14.843 /  0.371 s.  elapsed time =      82.6 s.
+t = 03/01/2023 09:40:08.  dt =  14.849 /  0.371 s.  elapsed time =      83.0 s.
+t = 03/01/2023 09:50:02.  dt =  14.854 /  0.371 s.  elapsed time =      83.4 s.
+t = 03/01/2023 10:00:11.  dt =  14.863 /  0.372 s.  elapsed time =      83.7 s.
+    Writing NETCDF output. t = 03/01/2023 10:00:00.
+    Writing NETCDF output. t = 03/01/2023 10:00:00.
+t = 03/01/2023 10:10:05.  dt =  14.866 /  0.372 s.  elapsed time =      84.2 s.
+t = 03/01/2023 10:20:00.  dt =  14.875 /  0.372 s.  elapsed time =      84.6 s.
+t = 03/01/2023 10:30:10.  dt =  14.880 /  0.372 s.  elapsed time =      85.0 s.
+t = 03/01/2023 10:40:06.  dt =  14.886 /  0.372 s.  elapsed time =      85.4 s.
+t = 03/01/2023 10:50:01.  dt =  14.897 /  0.372 s.  elapsed time =      85.8 s.
+t = 03/01/2023 11:00:12.  dt =  14.895 /  0.372 s.  elapsed time =      86.1 s.
+t = 03/01/2023 11:10:08.  dt =  14.913 /  0.373 s.  elapsed time =      86.5 s.
+t = 03/01/2023 11:20:05.  dt =  14.914 /  0.373 s.  elapsed time =      86.9 s.
+t = 03/01/2023 11:30:01.  dt =  14.911 /  0.373 s.  elapsed time =      87.3 s.
+t = 03/01/2023 11:40:13.  dt =  14.915 /  0.373 s.  elapsed time =      87.7 s.
+t = 03/01/2023 11:50:09.  dt =  14.899 /  0.372 s.  elapsed time =      88.1 s.
+t = 03/01/2023 12:00:05.  dt =  14.902 /  0.373 s.  elapsed time =      88.4 s.
+    Writing NETCDF output. t = 03/01/2023 12:00:00.
+    Writing NETCDF output. t = 03/01/2023 12:00:00.
+t = 03/01/2023 12:10:00.  dt =  14.883 /  0.372 s.  elapsed time =      88.9 s.
+t = 03/01/2023 12:20:11.  dt =  14.874 /  0.372 s.  elapsed time =      89.4 s.
+t = 03/01/2023 12:30:06.  dt =  14.880 /  0.372 s.  elapsed time =      89.7 s.
+t = 03/01/2023 12:40:01.  dt =  14.879 /  0.372 s.  elapsed time =      90.1 s.
+t = 03/01/2023 12:50:11.  dt =  14.895 /  0.372 s.  elapsed time =      90.6 s.
+t = 03/01/2023 13:00:07.  dt =  14.908 /  0.373 s.  elapsed time =      91.0 s.
+t = 03/01/2023 13:10:04.  dt =  14.910 /  0.373 s.  elapsed time =      91.3 s.
+t = 03/01/2023 13:20:00.  dt =  14.921 /  0.373 s.  elapsed time =      91.7 s.
+t = 03/01/2023 13:30:12.  dt =  14.912 /  0.373 s.  elapsed time =      92.1 s.
+t = 03/01/2023 13:40:08.  dt =  14.916 /  0.373 s.  elapsed time =      92.5 s.
+t = 03/01/2023 13:50:05.  dt =  14.917 /  0.373 s.  elapsed time =      92.9 s.
+t = 03/01/2023 14:00:02.  dt =  14.913 /  0.373 s.  elapsed time =      93.2 s.
+    Writing NETCDF output. t = 03/01/2023 14:00:00.
+    Writing NETCDF output. t = 03/01/2023 14:00:00.
+t = 03/01/2023 14:10:13.  dt =  14.922 /  0.373 s.  elapsed time =      93.7 s.
+t = 03/01/2023 14:20:10.  dt =  14.915 /  0.373 s.  elapsed time =      94.1 s.
+t = 03/01/2023 14:30:07.  dt =  14.920 /  0.373 s.  elapsed time =      94.5 s.
+t = 03/01/2023 14:40:03.  dt =  14.915 /  0.373 s.  elapsed time =      94.9 s.
+t = 03/01/2023 14:50:15.  dt =  14.903 /  0.373 s.  elapsed time =      95.3 s.
+t = 03/01/2023 15:00:11.  dt =  14.903 /  0.373 s.  elapsed time =      95.6 s.
+t = 03/01/2023 15:10:06.  dt =  14.886 /  0.372 s.  elapsed time =      96.0 s.
+t = 03/01/2023 15:20:02.  dt =  14.878 /  0.372 s.  elapsed time =      96.4 s.
+t = 03/01/2023 15:30:12.  dt =  14.878 /  0.372 s.  elapsed time =      96.8 s.
+t = 03/01/2023 15:40:07.  dt =  14.865 /  0.372 s.  elapsed time =      97.1 s.
+t = 03/01/2023 15:50:01.  dt =  14.870 /  0.372 s.  elapsed time =      97.5 s.
+t = 03/01/2023 16:00:11.  dt =  14.864 /  0.372 s.  elapsed time =      97.9 s.
+    Writing NETCDF output. t = 03/01/2023 16:00:00.
+    Writing NETCDF output. t = 03/01/2023 16:00:00.
+t = 03/01/2023 16:10:06.  dt =  14.864 /  0.372 s.  elapsed time =      98.4 s.
+t = 03/01/2023 16:20:00.  dt =  14.873 /  0.372 s.  elapsed time =      98.8 s.
+t = 03/01/2023 16:30:10.  dt =  14.862 /  0.372 s.  elapsed time =      99.1 s.
+t = 03/01/2023 16:40:05.  dt =  14.877 /  0.372 s.  elapsed time =      99.5 s.
+t = 03/01/2023 16:50:14.  dt =  14.878 /  0.372 s.  elapsed time =      99.9 s.
+t = 03/01/2023 17:00:10.  dt =  14.877 /  0.372 s.  elapsed time =     100.2 s.
+t = 03/01/2023 17:10:05.  dt =  14.893 /  0.372 s.  elapsed time =     100.6 s.
+t = 03/01/2023 17:20:01.  dt =  14.892 /  0.372 s.  elapsed time =     101.0 s.
+t = 03/01/2023 17:30:12.  dt =  14.902 /  0.373 s.  elapsed time =     101.4 s.
+t = 03/01/2023 17:40:08.  dt =  14.917 /  0.373 s.  elapsed time =     101.8 s.
+t = 03/01/2023 17:50:04.  dt =  14.914 /  0.373 s.  elapsed time =     102.1 s.
+t = 03/01/2023 18:00:01.  dt =  14.918 /  0.373 s.  elapsed time =     102.5 s.
+    Writing NETCDF output. t = 03/01/2023 18:00:00.
+    Writing NETCDF output. t = 03/01/2023 18:00:00.
+t = 03/01/2023 18:10:13.  dt =  14.919 /  0.373 s.  elapsed time =     103.0 s.
+t = 03/01/2023 18:20:09.  dt =  14.916 /  0.373 s.  elapsed time =     103.4 s.
+t = 03/01/2023 18:30:06.  dt =  14.920 /  0.373 s.  elapsed time =     103.7 s.
+t = 03/01/2023 18:40:03.  dt =  14.916 /  0.373 s.  elapsed time =     104.1 s.
+t = 03/01/2023 18:50:15.  dt =  14.920 /  0.373 s.  elapsed time =     104.5 s.
+t = 03/01/2023 19:00:11.  dt =  14.923 /  0.373 s.  elapsed time =     104.9 s.
+t = 03/01/2023 19:10:08.  dt =  14.921 /  0.373 s.  elapsed time =     105.3 s.
+t = 03/01/2023 19:20:05.  dt =  14.927 /  0.373 s.  elapsed time =     105.7 s.
+t = 03/01/2023 19:30:02.  dt =  14.927 /  0.373 s.  elapsed time =     106.0 s.
+t = 03/01/2023 19:40:14.  dt =  14.927 /  0.373 s.  elapsed time =     106.4 s.
+t = 03/01/2023 19:50:12.  dt =  14.934 /  0.373 s.  elapsed time =     106.8 s.
+t = 03/01/2023 20:00:09.  dt =  14.927 /  0.373 s.  elapsed time =     107.2 s.
+    Writing NETCDF output. t = 03/01/2023 20:00:00.
+    Writing NETCDF output. t = 03/01/2023 20:00:00.
+t = 03/01/2023 20:10:06.  dt =  14.935 /  0.373 s.  elapsed time =     107.6 s.
+t = 03/01/2023 20:20:03.  dt =  14.939 /  0.373 s.  elapsed time =     108.0 s.
+t = 03/01/2023 20:30:01.  dt =  14.933 /  0.373 s.  elapsed time =     108.4 s.
+t = 03/01/2023 20:40:13.  dt =  14.945 /  0.374 s.  elapsed time =     108.8 s.
+t = 03/01/2023 20:50:11.  dt =  14.938 /  0.373 s.  elapsed time =     109.2 s.
+t = 03/01/2023 21:00:09.  dt =  14.942 /  0.374 s.  elapsed time =     109.5 s.
+t = 03/01/2023 21:10:06.  dt =  14.946 /  0.374 s.  elapsed time =     109.9 s.
+t = 03/01/2023 21:20:04.  dt =  14.938 /  0.373 s.  elapsed time =     110.3 s.
+t = 03/01/2023 21:30:02.  dt =  14.950 /  0.374 s.  elapsed time =     110.7 s.
+t = 03/01/2023 21:40:15.  dt =  14.944 /  0.374 s.  elapsed time =     111.0 s.
+t = 03/01/2023 21:50:13.  dt =  14.943 /  0.374 s.  elapsed time =     111.4 s.
+t = 03/01/2023 22:00:10.  dt =  14.952 /  0.374 s.  elapsed time =     111.8 s.
+    Writing NETCDF output. t = 03/01/2023 22:00:00.
+    Writing NETCDF output. t = 03/01/2023 22:00:00.
+t = 03/01/2023 22:10:08.  dt =  14.942 /  0.374 s.  elapsed time =     112.3 s.
+t = 03/01/2023 22:20:06.  dt =  14.948 /  0.374 s.  elapsed time =     112.7 s.
+t = 03/01/2023 22:30:04.  dt =  14.950 /  0.374 s.  elapsed time =     113.0 s.
+t = 03/01/2023 22:40:02.  dt =  14.942 /  0.374 s.  elapsed time =     113.4 s.
+t = 03/01/2023 22:50:15.  dt =  14.950 /  0.374 s.  elapsed time =     113.8 s.
+t = 03/01/2023 23:00:13.  dt =  14.948 /  0.374 s.  elapsed time =     114.2 s.
+t = 03/01/2023 23:10:10.  dt =  14.946 /  0.374 s.  elapsed time =     114.5 s.
+t = 03/01/2023 23:20:08.  dt =  14.951 /  0.374 s.  elapsed time =     114.9 s.
+t = 03/01/2023 23:30:06.  dt =  14.948 /  0.374 s.  elapsed time =     115.3 s.
+t = 03/01/2023 23:40:04.  dt =  14.952 /  0.374 s.  elapsed time =     115.7 s.
+t = 03/01/2023 23:50:02.  dt =  14.951 /  0.374 s.  elapsed time =     116.1 s.
+t = 04/01/2023 00:00:01.  dt =  14.953 /  0.374 s.  elapsed time =     116.4 s.
+    Writing NETCDF output. t = 04/01/2023 00:00:00.
+    Writing NETCDF output. t = 04/01/2023 00:00:00.
+t = 04/01/2023 00:10:14.  dt =  14.955 /  0.374 s.  elapsed time =     116.9 s.
+t = 04/01/2023 00:20:12.  dt =  14.953 /  0.374 s.  elapsed time =     117.3 s.
+t = 04/01/2023 00:30:10.  dt =  14.956 /  0.374 s.  elapsed time =     117.7 s.
+t = 04/01/2023 00:40:08.  dt =  14.954 /  0.374 s.  elapsed time =     118.0 s.
+t = 04/01/2023 00:50:06.  dt =  14.951 /  0.374 s.  elapsed time =     118.4 s.
+t = 04/01/2023 01:00:04.  dt =  14.953 /  0.374 s.  elapsed time =     118.8 s.
+t = 04/01/2023 01:10:02.  dt =  14.950 /  0.374 s.  elapsed time =     119.1 s.
+t = 04/01/2023 01:20:01.  dt =  14.951 /  0.374 s.  elapsed time =     119.5 s.
+t = 04/01/2023 01:30:14.  dt =  14.952 /  0.374 s.  elapsed time =     119.9 s.
+t = 04/01/2023 01:40:12.  dt =  14.949 /  0.374 s.  elapsed time =     120.3 s.
+t = 04/01/2023 01:50:10.  dt =  14.953 /  0.374 s.  elapsed time =     120.7 s.
+t = 04/01/2023 02:00:08.  dt =  14.950 /  0.374 s.  elapsed time =     121.0 s.
+    Writing NETCDF output. t = 04/01/2023 02:00:00.
+    Writing NETCDF output. t = 04/01/2023 02:00:00.
+t = 04/01/2023 02:10:06.  dt =  14.951 /  0.374 s.  elapsed time =     121.5 s.
+t = 04/01/2023 02:20:04.  dt =  14.951 /  0.374 s.  elapsed time =     121.9 s.
+t = 04/01/2023 02:30:02.  dt =  14.949 /  0.374 s.  elapsed time =     122.3 s.
+t = 04/01/2023 02:40:15.  dt =  14.951 /  0.374 s.  elapsed time =     122.6 s.
+t = 04/01/2023 02:50:13.  dt =  14.949 /  0.374 s.  elapsed time =     123.0 s.
+t = 04/01/2023 03:00:11.  dt =  14.950 /  0.374 s.  elapsed time =     123.4 s.
+t = 04/01/2023 03:10:09.  dt =  14.951 /  0.374 s.  elapsed time =     123.8 s.
+t = 04/01/2023 03:20:07.  dt =  14.949 /  0.374 s.  elapsed time =     124.2 s.
+t = 04/01/2023 03:30:05.  dt =  14.951 /  0.374 s.  elapsed time =     124.5 s.
+t = 04/01/2023 03:40:03.  dt =  14.950 /  0.374 s.  elapsed time =     124.9 s.
+t = 04/01/2023 03:50:01.  dt =  14.949 /  0.374 s.  elapsed time =     125.3 s.
+t = 04/01/2023 04:00:14.  dt =  14.952 /  0.374 s.  elapsed time =     125.7 s.
+    Writing NETCDF output. t = 04/01/2023 04:00:00.
+    Writing NETCDF output. t = 04/01/2023 04:00:00.
+t = 04/01/2023 04:10:12.  dt =  14.949 /  0.374 s.  elapsed time =     126.1 s.
+t = 04/01/2023 04:20:10.  dt =  14.951 /  0.374 s.  elapsed time =     126.5 s.
+t = 04/01/2023 04:30:08.  dt =  14.950 /  0.374 s.  elapsed time =     126.9 s.
+t = 04/01/2023 04:40:06.  dt =  14.947 /  0.374 s.  elapsed time =     127.3 s.
+t = 04/01/2023 04:50:04.  dt =  14.945 /  0.374 s.  elapsed time =     127.7 s.
+t = 04/01/2023 05:00:01.  dt =  14.941 /  0.374 s.  elapsed time =     128.0 s.
+t = 04/01/2023 05:10:14.  dt =  14.936 /  0.373 s.  elapsed time =     128.4 s.
+t = 04/01/2023 05:20:11.  dt =  14.928 /  0.373 s.  elapsed time =     128.8 s.
+t = 04/01/2023 05:30:08.  dt =  14.922 /  0.373 s.  elapsed time =     129.2 s.
+t = 04/01/2023 05:40:05.  dt =  14.917 /  0.373 s.  elapsed time =     129.5 s.
+t = 04/01/2023 05:50:01.  dt =  14.914 /  0.373 s.  elapsed time =     129.9 s.
+t = 04/01/2023 06:00:13.  dt =  14.911 /  0.373 s.  elapsed time =     130.3 s.
+    Writing NETCDF output. t = 04/01/2023 06:00:00.
+    Writing NETCDF output. t = 04/01/2023 06:00:00.
+t = 04/01/2023 06:10:09.  dt =  14.909 /  0.373 s.  elapsed time =     130.8 s.
+t = 04/01/2023 06:20:06.  dt =  14.908 /  0.373 s.  elapsed time =     131.2 s.
+t = 04/01/2023 06:30:02.  dt =  14.906 /  0.373 s.  elapsed time =     131.5 s.
+t = 04/01/2023 06:40:13.  dt =  14.903 /  0.373 s.  elapsed time =     131.9 s.
+t = 04/01/2023 06:50:09.  dt =  14.897 /  0.372 s.  elapsed time =     132.3 s.
+t = 04/01/2023 07:00:05.  dt =  14.896 /  0.372 s.  elapsed time =     132.7 s.
+t = 04/01/2023 07:10:00.  dt =  14.889 /  0.372 s.  elapsed time =     133.1 s.
+t = 04/01/2023 07:20:11.  dt =  14.888 /  0.372 s.  elapsed time =     133.4 s.
+t = 04/01/2023 07:30:06.  dt =  14.886 /  0.372 s.  elapsed time =     133.8 s.
+t = 04/01/2023 07:40:02.  dt =  14.887 /  0.372 s.  elapsed time =     134.2 s.
+t = 04/01/2023 07:50:12.  dt =  14.892 /  0.372 s.  elapsed time =     134.6 s.
+t = 04/01/2023 08:00:08.  dt =  14.891 /  0.372 s.  elapsed time =     134.9 s.
+    Writing NETCDF output. t = 04/01/2023 08:00:00.
+    Writing NETCDF output. t = 04/01/2023 08:00:00.
+t = 04/01/2023 08:10:04.  dt =  14.896 /  0.372 s.  elapsed time =     135.4 s.
+t = 04/01/2023 08:20:15.  dt =  14.900 /  0.373 s.  elapsed time =     135.8 s.
+t = 04/01/2023 08:30:11.  dt =  14.900 /  0.373 s.  elapsed time =     136.2 s.
+t = 04/01/2023 08:40:07.  dt =  14.906 /  0.373 s.  elapsed time =     136.6 s.
+t = 04/01/2023 08:50:03.  dt =  14.907 /  0.373 s.  elapsed time =     137.0 s.
+t = 04/01/2023 09:00:14.  dt =  14.909 /  0.373 s.  elapsed time =     137.3 s.
+t = 04/01/2023 09:10:11.  dt =  14.916 /  0.373 s.  elapsed time =     137.7 s.
+t = 04/01/2023 09:20:07.  dt =  14.912 /  0.373 s.  elapsed time =     138.1 s.
+t = 04/01/2023 09:30:04.  dt =  14.916 /  0.373 s.  elapsed time =     138.5 s.
+t = 04/01/2023 09:40:00.  dt =  14.911 /  0.373 s.  elapsed time =     138.8 s.
+t = 04/01/2023 09:50:12.  dt =  14.904 /  0.373 s.  elapsed time =     139.2 s.
+t = 04/01/2023 10:00:08.  dt =  14.903 /  0.373 s.  elapsed time =     139.6 s.
+    Writing NETCDF output. t = 04/01/2023 10:00:00.
+    Writing NETCDF output. t = 04/01/2023 10:00:00.
+t = 04/01/2023 10:10:04.  dt =  14.891 /  0.372 s.  elapsed time =     140.1 s.
+t = 04/01/2023 10:20:14.  dt =  14.886 /  0.372 s.  elapsed time =     140.5 s.
+t = 04/01/2023 10:30:09.  dt =  14.882 /  0.372 s.  elapsed time =     140.8 s.
+t = 04/01/2023 10:40:04.  dt =  14.871 /  0.372 s.  elapsed time =     141.2 s.
+t = 04/01/2023 10:50:14.  dt =  14.869 /  0.372 s.  elapsed time =     141.6 s.
+t = 04/01/2023 11:00:09.  dt =  14.861 /  0.372 s.  elapsed time =     142.0 s.
+t = 04/01/2023 11:10:03.  dt =  14.855 /  0.371 s.  elapsed time =     142.4 s.
+t = 04/01/2023 11:20:12.  dt =  14.847 /  0.371 s.  elapsed time =     142.8 s.
+t = 04/01/2023 11:30:06.  dt =  14.837 /  0.371 s.  elapsed time =     143.1 s.
+t = 04/01/2023 11:40:14.  dt =  14.825 /  0.371 s.  elapsed time =     143.5 s.
+t = 04/01/2023 11:50:06.  dt =  14.806 /  0.370 s.  elapsed time =     143.9 s.
+t = 04/01/2023 12:00:13.  dt =  14.797 /  0.370 s.  elapsed time =     144.3 s.
+    Writing NETCDF output. t = 04/01/2023 12:00:00.
+    Writing NETCDF output. t = 04/01/2023 12:00:00.
+t = 04/01/2023 12:10:05.  dt =  14.782 /  0.370 s.  elapsed time =     144.8 s.
+t = 04/01/2023 12:20:10.  dt =  14.767 /  0.369 s.  elapsed time =     145.2 s.
+t = 04/01/2023 12:30:01.  dt =  14.773 /  0.369 s.  elapsed time =     145.6 s.
+t = 04/01/2023 12:40:07.  dt =  14.764 /  0.369 s.  elapsed time =     146.0 s.
+t = 04/01/2023 12:50:12.  dt =  14.773 /  0.369 s.  elapsed time =     146.4 s.
+t = 04/01/2023 13:00:03.  dt =  14.774 /  0.369 s.  elapsed time =     146.7 s.
+t = 04/01/2023 13:10:09.  dt =  14.769 /  0.369 s.  elapsed time =     147.7 s.
+t = 04/01/2023 13:20:15.  dt =  14.777 /  0.369 s.  elapsed time =     148.1 s.
+t = 04/01/2023 13:30:05.  dt =  14.772 /  0.369 s.  elapsed time =     148.5 s.
+t = 04/01/2023 13:40:11.  dt =  14.772 /  0.369 s.  elapsed time =     148.9 s.
+t = 04/01/2023 13:50:02.  dt =  14.768 /  0.369 s.  elapsed time =     149.3 s.
+t = 04/01/2023 14:00:07.  dt =  14.765 /  0.369 s.  elapsed time =     149.6 s.
+    Writing NETCDF output. t = 04/01/2023 14:00:00.
+    Writing NETCDF output. t = 04/01/2023 14:00:00.
+t = 04/01/2023 14:10:13.  dt =  14.768 /  0.369 s.  elapsed time =     150.1 s.
+t = 04/01/2023 14:20:11.  dt =  14.391 /  0.369 s.  elapsed time =     150.5 s.
+t = 04/01/2023 14:30:10.  dt =  14.388 /  0.369 s.  elapsed time =     150.9 s.
+t = 04/01/2023 14:40:04.  dt =  13.277 /  0.369 s.  elapsed time =     151.3 s.
+t = 04/01/2023 14:50:02.  dt =  13.269 /  0.369 s.  elapsed time =     151.7 s.
+t = 04/01/2023 15:00:02.  dt =  12.900 /  0.369 s.  elapsed time =     152.1 s.
+t = 04/01/2023 15:10:02.  dt =  12.522 /  0.368 s.  elapsed time =     152.5 s.
+t = 04/01/2023 15:20:03.  dt =  12.522 /  0.368 s.  elapsed time =     152.9 s.
+t = 04/01/2023 15:30:10.  dt =  12.897 /  0.369 s.  elapsed time =     153.3 s.
+t = 04/01/2023 15:40:11.  dt =  12.898 /  0.369 s.  elapsed time =     153.7 s.
+t = 04/01/2023 15:50:08.  dt =  14.023 /  0.369 s.  elapsed time =     154.1 s.
+t = 04/01/2023 16:00:04.  dt =  13.652 /  0.369 s.  elapsed time =     154.5 s.
+    Writing NETCDF output. t = 04/01/2023 16:00:00.
+    Writing NETCDF output. t = 04/01/2023 16:00:00.
+t = 04/01/2023 16:10:07.  dt =  14.773 /  0.369 s.  elapsed time =     155.0 s.
+t = 04/01/2023 16:20:12.  dt =  14.784 /  0.370 s.  elapsed time =     155.4 s.
+t = 04/01/2023 16:30:04.  dt =  14.778 /  0.369 s.  elapsed time =     155.8 s.
+t = 04/01/2023 16:40:10.  dt =  14.794 /  0.370 s.  elapsed time =     156.2 s.
+t = 04/01/2023 16:50:01.  dt =  14.784 /  0.370 s.  elapsed time =     156.6 s.
+t = 04/01/2023 17:00:08.  dt =  14.789 /  0.370 s.  elapsed time =     156.9 s.
+t = 04/01/2023 17:10:14.  dt =  14.794 /  0.370 s.  elapsed time =     157.3 s.
+t = 04/01/2023 17:20:03.  dt =  14.414 /  0.370 s.  elapsed time =     157.7 s.
+t = 04/01/2023 17:30:14.  dt =  14.789 /  0.370 s.  elapsed time =     158.1 s.
+t = 04/01/2023 17:40:05.  dt =  13.668 /  0.369 s.  elapsed time =     158.5 s.
+t = 04/01/2023 17:50:05.  dt =  13.289 /  0.369 s.  elapsed time =     158.9 s.
+t = 04/01/2023 18:00:11.  dt =  12.923 /  0.369 s.  elapsed time =     159.3 s.
+    Writing NETCDF output. t = 04/01/2023 18:00:00.
+    Writing NETCDF output. t = 04/01/2023 18:00:00.
+t = 04/01/2023 18:10:03.  dt =  12.537 /  0.369 s.  elapsed time =     159.8 s.
+t = 04/01/2023 18:20:02.  dt =  12.170 /  0.369 s.  elapsed time =     160.2 s.
+t = 04/01/2023 18:30:04.  dt =  12.541 /  0.369 s.  elapsed time =     160.6 s.
+t = 04/01/2023 18:40:01.  dt =  12.536 /  0.369 s.  elapsed time =     161.0 s.
+t = 04/01/2023 18:50:09.  dt =  12.924 /  0.369 s.  elapsed time =     161.5 s.
+t = 04/01/2023 19:00:03.  dt =  12.914 /  0.369 s.  elapsed time =     161.8 s.
+t = 04/01/2023 19:10:09.  dt =  13.296 /  0.369 s.  elapsed time =     162.3 s.
+t = 04/01/2023 19:20:06.  dt =  14.053 /  0.370 s.  elapsed time =     162.7 s.
+t = 04/01/2023 19:30:04.  dt =  14.418 /  0.370 s.  elapsed time =     163.0 s.
+t = 04/01/2023 19:40:10.  dt =  14.828 /  0.371 s.  elapsed time =     163.4 s.
+t = 04/01/2023 19:50:03.  dt =  14.841 /  0.371 s.  elapsed time =     163.8 s.
+t = 04/01/2023 20:00:12.  dt =  14.853 /  0.371 s.  elapsed time =     164.2 s.
+    Writing NETCDF output. t = 04/01/2023 20:00:00.
+    Writing NETCDF output. t = 04/01/2023 20:00:00.
+t = 04/01/2023 20:10:07.  dt =  14.896 /  0.372 s.  elapsed time =     164.7 s.
+t = 04/01/2023 20:20:03.  dt =  14.899 /  0.372 s.  elapsed time =     165.1 s.
+t = 04/01/2023 20:30:15.  dt =  14.919 /  0.373 s.  elapsed time =     165.4 s.
+t = 04/01/2023 20:40:11.  dt =  14.939 /  0.373 s.  elapsed time =     165.8 s.
+t = 04/01/2023 20:50:09.  dt =  14.931 /  0.373 s.  elapsed time =     166.2 s.
+t = 04/01/2023 21:00:07.  dt =  14.960 /  0.374 s.  elapsed time =     166.6 s.
+t = 04/01/2023 21:10:05.  dt =  14.946 /  0.374 s.  elapsed time =     167.0 s.
+t = 04/01/2023 21:20:03.  dt =  14.954 /  0.374 s.  elapsed time =     167.4 s.
+t = 04/01/2023 21:30:01.  dt =  14.968 /  0.374 s.  elapsed time =     167.7 s.
+t = 04/01/2023 21:40:15.  dt =  14.955 /  0.374 s.  elapsed time =     168.1 s.
+t = 04/01/2023 21:50:14.  dt =  14.976 /  0.374 s.  elapsed time =     168.5 s.
+t = 04/01/2023 22:00:12.  dt =  14.971 /  0.374 s.  elapsed time =     168.9 s.
+    Writing NETCDF output. t = 04/01/2023 22:00:00.
+    Writing NETCDF output. t = 04/01/2023 22:00:00.
+t = 04/01/2023 22:10:11.  dt =  14.973 /  0.374 s.  elapsed time =     169.4 s.
+t = 04/01/2023 22:20:10.  dt =  14.987 /  0.375 s.  elapsed time =     169.7 s.
+t = 04/01/2023 22:30:10.  dt =  14.974 /  0.374 s.  elapsed time =     170.1 s.
+t = 04/01/2023 22:40:09.  dt =  14.986 /  0.375 s.  elapsed time =     170.5 s.
+t = 04/01/2023 22:50:08.  dt =  14.985 /  0.375 s.  elapsed time =     170.9 s.
+t = 04/01/2023 23:00:08.  dt =  14.977 /  0.374 s.  elapsed time =     171.2 s.
+t = 04/01/2023 23:10:07.  dt =  14.990 /  0.375 s.  elapsed time =     171.6 s.
+t = 04/01/2023 23:20:06.  dt =  14.977 /  0.374 s.  elapsed time =     172.0 s.
+t = 04/01/2023 23:30:06.  dt =  14.984 /  0.375 s.  elapsed time =     172.4 s.
+t = 04/01/2023 23:40:05.  dt =  14.987 /  0.375 s.  elapsed time =     172.8 s.
+t = 04/01/2023 23:50:04.  dt =  14.979 /  0.374 s.  elapsed time =     173.2 s.
+t = 05/01/2023 00:00:04.  dt =  14.993 /  0.375 s.  elapsed time =     173.5 s.
+    Writing NETCDF output. t = 05/01/2023 00:00:00.
+    Writing NETCDF output. t = 05/01/2023 00:00:00.
+t = 05/01/2023 00:10:03.  dt =  14.985 /  0.375 s.  elapsed time =     174.0 s.
+t = 05/01/2023 00:20:03.  dt =  14.989 /  0.375 s.  elapsed time =     174.4 s.
+t = 05/01/2023 00:30:02.  dt =  14.993 /  0.375 s.  elapsed time =     174.8 s.
+t = 05/01/2023 00:40:02.  dt =  14.985 /  0.375 s.  elapsed time =     175.2 s.
+t = 05/01/2023 00:50:01.  dt =  14.992 /  0.375 s.  elapsed time =     175.6 s.
+t = 05/01/2023 01:00:01.  dt =  14.987 /  0.375 s.  elapsed time =     175.9 s.
+t = 05/01/2023 01:10:00.  dt =  14.983 /  0.375 s.  elapsed time =     176.3 s.
+t = 05/01/2023 01:20:15.  dt =  14.988 /  0.375 s.  elapsed time =     176.7 s.
+t = 05/01/2023 01:30:14.  dt =  14.980 /  0.374 s.  elapsed time =     177.1 s.
+t = 05/01/2023 01:40:13.  dt =  14.984 /  0.375 s.  elapsed time =     177.5 s.
+t = 05/01/2023 01:50:13.  dt =  14.983 /  0.375 s.  elapsed time =     177.9 s.
+t = 05/01/2023 02:00:12.  dt =  14.978 /  0.374 s.  elapsed time =     178.2 s.
+    Writing NETCDF output. t = 05/01/2023 02:00:00.
+    Writing NETCDF output. t = 05/01/2023 02:00:00.
+t = 05/01/2023 02:10:11.  dt =  14.984 /  0.375 s.  elapsed time =     178.7 s.
+t = 05/01/2023 02:20:10.  dt =  14.978 /  0.374 s.  elapsed time =     179.1 s.
+t = 05/01/2023 02:30:10.  dt =  14.982 /  0.375 s.  elapsed time =     179.5 s.
+t = 05/01/2023 02:40:09.  dt =  14.983 /  0.375 s.  elapsed time =     179.9 s.
+t = 05/01/2023 02:50:08.  dt =  14.980 /  0.374 s.  elapsed time =     180.2 s.
+t = 05/01/2023 03:00:07.  dt =  14.985 /  0.375 s.  elapsed time =     180.6 s.
+t = 05/01/2023 03:10:07.  dt =  14.983 /  0.375 s.  elapsed time =     181.0 s.
+t = 05/01/2023 03:20:06.  dt =  14.984 /  0.375 s.  elapsed time =     181.4 s.
+t = 05/01/2023 03:30:05.  dt =  14.986 /  0.375 s.  elapsed time =     181.7 s.
+t = 05/01/2023 03:40:05.  dt =  14.982 /  0.375 s.  elapsed time =     182.1 s.
+t = 05/01/2023 03:50:04.  dt =  14.984 /  0.375 s.  elapsed time =     182.5 s.
+t = 05/01/2023 04:00:03.  dt =  14.980 /  0.375 s.  elapsed time =     182.9 s.
+    Writing NETCDF output. t = 05/01/2023 04:00:00.
+    Writing NETCDF output. t = 05/01/2023 04:00:00.
+t = 05/01/2023 04:10:03.  dt =  14.977 /  0.374 s.  elapsed time =     183.4 s.
+t = 05/01/2023 04:20:02.  dt =  14.979 /  0.374 s.  elapsed time =     183.8 s.
+t = 05/01/2023 04:30:01.  dt =  14.974 /  0.374 s.  elapsed time =     184.1 s.
+t = 05/01/2023 04:40:15.  dt =  14.978 /  0.374 s.  elapsed time =     184.5 s.
+t = 05/01/2023 04:50:14.  dt =  14.978 /  0.374 s.  elapsed time =     184.9 s.
+t = 05/01/2023 05:00:13.  dt =  14.978 /  0.374 s.  elapsed time =     185.3 s.
+t = 05/01/2023 05:10:12.  dt =  14.983 /  0.375 s.  elapsed time =     185.7 s.
+t = 05/01/2023 05:20:12.  dt =  14.983 /  0.375 s.  elapsed time =     186.1 s.
+t = 05/01/2023 05:30:11.  dt =  14.986 /  0.375 s.  elapsed time =     186.4 s.
+t = 05/01/2023 05:40:10.  dt =  14.987 /  0.375 s.  elapsed time =     186.8 s.
+t = 05/01/2023 05:50:10.  dt =  14.985 /  0.375 s.  elapsed time =     187.2 s.
+t = 05/01/2023 06:00:09.  dt =  14.989 /  0.375 s.  elapsed time =     187.5 s.
+    Writing NETCDF output. t = 05/01/2023 06:00:00.
+    Writing NETCDF output. t = 05/01/2023 06:00:00.
+t = 05/01/2023 06:10:09.  dt =  14.987 /  0.375 s.  elapsed time =     188.0 s.
+t = 05/01/2023 06:20:08.  dt =  14.988 /  0.375 s.  elapsed time =     188.4 s.
+t = 05/01/2023 06:30:08.  dt =  14.990 /  0.375 s.  elapsed time =     188.8 s.
+t = 05/01/2023 06:40:08.  dt =  14.989 /  0.375 s.  elapsed time =     189.2 s.
+t = 05/01/2023 06:50:07.  dt =  14.993 /  0.375 s.  elapsed time =     189.6 s.
+t = 05/01/2023 07:00:07.  dt =  14.992 /  0.375 s.  elapsed time =     189.9 s.
+t = 05/01/2023 07:10:07.  dt =  14.993 /  0.375 s.  elapsed time =     190.3 s.
+t = 05/01/2023 07:20:06.  dt =  14.994 /  0.375 s.  elapsed time =     190.7 s.
+t = 05/01/2023 07:30:06.  dt =  14.991 /  0.375 s.  elapsed time =     191.1 s.
+t = 05/01/2023 07:40:06.  dt =  14.992 /  0.375 s.  elapsed time =     191.5 s.
+t = 05/01/2023 07:50:05.  dt =  14.987 /  0.375 s.  elapsed time =     191.9 s.
+t = 05/01/2023 08:00:05.  dt =  14.985 /  0.375 s.  elapsed time =     192.2 s.
+    Writing NETCDF output. t = 05/01/2023 08:00:00.
+    Writing NETCDF output. t = 05/01/2023 08:00:00.
+t = 05/01/2023 08:10:04.  dt =  14.983 /  0.375 s.  elapsed time =     192.7 s.
+t = 05/01/2023 08:20:03.  dt =  14.977 /  0.374 s.  elapsed time =     193.1 s.
+t = 05/01/2023 08:30:02.  dt =  14.978 /  0.374 s.  elapsed time =     193.5 s.
+t = 05/01/2023 08:40:01.  dt =  14.973 /  0.374 s.  elapsed time =     193.9 s.
+t = 05/01/2023 08:50:00.  dt =  14.968 /  0.374 s.  elapsed time =     194.3 s.
+t = 05/01/2023 09:00:14.  dt =  14.969 /  0.374 s.  elapsed time =     194.6 s.
+t = 05/01/2023 09:10:12.  dt =  14.958 /  0.374 s.  elapsed time =     195.0 s.
+t = 05/01/2023 09:20:11.  dt =  14.956 /  0.374 s.  elapsed time =     195.4 s.
+t = 05/01/2023 09:30:09.  dt =  14.954 /  0.374 s.  elapsed time =     195.8 s.
+t = 05/01/2023 09:40:07.  dt =  14.944 /  0.374 s.  elapsed time =     196.2 s.
+t = 05/01/2023 09:50:05.  dt =  14.943 /  0.374 s.  elapsed time =     196.6 s.
+t = 05/01/2023 10:00:02.  dt =  14.938 /  0.373 s.  elapsed time =     196.9 s.
+    Writing NETCDF output. t = 05/01/2023 10:00:00.
+    Writing NETCDF output. t = 05/01/2023 10:00:00.
+t = 05/01/2023 10:10:15.  dt =  14.931 /  0.373 s.  elapsed time =     197.4 s.
+t = 05/01/2023 10:20:12.  dt =  14.934 /  0.373 s.  elapsed time =     197.8 s.
+t = 05/01/2023 10:30:09.  dt =  14.929 /  0.373 s.  elapsed time =     198.2 s.
+t = 05/01/2023 10:40:06.  dt =  14.935 /  0.373 s.  elapsed time =     198.6 s.
+t = 05/01/2023 10:50:04.  dt =  14.937 /  0.373 s.  elapsed time =     199.0 s.
+t = 05/01/2023 11:00:01.  dt =  14.931 /  0.373 s.  elapsed time =     199.3 s.
+t = 05/01/2023 11:10:14.  dt =  14.941 /  0.374 s.  elapsed time =     199.7 s.
+t = 05/01/2023 11:20:11.  dt =  14.939 /  0.373 s.  elapsed time =     200.1 s.
+t = 05/01/2023 11:30:09.  dt =  14.938 /  0.373 s.  elapsed time =     200.5 s.
+t = 05/01/2023 11:40:06.  dt =  14.950 /  0.374 s.  elapsed time =     200.9 s.
+t = 05/01/2023 11:50:04.  dt =  14.948 /  0.374 s.  elapsed time =     201.3 s.
+t = 05/01/2023 12:00:03.  dt =  14.956 /  0.374 s.  elapsed time =     201.6 s.
+    Writing NETCDF output. t = 05/01/2023 12:00:00.
+    Writing NETCDF output. t = 05/01/2023 12:00:00.
+t = 05/01/2023 12:10:01.  dt =  14.965 /  0.374 s.  elapsed time =     202.1 s.
+t = 05/01/2023 12:20:15.  dt =  14.969 /  0.374 s.  elapsed time =     202.5 s.
+t = 05/01/2023 12:30:14.  dt =  14.979 /  0.374 s.  elapsed time =     202.9 s.
+t = 05/01/2023 12:40:13.  dt =  14.990 /  0.375 s.  elapsed time =     203.3 s.
+t = 05/01/2023 12:50:12.  dt =  14.626 /  0.375 s.  elapsed time =     203.7 s.
+t = 05/01/2023 13:00:04.  dt =  14.998 /  0.375 s.  elapsed time =     204.0 s.
+t = 05/01/2023 13:10:08.  dt =  14.999 /  0.375 s.  elapsed time =     204.4 s.
+t = 05/01/2023 13:20:06.  dt =  14.626 /  0.375 s.  elapsed time =     204.8 s.
+t = 05/01/2023 13:30:01.  dt =  14.993 /  0.375 s.  elapsed time =     205.1 s.
+t = 05/01/2023 13:40:13.  dt =  14.999 /  0.375 s.  elapsed time =     205.5 s.
+t = 05/01/2023 13:50:13.  dt =  14.999 /  0.375 s.  elapsed time =     205.9 s.
+t = 05/01/2023 14:00:06.  dt =  14.997 /  0.375 s.  elapsed time =     206.3 s.
+    Writing NETCDF output. t = 05/01/2023 14:00:00.
+    Writing NETCDF output. t = 05/01/2023 14:00:00.
+t = 05/01/2023 14:10:14.  dt =  14.628 /  0.375 s.  elapsed time =     206.8 s.
+t = 05/01/2023 14:20:05.  dt =  14.998 /  0.375 s.  elapsed time =     207.2 s.
+t = 05/01/2023 14:30:09.  dt =  14.628 /  0.375 s.  elapsed time =     207.5 s.
+t = 05/01/2023 14:40:05.  dt =  14.627 /  0.375 s.  elapsed time =     207.9 s.
+t = 05/01/2023 14:50:08.  dt =  14.995 /  0.375 s.  elapsed time =     208.3 s.
+t = 05/01/2023 15:00:01.  dt =  14.630 /  0.375 s.  elapsed time =     208.7 s.
+t = 05/01/2023 15:10:11.  dt =  14.998 /  0.375 s.  elapsed time =     209.1 s.
+t = 05/01/2023 15:20:12.  dt =  14.626 /  0.375 s.  elapsed time =     209.5 s.
+t = 05/01/2023 15:30:06.  dt =  14.631 /  0.375 s.  elapsed time =     209.8 s.
+t = 05/01/2023 15:40:06.  dt =  14.626 /  0.375 s.  elapsed time =     210.2 s.
+t = 05/01/2023 15:50:06.  dt =  14.640 /  0.375 s.  elapsed time =     210.6 s.
+t = 05/01/2023 16:00:06.  dt =  14.635 /  0.375 s.  elapsed time =     211.0 s.
+    Writing NETCDF output. t = 05/01/2023 16:00:00.
+    Writing NETCDF output. t = 05/01/2023 16:00:00.
+t = 05/01/2023 16:10:06.  dt =  14.640 /  0.375 s.  elapsed time =     211.5 s.
+t = 05/01/2023 16:20:06.  dt =  14.648 /  0.376 s.  elapsed time =     211.9 s.
+t = 05/01/2023 16:30:07.  dt =  14.639 /  0.375 s.  elapsed time =     212.3 s.
+t = 05/01/2023 16:40:07.  dt =  14.649 /  0.376 s.  elapsed time =     212.7 s.
+t = 05/01/2023 16:50:07.  dt =  14.644 /  0.375 s.  elapsed time =     213.1 s.
+t = 05/01/2023 17:00:08.  dt =  14.640 /  0.375 s.  elapsed time =     213.4 s.
+t = 05/01/2023 17:10:08.  dt =  14.650 /  0.376 s.  elapsed time =     214.2 s.
+t = 05/01/2023 17:20:09.  dt =  14.640 /  0.375 s.  elapsed time =     214.5 s.
+t = 05/01/2023 17:30:09.  dt =  14.652 /  0.376 s.  elapsed time =     214.9 s.
+t = 05/01/2023 17:40:10.  dt =  14.631 /  0.375 s.  elapsed time =     215.3 s.
+t = 05/01/2023 17:50:09.  dt =  14.634 /  0.375 s.  elapsed time =     215.7 s.
+t = 05/01/2023 18:00:04.  dt =  14.984 /  0.375 s.  elapsed time =     216.1 s.
+    Writing NETCDF output. t = 05/01/2023 18:00:00.
+    Writing NETCDF output. t = 05/01/2023 18:00:00.
+t = 05/01/2023 18:10:04.  dt =  14.969 /  0.374 s.  elapsed time =     216.6 s.
+t = 05/01/2023 18:20:02.  dt =  14.966 /  0.374 s.  elapsed time =     217.0 s.
+t = 05/01/2023 18:30:00.  dt =  14.941 /  0.374 s.  elapsed time =     217.3 s.
+t = 05/01/2023 18:40:13.  dt =  14.946 /  0.374 s.  elapsed time =     217.7 s.
+t = 05/01/2023 18:50:11.  dt =  14.937 /  0.373 s.  elapsed time =     218.1 s.
+t = 05/01/2023 19:00:08.  dt =  14.932 /  0.373 s.  elapsed time =     218.5 s.
+t = 05/01/2023 19:10:05.  dt =  14.934 /  0.373 s.  elapsed time =     218.9 s.
+t = 05/01/2023 19:20:02.  dt =  14.922 /  0.373 s.  elapsed time =     219.2 s.
+t = 05/01/2023 19:30:15.  dt =  14.930 /  0.373 s.  elapsed time =     219.6 s.
+t = 05/01/2023 19:40:11.  dt =  14.928 /  0.373 s.  elapsed time =     220.0 s.
+t = 05/01/2023 19:50:09.  dt =  14.925 /  0.373 s.  elapsed time =     220.4 s.
+t = 05/01/2023 20:00:06.  dt =  14.929 /  0.373 s.  elapsed time =     220.8 s.
+    Writing NETCDF output. t = 05/01/2023 20:00:00.
+    Writing NETCDF output. t = 05/01/2023 20:00:00.
+t = 05/01/2023 20:10:03.  dt =  14.927 /  0.373 s.  elapsed time =     221.3 s.
+t = 05/01/2023 20:20:15.  dt =  14.927 /  0.373 s.  elapsed time =     221.7 s.
+t = 05/01/2023 20:30:12.  dt =  14.926 /  0.373 s.  elapsed time =     222.0 s.
+t = 05/01/2023 20:40:09.  dt =  14.916 /  0.373 s.  elapsed time =     222.4 s.
+t = 05/01/2023 20:50:05.  dt =  14.915 /  0.373 s.  elapsed time =     222.8 s.
+t = 05/01/2023 21:00:02.  dt =  14.906 /  0.373 s.  elapsed time =     223.2 s.
+t = 05/01/2023 21:10:13.  dt =  14.902 /  0.373 s.  elapsed time =     223.6 s.
+t = 05/01/2023 21:20:09.  dt =  14.893 /  0.372 s.  elapsed time =     224.0 s.
+t = 05/01/2023 21:30:04.  dt =  14.890 /  0.372 s.  elapsed time =     224.3 s.
+t = 05/01/2023 21:40:15.  dt =  14.891 /  0.372 s.  elapsed time =     224.7 s.
+t = 05/01/2023 21:50:10.  dt =  14.882 /  0.372 s.  elapsed time =     225.1 s.
+t = 05/01/2023 22:00:06.  dt =  14.887 /  0.372 s.  elapsed time =     225.5 s.
+    Writing NETCDF output. t = 05/01/2023 22:00:00.
+    Writing NETCDF output. t = 05/01/2023 22:00:00.
+t = 05/01/2023 22:10:01.  dt =  14.879 /  0.372 s.  elapsed time =     226.0 s.
+t = 05/01/2023 22:20:11.  dt =  14.886 /  0.372 s.  elapsed time =     226.4 s.
+t = 05/01/2023 22:30:07.  dt =  14.885 /  0.372 s.  elapsed time =     226.7 s.
+t = 05/01/2023 22:40:02.  dt =  14.887 /  0.372 s.  elapsed time =     227.1 s.
+t = 05/01/2023 22:50:13.  dt =  14.896 /  0.372 s.  elapsed time =     227.5 s.
+t = 05/01/2023 23:00:08.  dt =  14.896 /  0.372 s.  elapsed time =     227.9 s.
+t = 05/01/2023 23:10:04.  dt =  14.901 /  0.373 s.  elapsed time =     228.3 s.
+t = 05/01/2023 23:20:01.  dt =  14.911 /  0.373 s.  elapsed time =     228.7 s.
+t = 05/01/2023 23:30:12.  dt =  14.915 /  0.373 s.  elapsed time =     229.0 s.
+t = 05/01/2023 23:40:09.  dt =  14.926 /  0.373 s.  elapsed time =     229.4 s.
+t = 05/01/2023 23:50:06.  dt =  14.937 /  0.373 s.  elapsed time =     229.8 s.
+t = 06/01/2023 00:00:04.  dt =  14.938 /  0.373 s.  elapsed time =     230.2 s.
+    Writing NETCDF output. t = 06/01/2023 00:00:00.
+    Writing NETCDF output. t = 06/01/2023 00:00:00.
+t = 06/01/2023 00:10:01.  dt =  14.955 /  0.374 s.  elapsed time =     230.6 s.
+t = 06/01/2023 00:20:15.  dt =  14.957 /  0.374 s.  elapsed time =     231.0 s.
+t = 06/01/2023 00:30:13.  dt =  14.965 /  0.374 s.  elapsed time =     231.4 s.
+t = 06/01/2023 00:40:12.  dt =  14.974 /  0.374 s.  elapsed time =     231.8 s.
+t = 06/01/2023 00:50:11.  dt =  14.984 /  0.375 s.  elapsed time =     232.2 s.
+t = 06/01/2023 01:00:11.  dt =  14.993 /  0.375 s.  elapsed time =     232.5 s.
+t = 06/01/2023 01:10:00.  dt =  14.631 /  0.375 s.  elapsed time =     232.9 s.
+t = 06/01/2023 01:20:00.  dt =  14.653 /  0.376 s.  elapsed time =     233.3 s.
+t = 06/01/2023 01:30:01.  dt =  14.658 /  0.376 s.  elapsed time =     233.7 s.
+t = 06/01/2023 01:40:02.  dt =  14.662 /  0.376 s.  elapsed time =     234.1 s.
+t = 06/01/2023 01:50:04.  dt =  14.658 /  0.376 s.  elapsed time =     234.6 s.
+t = 06/01/2023 02:00:04.  dt =  14.660 /  0.376 s.  elapsed time =     235.0 s.
+    Writing NETCDF output. t = 06/01/2023 02:00:00.
+    Writing NETCDF output. t = 06/01/2023 02:00:00.
+t = 06/01/2023 02:10:05.  dt =  14.646 /  0.376 s.  elapsed time =     235.5 s.
+t = 06/01/2023 02:20:06.  dt =  14.648 /  0.376 s.  elapsed time =     235.9 s.
+t = 06/01/2023 02:30:06.  dt =  14.642 /  0.375 s.  elapsed time =     236.3 s.
+t = 06/01/2023 02:40:07.  dt =  14.641 /  0.375 s.  elapsed time =     236.7 s.
+t = 06/01/2023 02:50:07.  dt =  14.648 /  0.376 s.  elapsed time =     237.0 s.
+t = 06/01/2023 03:00:07.  dt =  14.643 /  0.375 s.  elapsed time =     237.4 s.
+t = 06/01/2023 03:10:08.  dt =  14.654 /  0.376 s.  elapsed time =     237.8 s.
+t = 06/01/2023 03:20:09.  dt =  14.654 /  0.376 s.  elapsed time =     238.2 s.
+t = 06/01/2023 03:30:10.  dt =  14.654 /  0.376 s.  elapsed time =     238.6 s.
+t = 06/01/2023 03:40:11.  dt =  14.659 /  0.376 s.  elapsed time =     239.0 s.
+t = 06/01/2023 03:50:11.  dt =  14.654 /  0.376 s.  elapsed time =     239.4 s.
+t = 06/01/2023 04:00:12.  dt =  14.653 /  0.376 s.  elapsed time =     239.7 s.
+    Writing NETCDF output. t = 06/01/2023 04:00:00.
+    Writing NETCDF output. t = 06/01/2023 04:00:00.
+t = 06/01/2023 04:10:13.  dt =  14.654 /  0.376 s.  elapsed time =     240.2 s.
+t = 06/01/2023 04:20:14.  dt =  14.646 /  0.376 s.  elapsed time =     240.6 s.
+t = 06/01/2023 04:30:14.  dt =  14.653 /  0.376 s.  elapsed time =     241.0 s.
+t = 06/01/2023 04:40:00.  dt =  14.650 /  0.376 s.  elapsed time =     241.4 s.
+t = 06/01/2023 04:50:01.  dt =  14.657 /  0.376 s.  elapsed time =     241.8 s.
+t = 06/01/2023 05:00:02.  dt =  14.663 /  0.376 s.  elapsed time =     242.1 s.
+t = 06/01/2023 05:10:03.  dt =  14.660 /  0.376 s.  elapsed time =     242.5 s.
+t = 06/01/2023 05:20:05.  dt =  14.669 /  0.376 s.  elapsed time =     242.9 s.
+t = 06/01/2023 05:30:06.  dt =  14.664 /  0.376 s.  elapsed time =     243.3 s.
+t = 06/01/2023 05:40:07.  dt =  14.665 /  0.376 s.  elapsed time =     243.7 s.
+t = 06/01/2023 05:50:08.  dt =  14.661 /  0.376 s.  elapsed time =     244.1 s.
+t = 06/01/2023 06:00:09.  dt =  14.659 /  0.376 s.  elapsed time =     244.4 s.
+    Writing NETCDF output. t = 06/01/2023 06:00:00.
+    Writing NETCDF output. t = 06/01/2023 06:00:00.
+t = 06/01/2023 06:10:10.  dt =  14.656 /  0.376 s.  elapsed time =     244.9 s.
+t = 06/01/2023 06:20:11.  dt =  14.654 /  0.376 s.  elapsed time =     245.3 s.
+t = 06/01/2023 06:30:12.  dt =  14.651 /  0.376 s.  elapsed time =     245.7 s.
+t = 06/01/2023 06:40:13.  dt =  14.651 /  0.376 s.  elapsed time =     246.1 s.
+t = 06/01/2023 06:50:13.  dt =  14.650 /  0.376 s.  elapsed time =     246.5 s.
+t = 06/01/2023 07:00:14.  dt =  14.646 /  0.376 s.  elapsed time =     246.8 s.
+t = 06/01/2023 07:10:14.  dt =  14.646 /  0.376 s.  elapsed time =     247.2 s.
+t = 06/01/2023 07:20:00.  dt =  14.641 /  0.375 s.  elapsed time =     247.6 s.
+t = 06/01/2023 07:30:00.  dt =  14.639 /  0.375 s.  elapsed time =     248.0 s.
+t = 06/01/2023 07:40:01.  dt =  14.637 /  0.375 s.  elapsed time =     248.4 s.
+t = 06/01/2023 07:50:01.  dt =  14.636 /  0.375 s.  elapsed time =     248.8 s.
+t = 06/01/2023 08:00:01.  dt =  14.633 /  0.375 s.  elapsed time =     249.1 s.
+    Writing NETCDF output. t = 06/01/2023 08:00:00.
+    Writing NETCDF output. t = 06/01/2023 08:00:00.
+t = 06/01/2023 08:10:01.  dt =  14.634 /  0.375 s.  elapsed time =     249.6 s.
+t = 06/01/2023 08:20:01.  dt =  14.628 /  0.375 s.  elapsed time =     250.0 s.
+t = 06/01/2023 08:30:00.  dt =  14.626 /  0.375 s.  elapsed time =     250.4 s.
+t = 06/01/2023 08:40:14.  dt =  14.993 /  0.375 s.  elapsed time =     250.8 s.
+t = 06/01/2023 08:50:13.  dt =  14.980 /  0.375 s.  elapsed time =     251.2 s.
+t = 06/01/2023 09:00:13.  dt =  14.978 /  0.374 s.  elapsed time =     251.5 s.
+t = 06/01/2023 09:10:11.  dt =  14.962 /  0.374 s.  elapsed time =     251.9 s.
+t = 06/01/2023 09:20:10.  dt =  14.958 /  0.374 s.  elapsed time =     252.3 s.
+t = 06/01/2023 09:30:08.  dt =  14.951 /  0.374 s.  elapsed time =     252.7 s.
+t = 06/01/2023 09:40:06.  dt =  14.945 /  0.374 s.  elapsed time =     253.1 s.
+t = 06/01/2023 09:50:04.  dt =  14.946 /  0.374 s.  elapsed time =     253.5 s.
+t = 06/01/2023 10:00:01.  dt =  14.939 /  0.373 s.  elapsed time =     253.8 s.
+    Writing NETCDF output. t = 06/01/2023 10:00:00.
+    Writing NETCDF output. t = 06/01/2023 10:00:00.
+t = 06/01/2023 10:10:14.  dt =  14.938 /  0.373 s.  elapsed time =     254.4 s.
+t = 06/01/2023 10:20:11.  dt =  14.942 /  0.374 s.  elapsed time =     254.8 s.
+t = 06/01/2023 10:30:09.  dt =  14.937 /  0.373 s.  elapsed time =     255.1 s.
+t = 06/01/2023 10:40:07.  dt =  14.947 /  0.374 s.  elapsed time =     255.5 s.
+t = 06/01/2023 10:50:05.  dt =  14.950 /  0.374 s.  elapsed time =     255.9 s.
+t = 06/01/2023 11:00:03.  dt =  14.946 /  0.374 s.  elapsed time =     256.3 s.
+t = 06/01/2023 11:10:01.  dt =  14.967 /  0.374 s.  elapsed time =     256.7 s.
+t = 06/01/2023 11:20:14.  dt =  14.969 /  0.374 s.  elapsed time =     257.1 s.
+t = 06/01/2023 11:30:13.  dt =  14.979 /  0.374 s.  elapsed time =     257.4 s.
+t = 06/01/2023 11:40:09.  dt =  14.630 /  0.375 s.  elapsed time =     257.8 s.
+t = 06/01/2023 11:50:09.  dt =  14.640 /  0.375 s.  elapsed time =     258.2 s.
+t = 06/01/2023 12:00:10.  dt =  14.661 /  0.376 s.  elapsed time =     258.6 s.
+    Writing NETCDF output. t = 06/01/2023 12:00:00.
+    Writing NETCDF output. t = 06/01/2023 12:00:00.
+t = 06/01/2023 12:10:11.  dt =  14.666 /  0.376 s.  elapsed time =     259.1 s.
+t = 06/01/2023 12:20:13.  dt =  14.660 /  0.376 s.  elapsed time =     259.5 s.
+t = 06/01/2023 12:30:14.  dt =  14.665 /  0.376 s.  elapsed time =     259.9 s.
+t = 06/01/2023 12:40:00.  dt =  14.665 /  0.376 s.  elapsed time =     260.2 s.
+t = 06/01/2023 12:50:02.  dt =  14.662 /  0.376 s.  elapsed time =     260.6 s.
+t = 06/01/2023 13:00:03.  dt =  14.671 /  0.376 s.  elapsed time =     261.0 s.
+t = 06/01/2023 13:10:04.  dt =  14.667 /  0.376 s.  elapsed time =     261.4 s.
+t = 06/01/2023 13:20:06.  dt =  14.675 /  0.376 s.  elapsed time =     261.8 s.
+t = 06/01/2023 13:30:07.  dt =  14.677 /  0.376 s.  elapsed time =     262.2 s.
+t = 06/01/2023 13:40:09.  dt =  14.676 /  0.376 s.  elapsed time =     262.5 s.
+t = 06/01/2023 13:50:11.  dt =  14.684 /  0.377 s.  elapsed time =     262.9 s.
+t = 06/01/2023 14:00:13.  dt =  14.678 /  0.376 s.  elapsed time =     263.3 s.
+    Writing NETCDF output. t = 06/01/2023 14:00:00.
+    Writing NETCDF output. t = 06/01/2023 14:00:00.
+t = 06/01/2023 14:10:00.  dt =  14.682 /  0.376 s.  elapsed time =     263.8 s.
+t = 06/01/2023 14:20:02.  dt =  14.685 /  0.377 s.  elapsed time =     264.2 s.
+t = 06/01/2023 14:30:04.  dt =  14.681 /  0.376 s.  elapsed time =     264.6 s.
+t = 06/01/2023 14:40:06.  dt =  14.684 /  0.377 s.  elapsed time =     265.0 s.
+t = 06/01/2023 14:50:08.  dt =  14.679 /  0.376 s.  elapsed time =     265.4 s.
+t = 06/01/2023 15:00:10.  dt =  14.678 /  0.376 s.  elapsed time =     265.7 s.
+t = 06/01/2023 15:10:12.  dt =  14.680 /  0.376 s.  elapsed time =     266.1 s.
+t = 06/01/2023 15:20:14.  dt =  14.677 /  0.376 s.  elapsed time =     266.5 s.
+t = 06/01/2023 15:30:01.  dt =  14.684 /  0.377 s.  elapsed time =     266.9 s.
+t = 06/01/2023 15:40:03.  dt =  14.683 /  0.376 s.  elapsed time =     267.3 s.
+t = 06/01/2023 15:50:05.  dt =  14.683 /  0.376 s.  elapsed time =     267.7 s.
+t = 06/01/2023 16:00:07.  dt =  14.687 /  0.377 s.  elapsed time =     268.0 s.
+    Writing NETCDF output. t = 06/01/2023 16:00:00.
+    Writing NETCDF output. t = 06/01/2023 16:00:00.
+t = 06/01/2023 16:10:09.  dt =  14.683 /  0.376 s.  elapsed time =     268.5 s.
+t = 06/01/2023 16:20:11.  dt =  14.692 /  0.377 s.  elapsed time =     268.9 s.
+t = 06/01/2023 16:30:13.  dt =  14.690 /  0.377 s.  elapsed time =     269.3 s.
+t = 06/01/2023 16:40:01.  dt =  14.696 /  0.377 s.  elapsed time =     269.7 s.
+t = 06/01/2023 16:50:03.  dt =  14.683 /  0.376 s.  elapsed time =     270.1 s.
+t = 06/01/2023 17:00:05.  dt =  14.676 /  0.376 s.  elapsed time =     270.4 s.
+t = 06/01/2023 17:10:07.  dt =  14.666 /  0.376 s.  elapsed time =     270.8 s.
+t = 06/01/2023 17:20:08.  dt =  14.647 /  0.376 s.  elapsed time =     271.2 s.
+t = 06/01/2023 17:30:08.  dt =  14.640 /  0.375 s.  elapsed time =     271.6 s.
+t = 06/01/2023 17:40:13.  dt =  14.999 /  0.375 s.  elapsed time =     272.0 s.
+t = 06/01/2023 17:50:13.  dt =  14.982 /  0.375 s.  elapsed time =     272.4 s.
+t = 06/01/2023 18:00:12.  dt =  14.977 /  0.374 s.  elapsed time =     272.7 s.
+    Writing NETCDF output. t = 06/01/2023 18:00:00.
+    Writing NETCDF output. t = 06/01/2023 18:00:00.
+t = 06/01/2023 18:10:10.  dt =  14.958 /  0.374 s.  elapsed time =     273.2 s.
+t = 06/01/2023 18:20:08.  dt =  14.944 /  0.374 s.  elapsed time =     273.6 s.
+t = 06/01/2023 18:30:06.  dt =  14.941 /  0.374 s.  elapsed time =     274.0 s.
+t = 06/01/2023 18:40:03.  dt =  14.929 /  0.373 s.  elapsed time =     274.4 s.
+t = 06/01/2023 18:50:12.  dt =  14.546 /  0.373 s.  elapsed time =     274.8 s.
+t = 06/01/2023 19:00:02.  dt =  14.169 /  0.373 s.  elapsed time =     275.3 s.
+t = 06/01/2023 19:10:03.  dt =  13.415 /  0.373 s.  elapsed time =     275.7 s.
+t = 06/01/2023 19:20:06.  dt =  13.410 /  0.372 s.  elapsed time =     276.1 s.
+t = 06/01/2023 19:30:04.  dt =  13.036 /  0.372 s.  elapsed time =     276.5 s.
+t = 06/01/2023 19:40:04.  dt =  13.774 /  0.372 s.  elapsed time =     276.9 s.
+t = 06/01/2023 19:50:01.  dt =  13.782 /  0.372 s.  elapsed time =     277.3 s.
+t = 06/01/2023 20:00:08.  dt =  13.777 /  0.372 s.  elapsed time =     277.6 s.
+    Writing NETCDF output. t = 06/01/2023 20:00:00.
+    Writing NETCDF output. t = 06/01/2023 20:00:00.
+t = 06/01/2023 20:10:01.  dt =  14.144 /  0.372 s.  elapsed time =     278.1 s.
+t = 06/01/2023 20:20:13.  dt =  14.531 /  0.373 s.  elapsed time =     278.6 s.
+t = 06/01/2023 20:30:08.  dt =  14.146 /  0.372 s.  elapsed time =     278.9 s.
+t = 06/01/2023 20:40:03.  dt =  14.526 /  0.372 s.  elapsed time =     279.3 s.
+t = 06/01/2023 20:50:13.  dt =  14.529 /  0.373 s.  elapsed time =     279.7 s.
+t = 06/01/2023 21:00:02.  dt =  14.522 /  0.372 s.  elapsed time =     280.0 s.
+t = 06/01/2023 21:10:10.  dt =  14.907 /  0.373 s.  elapsed time =     280.4 s.
+t = 06/01/2023 21:20:06.  dt =  14.902 /  0.373 s.  elapsed time =     280.8 s.
+t = 06/01/2023 21:30:03.  dt =  14.909 /  0.373 s.  elapsed time =     281.2 s.
+t = 06/01/2023 21:40:14.  dt =  14.918 /  0.373 s.  elapsed time =     281.6 s.
+t = 06/01/2023 21:50:11.  dt =  14.912 /  0.373 s.  elapsed time =     282.0 s.
+t = 06/01/2023 22:00:07.  dt =  14.925 /  0.373 s.  elapsed time =     282.3 s.
+    Writing NETCDF output. t = 06/01/2023 22:00:00.
+    Writing NETCDF output. t = 06/01/2023 22:00:00.
+t = 06/01/2023 22:10:04.  dt =  14.924 /  0.373 s.  elapsed time =     282.8 s.
+t = 06/01/2023 22:20:01.  dt =  14.926 /  0.373 s.  elapsed time =     283.2 s.
+t = 06/01/2023 22:30:13.  dt =  14.940 /  0.373 s.  elapsed time =     283.6 s.
+t = 06/01/2023 22:40:11.  dt =  14.933 /  0.373 s.  elapsed time =     284.0 s.
+t = 06/01/2023 22:50:09.  dt =  14.957 /  0.374 s.  elapsed time =     284.4 s.
+t = 06/01/2023 23:00:07.  dt =  14.954 /  0.374 s.  elapsed time =     284.7 s.
+t = 06/01/2023 23:10:05.  dt =  14.958 /  0.374 s.  elapsed time =     285.1 s.
+t = 06/01/2023 23:20:04.  dt =  14.983 /  0.375 s.  elapsed time =     285.5 s.
+t = 06/01/2023 23:30:03.  dt =  14.970 /  0.374 s.  elapsed time =     285.9 s.
+t = 06/01/2023 23:40:03.  dt =  14.990 /  0.375 s.  elapsed time =     286.3 s.
+t = 06/01/2023 23:50:02.  dt =  14.996 /  0.375 s.  elapsed time =     286.7 s.
+t = 07/01/2023 00:00:08.  dt =  14.992 /  0.375 s.  elapsed time =     287.0 s.
+    Writing NETCDF output. t = 07/01/2023 00:00:00.
+    Writing NETCDF output. t = 07/01/2023 00:00:00.
+t = 07/01/2023 00:10:00.  dt =  14.638 /  0.375 s.  elapsed time =     287.5 s.
+t = 07/01/2023 00:20:00.  dt =  14.631 /  0.375 s.  elapsed time =     287.9 s.
+t = 07/01/2023 00:30:00.  dt =  14.643 /  0.375 s.  elapsed time =     288.3 s.
+t = 07/01/2023 00:40:01.  dt =  14.652 /  0.376 s.  elapsed time =     288.7 s.
+t = 07/01/2023 00:50:01.  dt =  14.644 /  0.375 s.  elapsed time =     289.1 s.
+t = 07/01/2023 01:00:02.  dt =  14.662 /  0.376 s.  elapsed time =     289.4 s.
+t = 07/01/2023 01:10:03.  dt =  14.658 /  0.376 s.  elapsed time =     289.8 s.
+t = 07/01/2023 01:20:04.  dt =  14.664 /  0.376 s.  elapsed time =     290.2 s.
+t = 07/01/2023 01:30:06.  dt =  14.673 /  0.376 s.  elapsed time =     290.6 s.
+t = 07/01/2023 01:40:07.  dt =  14.663 /  0.376 s.  elapsed time =     291.0 s.
+t = 07/01/2023 01:50:09.  dt =  14.677 /  0.376 s.  elapsed time =     291.4 s.
+t = 07/01/2023 02:00:10.  dt =  14.671 /  0.376 s.  elapsed time =     291.7 s.
+    Writing NETCDF output. t = 07/01/2023 02:00:00.
+    Writing NETCDF output. t = 07/01/2023 02:00:00.
+t = 07/01/2023 02:10:12.  dt =  14.671 /  0.376 s.  elapsed time =     292.2 s.
+t = 07/01/2023 02:20:13.  dt =  14.679 /  0.376 s.  elapsed time =     292.6 s.
+t = 07/01/2023 02:30:00.  dt =  14.669 /  0.376 s.  elapsed time =     293.0 s.
+t = 07/01/2023 02:40:02.  dt =  14.677 /  0.376 s.  elapsed time =     293.4 s.
+t = 07/01/2023 02:50:03.  dt =  14.668 /  0.376 s.  elapsed time =     293.8 s.
+t = 07/01/2023 03:00:05.  dt =  14.663 /  0.376 s.  elapsed time =     294.1 s.
+t = 07/01/2023 03:10:06.  dt =  14.666 /  0.376 s.  elapsed time =     294.5 s.
+t = 07/01/2023 03:20:07.  dt =  14.645 /  0.376 s.  elapsed time =     294.9 s.
+t = 07/01/2023 03:30:08.  dt =  14.649 /  0.376 s.  elapsed time =     295.3 s.
+t = 07/01/2023 03:40:08.  dt =  14.641 /  0.375 s.  elapsed time =     295.8 s.
+t = 07/01/2023 03:50:08.  dt =  14.626 /  0.375 s.  elapsed time =     296.2 s.
+t = 07/01/2023 04:00:11.  dt =  14.633 /  0.375 s.  elapsed time =     296.6 s.
+    Writing NETCDF output. t = 07/01/2023 04:00:00.
+    Writing NETCDF output. t = 07/01/2023 04:00:00.
+t = 07/01/2023 04:10:06.  dt =  14.990 /  0.375 s.  elapsed time =     297.1 s.
+t = 07/01/2023 04:20:06.  dt =  14.991 /  0.375 s.  elapsed time =     297.5 s.
+t = 07/01/2023 04:30:05.  dt =  14.994 /  0.375 s.  elapsed time =     297.8 s.
+t = 07/01/2023 04:40:05.  dt =  14.983 /  0.375 s.  elapsed time =     298.2 s.
+t = 07/01/2023 04:50:05.  dt =  14.997 /  0.375 s.  elapsed time =     298.6 s.
+t = 07/01/2023 05:00:04.  dt =  14.991 /  0.375 s.  elapsed time =     299.0 s.
+t = 07/01/2023 05:10:04.  dt =  14.992 /  0.375 s.  elapsed time =     299.4 s.
+t = 07/01/2023 05:20:03.  dt =  14.625 /  0.375 s.  elapsed time =     299.8 s.
+t = 07/01/2023 05:30:13.  dt =  14.992 /  0.375 s.  elapsed time =     300.1 s.
+t = 07/01/2023 05:40:04.  dt =  14.627 /  0.375 s.  elapsed time =     300.5 s.
+t = 07/01/2023 05:50:00.  dt =  14.627 /  0.375 s.  elapsed time =     300.9 s.
+t = 07/01/2023 06:00:03.  dt =  14.997 /  0.375 s.  elapsed time =     301.3 s.
+    Writing NETCDF output. t = 07/01/2023 06:00:00.
+    Writing NETCDF output. t = 07/01/2023 06:00:00.
+t = 07/01/2023 06:10:09.  dt =  14.633 /  0.375 s.  elapsed time =     301.8 s.
+t = 07/01/2023 06:20:13.  dt =  14.625 /  0.375 s.  elapsed time =     302.2 s.
+t = 07/01/2023 06:30:13.  dt =  14.629 /  0.375 s.  elapsed time =     302.5 s.
+t = 07/01/2023 06:40:04.  dt =  14.629 /  0.375 s.  elapsed time =     302.9 s.
+t = 07/01/2023 06:50:08.  dt =  14.996 /  0.375 s.  elapsed time =     303.3 s.
+t = 07/01/2023 07:00:00.  dt =  14.629 /  0.375 s.  elapsed time =     303.7 s.
+t = 07/01/2023 07:10:11.  dt =  14.995 /  0.375 s.  elapsed time =     304.1 s.
+t = 07/01/2023 07:20:06.  dt =  14.992 /  0.375 s.  elapsed time =     304.5 s.
+t = 07/01/2023 07:30:06.  dt =  14.991 /  0.375 s.  elapsed time =     304.8 s.
+t = 07/01/2023 07:40:05.  dt =  14.980 /  0.374 s.  elapsed time =     305.2 s.
+t = 07/01/2023 07:50:04.  dt =  14.972 /  0.374 s.  elapsed time =     305.6 s.
+t = 07/01/2023 08:00:03.  dt =  14.966 /  0.374 s.  elapsed time =     306.0 s.
+    Writing NETCDF output. t = 07/01/2023 08:00:00.
+    Writing NETCDF output. t = 07/01/2023 08:00:00.
+t = 07/01/2023 08:10:01.  dt =  14.956 /  0.374 s.  elapsed time =     307.0 s.
+t = 07/01/2023 08:20:14.  dt =  14.949 /  0.374 s.  elapsed time =     307.4 s.
+t = 07/01/2023 08:30:12.  dt =  14.945 /  0.374 s.  elapsed time =     307.8 s.
+t = 07/01/2023 08:40:10.  dt =  14.943 /  0.374 s.  elapsed time =     308.2 s.
+t = 07/01/2023 08:50:08.  dt =  14.940 /  0.374 s.  elapsed time =     308.6 s.
+t = 07/01/2023 09:00:05.  dt =  14.941 /  0.374 s.  elapsed time =     308.9 s.
+t = 07/01/2023 09:10:03.  dt =  14.937 /  0.373 s.  elapsed time =     309.3 s.
+t = 07/01/2023 09:20:00.  dt =  14.934 /  0.373 s.  elapsed time =     309.7 s.
+t = 07/01/2023 09:30:13.  dt =  14.936 /  0.373 s.  elapsed time =     310.0 s.
+t = 07/01/2023 09:40:10.  dt =  14.930 /  0.373 s.  elapsed time =     310.4 s.
+t = 07/01/2023 09:50:07.  dt =  14.931 /  0.373 s.  elapsed time =     310.8 s.
+t = 07/01/2023 10:00:04.  dt =  14.927 /  0.373 s.  elapsed time =     311.2 s.
+    Writing NETCDF output. t = 07/01/2023 10:00:00.
+    Writing NETCDF output. t = 07/01/2023 10:00:00.
+t = 07/01/2023 10:10:06.  dt =  14.555 /  0.373 s.  elapsed time =     311.7 s.
+t = 07/01/2023 10:20:02.  dt =  14.553 /  0.373 s.  elapsed time =     312.1 s.
+t = 07/01/2023 10:30:06.  dt =  14.177 /  0.373 s.  elapsed time =     312.4 s.
+t = 07/01/2023 10:40:01.  dt =  14.177 /  0.373 s.  elapsed time =     312.8 s.
+t = 07/01/2023 10:50:03.  dt =  13.800 /  0.373 s.  elapsed time =     313.2 s.
+t = 07/01/2023 11:00:10.  dt =  13.800 /  0.373 s.  elapsed time =     313.6 s.
+t = 07/01/2023 11:10:08.  dt =  13.424 /  0.373 s.  elapsed time =     314.0 s.
+t = 07/01/2023 11:20:07.  dt =  13.796 /  0.373 s.  elapsed time =     314.4 s.
+t = 07/01/2023 11:30:13.  dt =  13.424 /  0.373 s.  elapsed time =     314.8 s.
+t = 07/01/2023 11:40:04.  dt =  13.424 /  0.373 s.  elapsed time =     315.2 s.
+t = 07/01/2023 11:50:08.  dt =  13.424 /  0.373 s.  elapsed time =     315.6 s.
+t = 07/01/2023 12:00:03.  dt =  13.799 /  0.373 s.  elapsed time =     316.0 s.
+    Writing NETCDF output. t = 07/01/2023 12:00:00.
+    Writing NETCDF output. t = 07/01/2023 12:00:00.
+t = 07/01/2023 12:10:01.  dt =  13.425 /  0.373 s.  elapsed time =     316.5 s.
+t = 07/01/2023 12:20:14.  dt =  13.801 /  0.373 s.  elapsed time =     316.9 s.
+t = 07/01/2023 12:30:09.  dt =  13.427 /  0.373 s.  elapsed time =     317.3 s.
+t = 07/01/2023 12:40:10.  dt =  13.428 /  0.373 s.  elapsed time =     317.7 s.
+t = 07/01/2023 12:50:05.  dt =  13.054 /  0.373 s.  elapsed time =     318.1 s.
+t = 07/01/2023 13:00:05.  dt =  13.052 /  0.373 s.  elapsed time =     318.5 s.
+t = 07/01/2023 13:10:08.  dt =  12.682 /  0.373 s.  elapsed time =     318.9 s.
+t = 07/01/2023 13:20:04.  dt =  12.676 /  0.373 s.  elapsed time =     319.3 s.
+t = 07/01/2023 13:30:12.  dt =  12.680 /  0.373 s.  elapsed time =     319.7 s.
+t = 07/01/2023 13:40:00.  dt =  13.050 /  0.373 s.  elapsed time =     320.1 s.
+t = 07/01/2023 13:50:01.  dt =  13.050 /  0.373 s.  elapsed time =     320.5 s.
+t = 07/01/2023 14:00:11.  dt =  13.053 /  0.373 s.  elapsed time =     320.9 s.
+    Writing NETCDF output. t = 07/01/2023 14:00:00.
+    Writing NETCDF output. t = 07/01/2023 14:00:00.
+t = 07/01/2023 14:10:12.  dt =  13.048 /  0.373 s.  elapsed time =     321.7 s.
+t = 07/01/2023 14:20:04.  dt =  13.428 /  0.373 s.  elapsed time =     322.1 s.
+t = 07/01/2023 14:30:02.  dt =  13.052 /  0.373 s.  elapsed time =     322.5 s.
+t = 07/01/2023 14:40:12.  dt =  13.798 /  0.373 s.  elapsed time =     322.9 s.
+t = 07/01/2023 14:50:06.  dt =  13.806 /  0.373 s.  elapsed time =     323.3 s.
+t = 07/01/2023 15:00:13.  dt =  13.802 /  0.373 s.  elapsed time =     323.6 s.
+t = 07/01/2023 15:10:07.  dt =  14.177 /  0.373 s.  elapsed time =     324.0 s.
+t = 07/01/2023 15:20:03.  dt =  14.557 /  0.373 s.  elapsed time =     324.4 s.
+t = 07/01/2023 15:30:10.  dt =  14.180 /  0.373 s.  elapsed time =     324.8 s.
+t = 07/01/2023 15:40:11.  dt =  14.563 /  0.373 s.  elapsed time =     325.2 s.
+t = 07/01/2023 15:50:05.  dt =  14.187 /  0.373 s.  elapsed time =     325.6 s.
+t = 07/01/2023 16:00:11.  dt =  14.563 /  0.373 s.  elapsed time =     326.0 s.
+    Writing NETCDF output. t = 07/01/2023 16:00:00.
+    Writing NETCDF output. t = 07/01/2023 16:00:00.
+t = 07/01/2023 16:10:08.  dt =  14.570 /  0.374 s.  elapsed time =     326.5 s.
+t = 07/01/2023 16:20:10.  dt =  14.937 /  0.373 s.  elapsed time =     326.9 s.
+t = 07/01/2023 16:30:07.  dt =  14.949 /  0.374 s.  elapsed time =     327.2 s.
+t = 07/01/2023 16:40:05.  dt =  14.947 /  0.374 s.  elapsed time =     327.6 s.
+t = 07/01/2023 16:50:03.  dt =  14.955 /  0.374 s.  elapsed time =     328.0 s.
+t = 07/01/2023 17:00:01.  dt =  14.960 /  0.374 s.  elapsed time =     328.4 s.
+t = 07/01/2023 17:10:15.  dt =  14.958 /  0.374 s.  elapsed time =     328.8 s.
+t = 07/01/2023 17:20:13.  dt =  14.971 /  0.374 s.  elapsed time =     329.1 s.
+t = 07/01/2023 17:30:12.  dt =  14.967 /  0.374 s.  elapsed time =     329.5 s.
+t = 07/01/2023 17:40:11.  dt =  14.969 /  0.374 s.  elapsed time =     329.9 s.
+t = 07/01/2023 17:50:10.  dt =  14.977 /  0.374 s.  elapsed time =     330.3 s.
+t = 07/01/2023 18:00:09.  dt =  14.970 /  0.374 s.  elapsed time =     330.6 s.
+    Writing NETCDF output. t = 07/01/2023 18:00:00.
+    Writing NETCDF output. t = 07/01/2023 18:00:00.
+t = 07/01/2023 18:10:08.  dt =  14.978 /  0.374 s.  elapsed time =     331.1 s.
+t = 07/01/2023 18:20:07.  dt =  14.980 /  0.375 s.  elapsed time =     331.5 s.
+t = 07/01/2023 18:30:06.  dt =  14.978 /  0.374 s.  elapsed time =     331.9 s.
+t = 07/01/2023 18:40:05.  dt =  14.989 /  0.375 s.  elapsed time =     332.3 s.
+t = 07/01/2023 18:50:05.  dt =  14.986 /  0.375 s.  elapsed time =     332.7 s.
+t = 07/01/2023 19:00:05.  dt =  14.994 /  0.375 s.  elapsed time =     333.0 s.
+t = 07/01/2023 19:10:04.  dt =  14.997 /  0.375 s.  elapsed time =     333.4 s.
+t = 07/01/2023 19:20:01.  dt =  14.998 /  0.375 s.  elapsed time =     333.8 s.
+t = 07/01/2023 19:30:06.  dt =  14.634 /  0.375 s.  elapsed time =     334.1 s.
+t = 07/01/2023 19:40:06.  dt =  14.632 /  0.375 s.  elapsed time =     334.5 s.
+t = 07/01/2023 19:50:06.  dt =  14.644 /  0.375 s.  elapsed time =     334.9 s.
+t = 07/01/2023 20:00:06.  dt =  14.646 /  0.376 s.  elapsed time =     335.3 s.
+    Writing NETCDF output. t = 07/01/2023 20:00:00.
+    Writing NETCDF output. t = 07/01/2023 20:00:00.
+t = 07/01/2023 20:10:07.  dt =  14.650 /  0.376 s.  elapsed time =     335.8 s.
+t = 07/01/2023 20:20:08.  dt =  14.660 /  0.376 s.  elapsed time =     336.2 s.
+t = 07/01/2023 20:30:09.  dt =  14.656 /  0.376 s.  elapsed time =     336.8 s.
+t = 07/01/2023 20:40:10.  dt =  14.662 /  0.376 s.  elapsed time =     337.1 s.
+t = 07/01/2023 20:50:11.  dt =  14.664 /  0.376 s.  elapsed time =     337.5 s.
+t = 07/01/2023 21:00:12.  dt =  14.660 /  0.376 s.  elapsed time =     337.9 s.
+t = 07/01/2023 21:10:13.  dt =  14.668 /  0.376 s.  elapsed time =     338.3 s.
+t = 07/01/2023 21:20:15.  dt =  14.662 /  0.376 s.  elapsed time =     338.7 s.
+t = 07/01/2023 21:30:01.  dt =  14.667 /  0.376 s.  elapsed time =     339.0 s.
+t = 07/01/2023 21:40:03.  dt =  14.670 /  0.376 s.  elapsed time =     339.4 s.
+t = 07/01/2023 21:50:04.  dt =  14.665 /  0.376 s.  elapsed time =     339.8 s.
+t = 07/01/2023 22:00:06.  dt =  14.675 /  0.376 s.  elapsed time =     340.2 s.
+    Writing NETCDF output. t = 07/01/2023 22:00:00.
+    Writing NETCDF output. t = 07/01/2023 22:00:00.
+t = 07/01/2023 22:10:07.  dt =  14.670 /  0.376 s.  elapsed time =     340.7 s.
+t = 07/01/2023 22:20:09.  dt =  14.670 /  0.376 s.  elapsed time =     341.1 s.
+t = 07/01/2023 22:30:10.  dt =  14.671 /  0.376 s.  elapsed time =     341.5 s.
+t = 07/01/2023 22:40:11.  dt =  14.660 /  0.376 s.  elapsed time =     341.8 s.
+t = 07/01/2023 22:50:12.  dt =  14.660 /  0.376 s.  elapsed time =     342.2 s.
+t = 07/01/2023 23:00:13.  dt =  14.650 /  0.376 s.  elapsed time =     342.6 s.
+t = 07/01/2023 23:10:14.  dt =  14.642 /  0.375 s.  elapsed time =     343.0 s.
+t = 07/01/2023 23:20:14.  dt =  14.649 /  0.376 s.  elapsed time =     343.4 s.
+t = 07/01/2023 23:30:15.  dt =  14.642 /  0.375 s.  elapsed time =     343.8 s.
+t = 07/01/2023 23:40:00.  dt =  14.651 /  0.376 s.  elapsed time =     344.1 s.
+t = 07/01/2023 23:50:01.  dt =  14.658 /  0.376 s.  elapsed time =     344.5 s.
+t = 08/01/2023 00:00:02.  dt =  14.659 /  0.376 s.  elapsed time =     344.9 s.
+    Writing NETCDF output. t = 08/01/2023 00:00:00.
+    Writing NETCDF output. t = 08/01/2023 00:00:00.
+t = 08/01/2023 00:10:03.  dt =  14.669 /  0.376 s.  elapsed time =     345.4 s.
+t = 08/01/2023 00:20:05.  dt =  14.669 /  0.376 s.  elapsed time =     345.8 s.
+t = 08/01/2023 00:30:07.  dt =  14.682 /  0.376 s.  elapsed time =     346.1 s.
+t = 08/01/2023 00:40:09.  dt =  14.688 /  0.377 s.  elapsed time =     346.5 s.
+t = 08/01/2023 00:50:11.  dt =  14.693 /  0.377 s.  elapsed time =     346.9 s.
+t = 08/01/2023 01:00:14.  dt =  14.700 /  0.377 s.  elapsed time =     347.3 s.
+t = 08/01/2023 01:10:02.  dt =  14.707 /  0.377 s.  elapsed time =     347.7 s.
+t = 08/01/2023 01:20:05.  dt =  14.712 /  0.377 s.  elapsed time =     348.1 s.
+t = 08/01/2023 01:30:08.  dt =  14.715 /  0.377 s.  elapsed time =     348.4 s.
+t = 08/01/2023 01:40:11.  dt =  14.719 /  0.377 s.  elapsed time =     348.8 s.
+t = 08/01/2023 01:50:00.  dt =  14.724 /  0.378 s.  elapsed time =     349.2 s.
+t = 08/01/2023 02:00:04.  dt =  14.727 /  0.378 s.  elapsed time =     349.6 s.
+    Writing NETCDF output. t = 08/01/2023 02:00:00.
+    Writing NETCDF output. t = 08/01/2023 02:00:00.
+t = 08/01/2023 02:10:08.  dt =  14.729 /  0.378 s.  elapsed time =     350.1 s.
+t = 08/01/2023 02:20:12.  dt =  14.732 /  0.378 s.  elapsed time =     350.5 s.
+t = 08/01/2023 02:30:01.  dt =  14.733 /  0.378 s.  elapsed time =     350.8 s.
+t = 08/01/2023 02:40:05.  dt =  14.735 /  0.378 s.  elapsed time =     351.2 s.
+t = 08/01/2023 02:50:09.  dt =  14.730 /  0.378 s.  elapsed time =     351.6 s.
+t = 08/01/2023 03:00:13.  dt =  14.734 /  0.378 s.  elapsed time =     352.0 s.
+t = 08/01/2023 03:10:03.  dt =  14.733 /  0.378 s.  elapsed time =     352.4 s.
+t = 08/01/2023 03:20:07.  dt =  14.728 /  0.378 s.  elapsed time =     352.8 s.
+t = 08/01/2023 03:30:10.  dt =  14.729 /  0.378 s.  elapsed time =     353.1 s.
+t = 08/01/2023 03:40:14.  dt =  14.724 /  0.378 s.  elapsed time =     353.5 s.
+t = 08/01/2023 03:50:03.  dt =  14.722 /  0.377 s.  elapsed time =     353.9 s.
+t = 08/01/2023 04:00:07.  dt =  14.719 /  0.377 s.  elapsed time =     354.3 s.
+    Writing NETCDF output. t = 08/01/2023 04:00:00.
+    Writing NETCDF output. t = 08/01/2023 04:00:00.
+t = 08/01/2023 04:10:10.  dt =  14.713 /  0.377 s.  elapsed time =     354.8 s.
+t = 08/01/2023 04:20:13.  dt =  14.710 /  0.377 s.  elapsed time =     355.2 s.
+t = 08/01/2023 04:30:02.  dt =  14.706 /  0.377 s.  elapsed time =     355.5 s.
+t = 08/01/2023 04:40:04.  dt =  14.699 /  0.377 s.  elapsed time =     355.9 s.
+t = 08/01/2023 04:50:07.  dt =  14.694 /  0.377 s.  elapsed time =     356.3 s.
+t = 08/01/2023 05:00:09.  dt =  14.688 /  0.377 s.  elapsed time =     356.7 s.
+t = 08/01/2023 05:10:11.  dt =  14.684 /  0.377 s.  elapsed time =     357.6 s.
+t = 08/01/2023 05:20:13.  dt =  14.690 /  0.377 s.  elapsed time =     358.0 s.
+t = 08/01/2023 05:30:01.  dt =  14.697 /  0.377 s.  elapsed time =     358.3 s.
+t = 08/01/2023 05:40:04.  dt =  14.705 /  0.377 s.  elapsed time =     358.7 s.
+t = 08/01/2023 05:50:07.  dt =  14.718 /  0.377 s.  elapsed time =     359.1 s.
+t = 08/01/2023 06:00:10.  dt =  14.723 /  0.378 s.  elapsed time =     359.5 s.
+    Writing NETCDF output. t = 08/01/2023 06:00:00.
+    Writing NETCDF output. t = 08/01/2023 06:00:00.
+t = 08/01/2023 06:10:15.  dt =  14.739 /  0.378 s.  elapsed time =     360.0 s.
+t = 08/01/2023 06:20:05.  dt =  14.756 /  0.378 s.  elapsed time =     360.4 s.
+t = 08/01/2023 06:30:10.  dt =  14.765 /  0.379 s.  elapsed time =     360.7 s.
+t = 08/01/2023 06:40:01.  dt =  14.771 /  0.379 s.  elapsed time =     361.1 s.
+t = 08/01/2023 06:50:06.  dt =  14.774 /  0.379 s.  elapsed time =     361.5 s.
+t = 08/01/2023 07:00:12.  dt =  14.772 /  0.379 s.  elapsed time =     361.9 s.
+t = 08/01/2023 07:10:03.  dt =  14.777 /  0.379 s.  elapsed time =     362.2 s.
+t = 08/01/2023 07:20:08.  dt =  14.767 /  0.379 s.  elapsed time =     362.6 s.
+t = 08/01/2023 07:30:14.  dt =  14.769 /  0.379 s.  elapsed time =     363.0 s.
+t = 08/01/2023 07:40:04.  dt =  14.762 /  0.379 s.  elapsed time =     363.4 s.
+t = 08/01/2023 07:50:10.  dt =  14.742 /  0.378 s.  elapsed time =     363.8 s.
+t = 08/01/2023 08:00:14.  dt =  14.744 /  0.378 s.  elapsed time =     364.1 s.
+    Writing NETCDF output. t = 08/01/2023 08:00:00.
+    Writing NETCDF output. t = 08/01/2023 08:00:00.
+t = 08/01/2023 08:10:03.  dt =  14.712 /  0.377 s.  elapsed time =     364.6 s.
+t = 08/01/2023 08:20:06.  dt =  14.688 /  0.377 s.  elapsed time =     365.0 s.
+t = 08/01/2023 08:30:08.  dt =  14.683 /  0.376 s.  elapsed time =     365.4 s.
+t = 08/01/2023 08:40:09.  dt =  14.664 /  0.376 s.  elapsed time =     365.8 s.
+t = 08/01/2023 08:50:10.  dt =  14.652 /  0.376 s.  elapsed time =     366.2 s.
+t = 08/01/2023 09:00:11.  dt =  14.651 /  0.376 s.  elapsed time =     366.5 s.
+t = 08/01/2023 09:10:11.  dt =  14.639 /  0.375 s.  elapsed time =     366.9 s.
+t = 08/01/2023 09:20:12.  dt =  14.635 /  0.375 s.  elapsed time =     367.3 s.
+t = 08/01/2023 09:30:12.  dt =  14.638 /  0.375 s.  elapsed time =     367.7 s.
+t = 08/01/2023 09:40:12.  dt =  14.628 /  0.375 s.  elapsed time =     368.1 s.
+t = 08/01/2023 09:50:12.  dt =  14.638 /  0.375 s.  elapsed time =     368.5 s.
+t = 08/01/2023 10:00:12.  dt =  14.628 /  0.375 s.  elapsed time =     368.8 s.
+    Writing NETCDF output. t = 08/01/2023 10:00:00.
+    Writing NETCDF output. t = 08/01/2023 10:00:00.
+t = 08/01/2023 10:10:11.  dt =  14.632 /  0.375 s.  elapsed time =     369.3 s.
+t = 08/01/2023 10:20:11.  dt =  14.627 /  0.375 s.  elapsed time =     369.7 s.
+t = 08/01/2023 10:30:03.  dt =  14.998 /  0.375 s.  elapsed time =     370.1 s.
+t = 08/01/2023 10:40:14.  dt =  14.997 /  0.375 s.  elapsed time =     370.5 s.
+t = 08/01/2023 10:50:14.  dt =  14.991 /  0.375 s.  elapsed time =     370.9 s.
+t = 08/01/2023 11:00:14.  dt =  14.989 /  0.375 s.  elapsed time =     371.2 s.
+t = 08/01/2023 11:10:07.  dt =  14.612 /  0.375 s.  elapsed time =     371.6 s.
+t = 08/01/2023 11:20:12.  dt =  14.233 /  0.375 s.  elapsed time =     372.0 s.
+t = 08/01/2023 11:30:04.  dt =  13.853 /  0.374 s.  elapsed time =     372.5 s.
+t = 08/01/2023 11:40:09.  dt =  13.104 /  0.374 s.  elapsed time =     372.9 s.
+t = 08/01/2023 11:50:05.  dt =  12.717 /  0.374 s.  elapsed time =     373.4 s.
+t = 08/01/2023 12:00:04.  dt =  12.346 /  0.374 s.  elapsed time =     373.7 s.
+    Writing NETCDF output. t = 08/01/2023 12:00:00.
+    Writing NETCDF output. t = 08/01/2023 12:00:00.
+t = 08/01/2023 12:10:04.  dt =  11.589 /  0.374 s.  elapsed time =     374.3 s.
+t = 08/01/2023 12:20:06.  dt =  11.584 /  0.374 s.  elapsed time =     374.7 s.
+t = 08/01/2023 12:30:01.  dt =  11.211 /  0.374 s.  elapsed time =     375.1 s.
+t = 08/01/2023 12:40:02.  dt =  10.832 /  0.374 s.  elapsed time =     375.5 s.
+t = 08/01/2023 12:50:09.  dt =  10.453 /  0.373 s.  elapsed time =     376.0 s.
+t = 08/01/2023 13:00:01.  dt =  10.080 /  0.373 s.  elapsed time =     376.4 s.
+t = 08/01/2023 13:10:03.  dt =   9.705 /  0.373 s.  elapsed time =     376.8 s.
+t = 08/01/2023 13:20:05.  dt =  10.446 /  0.373 s.  elapsed time =     377.3 s.
+t = 08/01/2023 13:30:01.  dt =  10.457 /  0.373 s.  elapsed time =     377.7 s.
+t = 08/01/2023 13:40:01.  dt =  11.194 /  0.373 s.  elapsed time =     378.1 s.
+t = 08/01/2023 13:50:03.  dt =  12.340 /  0.374 s.  elapsed time =     378.5 s.
+t = 08/01/2023 14:00:07.  dt =  12.333 /  0.374 s.  elapsed time =     378.9 s.
+    Writing NETCDF output. t = 08/01/2023 14:00:00.
+    Writing NETCDF output. t = 08/01/2023 14:00:00.
+t = 08/01/2023 14:10:04.  dt =  13.450 /  0.374 s.  elapsed time =     379.4 s.
+t = 08/01/2023 14:20:07.  dt =  14.613 /  0.375 s.  elapsed time =     379.9 s.
+t = 08/01/2023 14:30:02.  dt =  14.213 /  0.374 s.  elapsed time =     380.2 s.
+t = 08/01/2023 14:40:12.  dt =  14.994 /  0.375 s.  elapsed time =     380.6 s.
+t = 08/01/2023 14:50:10.  dt =  14.627 /  0.375 s.  elapsed time =     381.0 s.
+t = 08/01/2023 15:00:12.  dt =  14.996 /  0.375 s.  elapsed time =     381.4 s.
+t = 08/01/2023 15:10:02.  dt =  14.654 /  0.376 s.  elapsed time =     381.7 s.
+t = 08/01/2023 15:20:03.  dt =  14.629 /  0.375 s.  elapsed time =     382.1 s.
+t = 08/01/2023 15:30:03.  dt =  14.646 /  0.376 s.  elapsed time =     382.5 s.
+t = 08/01/2023 15:40:06.  dt =  14.649 /  0.376 s.  elapsed time =     382.9 s.
+t = 08/01/2023 15:50:09.  dt =  14.993 /  0.375 s.  elapsed time =     383.3 s.
+t = 08/01/2023 16:00:13.  dt =  14.638 /  0.375 s.  elapsed time =     383.7 s.
+    Writing NETCDF output. t = 08/01/2023 16:00:00.
+    Writing NETCDF output. t = 08/01/2023 16:00:00.
+t = 08/01/2023 16:10:11.  dt =  13.869 /  0.375 s.  elapsed time =     384.2 s.
+t = 08/01/2023 16:20:08.  dt =  13.862 /  0.375 s.  elapsed time =     384.6 s.
+t = 08/01/2023 16:30:07.  dt =  13.875 /  0.375 s.  elapsed time =     384.9 s.
+t = 08/01/2023 16:40:11.  dt =  13.853 /  0.374 s.  elapsed time =     385.3 s.
+t = 08/01/2023 16:50:07.  dt =  14.250 /  0.375 s.  elapsed time =     385.7 s.
+t = 08/01/2023 17:00:12.  dt =  14.246 /  0.375 s.  elapsed time =     386.1 s.
+t = 08/01/2023 17:10:06.  dt =  14.235 /  0.375 s.  elapsed time =     386.5 s.
+t = 08/01/2023 17:20:11.  dt =  14.639 /  0.375 s.  elapsed time =     386.9 s.
+t = 08/01/2023 17:30:03.  dt =  14.998 /  0.375 s.  elapsed time =     387.3 s.
+t = 08/01/2023 17:40:05.  dt =  14.644 /  0.375 s.  elapsed time =     387.7 s.
+t = 08/01/2023 17:50:05.  dt =  14.657 /  0.376 s.  elapsed time =     388.0 s.
+t = 08/01/2023 18:00:06.  dt =  14.647 /  0.376 s.  elapsed time =     388.4 s.
+    Writing NETCDF output. t = 08/01/2023 18:00:00.
+    Writing NETCDF output. t = 08/01/2023 18:00:00.
+t = 08/01/2023 18:10:07.  dt =  14.679 /  0.376 s.  elapsed time =     388.9 s.
+t = 08/01/2023 18:20:08.  dt =  14.669 /  0.376 s.  elapsed time =     389.3 s.
+t = 08/01/2023 18:30:10.  dt =  14.676 /  0.376 s.  elapsed time =     389.7 s.
+t = 08/01/2023 18:40:12.  dt =  14.689 /  0.377 s.  elapsed time =     390.1 s.
+t = 08/01/2023 18:50:14.  dt =  14.674 /  0.376 s.  elapsed time =     390.5 s.
+t = 08/01/2023 19:00:02.  dt =  14.691 /  0.377 s.  elapsed time =     390.8 s.
+t = 08/01/2023 19:10:03.  dt =  14.683 /  0.376 s.  elapsed time =     391.2 s.
+t = 08/01/2023 19:20:06.  dt =  14.683 /  0.376 s.  elapsed time =     391.6 s.
+t = 08/01/2023 19:30:08.  dt =  14.699 /  0.377 s.  elapsed time =     392.0 s.
+t = 08/01/2023 19:40:10.  dt =  14.684 /  0.377 s.  elapsed time =     392.4 s.
+t = 08/01/2023 19:50:13.  dt =  14.706 /  0.377 s.  elapsed time =     392.8 s.
+t = 08/01/2023 20:00:01.  dt =  14.704 /  0.377 s.  elapsed time =     393.1 s.
+    Writing NETCDF output. t = 08/01/2023 20:00:00.
+    Writing NETCDF output. t = 08/01/2023 20:00:00.
+t = 08/01/2023 20:10:04.  dt =  14.698 /  0.377 s.  elapsed time =     393.6 s.
+t = 08/01/2023 20:20:07.  dt =  14.731 /  0.378 s.  elapsed time =     394.0 s.
+t = 08/01/2023 20:30:10.  dt =  14.717 /  0.377 s.  elapsed time =     394.4 s.
+t = 08/01/2023 20:40:15.  dt =  14.743 /  0.378 s.  elapsed time =     394.8 s.
+t = 08/01/2023 20:50:04.  dt =  14.755 /  0.378 s.  elapsed time =     395.2 s.
+t = 08/01/2023 21:00:09.  dt =  14.753 /  0.378 s.  elapsed time =     395.5 s.
+t = 08/01/2023 21:10:00.  dt =  14.793 /  0.379 s.  elapsed time =     395.9 s.
+t = 08/01/2023 21:20:07.  dt =  14.791 /  0.379 s.  elapsed time =     396.3 s.
+t = 08/01/2023 21:30:14.  dt =  14.805 /  0.380 s.  elapsed time =     396.6 s.
+t = 08/01/2023 21:40:06.  dt =  14.810 /  0.380 s.  elapsed time =     397.0 s.
+t = 08/01/2023 21:50:13.  dt =  14.812 /  0.380 s.  elapsed time =     397.4 s.
+t = 08/01/2023 22:00:06.  dt =  14.799 /  0.379 s.  elapsed time =     397.7 s.
+    Writing NETCDF output. t = 08/01/2023 22:00:00.
+    Writing NETCDF output. t = 08/01/2023 22:00:00.
+t = 08/01/2023 22:10:13.  dt =  14.819 /  0.380 s.  elapsed time =     398.3 s.
+t = 08/01/2023 22:20:05.  dt =  14.809 /  0.380 s.  elapsed time =     398.6 s.
+t = 08/01/2023 22:30:12.  dt =  14.816 /  0.380 s.  elapsed time =     399.0 s.
+t = 08/01/2023 22:40:05.  dt =  14.809 /  0.380 s.  elapsed time =     399.4 s.
+t = 08/01/2023 22:50:12.  dt =  14.811 /  0.380 s.  elapsed time =     399.8 s.
+t = 08/01/2023 23:00:05.  dt =  14.813 /  0.380 s.  elapsed time =     400.1 s.
+t = 08/01/2023 23:10:12.  dt =  14.794 /  0.379 s.  elapsed time =     400.5 s.
+t = 08/01/2023 23:20:04.  dt =  14.809 /  0.380 s.  elapsed time =     400.9 s.
+t = 08/01/2023 23:30:10.  dt =  14.790 /  0.379 s.  elapsed time =     401.3 s.
+t = 08/01/2023 23:40:02.  dt =  14.803 /  0.380 s.  elapsed time =     401.7 s.
+t = 08/01/2023 23:50:09.  dt =  14.801 /  0.380 s.  elapsed time =     402.1 s.
+    Writing NETCDF output. t = 09/01/2023 00:00:00.
+    Writing NETCDF output. t = 09/01/2023 00:00:00.
+Trying to open file: log/woods_2023_2024_BASE_193032.000315.rst ... OK. File unit: 101
+Closing file unit: 101
+Trying to open file: log/woods_2023_2024_BASE_193032.000315_turb.rst ... OK. File unit: 101
+Closing file unit: 101
+
+Exiting timestep loop
+
+Simulation start time = 02/01/2023 00:00:00
+Simulation end time = 09/01/2023 00:00:00
+Number of timesteps executed = 42028
+Elapsed system_time =    403.1553     s
+Runtime ratio =    1500.166
+
+Output timestep statistics:
+Trying to open file: log/woods_2023_2024_BASE_ext_cfl_dt.csv ... OK. File unit: 101
+Closing file unit: 101
+Trying to open file: log/woods_2023_2024_BASE_int_cfl_dt.csv ... OK. File unit: 101
+Closing file unit: 101
+Finished timestep statistics output.
+
+De-allocating Domain Object:
+Cleaning "GOTM" external turbulence module:
+    clean_turbulence
+        de-allocating turbulence memory ...
+        done.
+    clean_tridiagonal
+Successful.
+Closing output files...
+Closing file: ../../outputs/results/woods_2023_2024_BASE_HD.nc
+Closing file: ../../outputs/results/woods_2023_2024_BASE_MET.nc
+Closing file, ../../includes/bc/1_weather/../../../bc_repo/1_weather/CFSR/CFSR_20230101_20240501.nc
+Closing file, ../../includes/bc/1_weather/../../../bc_repo/1_weather/CFSR/CFSR_20230101_20240501.nc
+Successful.
+
+
+Simulation Summary:
+
+Input File: /Development/projects/Woods/woods_model_tfvaed_0.2/model_runs/WQ/woods_2023_2024_BASE.fvc
+Log File: /Development/projects/Woods/woods_model_tfvaed_0.2/model_runs/WQ/log/woods_2023_2024_BASE.log
+
+Computer name: rosella
+User name: hydro
+Execution Timestamp: 04/11/2024 14:19:38
+Execution Completed: 04/11/2024 14:26:35
+
+Number of warnings = 7
+
+Run Successful.
+
+Checking TUFLOW FV Licence 1 (please wait)...Done.  Dongle 3793274.
+Releasing TUFLOW FV Licence...Done.
+Checking TUFLOW FV Threads Licence 1 (please wait)...Done.  Dongle 3793274.
+Checking TUFLOW FV Threads Licence 2 (please wait)...Done.  Dongle 3793274.
+Checking TUFLOW FV Threads Licence 3 (please wait)...Done.  Dongle 3793274.
+Checking TUFLOW FV Threads Licence 4 (please wait)...Done.  Dongle 3793274.
+Checking TUFLOW FV Threads Licence 5 (please wait)...Done.  Dongle 3793274.
+Checking TUFLOW FV Threads Licence 6 (please wait)...Done.  Dongle 3793274.
+Checking TUFLOW FV Threads Licence 7 (please wait)...Done.  Dongle 3793274.
+Checking TUFLOW FV Threads Licence 8 (please wait)...Done.  Dongle 3793274.
+Checking TUFLOW FV Threads Licence 9 (please wait)...Done.  Dongle 3793274.
+Checking TUFLOW FV Threads Licence 10 (please wait)...Done.  Dongle 3793274.
+Checking TUFLOW FV Threads Licence 11 (please wait)...Done.  Dongle 3793274.
+Checking TUFLOW FV Threads Licence 12 (please wait)...Done.  Dongle 3793274.
+Checking TUFLOW FV Threads Licence 13 (please wait)...Done.  Dongle 3793274.
+Checking TUFLOW FV Threads Licence 14 (please wait)...Done.  Dongle 3793274.
+Checking TUFLOW FV Threads Licence 15 (please wait)...Done.  Dongle 3793274.
+Checking TUFLOW FV Threads Licence 16 (please wait)...Done.  Dongle 3793274.
+Releasing 16 TUFLOW FV Threads...Done.
+Checking TUFLOW FV 3D Licence 1 (please wait)...Done.  Dongle 3793274.
+Releasing TUFLOW FV 3D Licence...Done.
+Checking TUFLOW FV AD Licence 1 (please wait)...Done.  Dongle 3793274.
+Releasing TUFLOW FV AD Licence...Done.
+Checking TUFLOW FV GPU Cards Licence 1 (please wait)...Done.  Dongle 3793274.
+Releasing 1 TUFLOW FV GPU Cards...Done.
+
+Exiting TUFLOWFV
+
+Unloading module
+    done
+Destroying context
+    done

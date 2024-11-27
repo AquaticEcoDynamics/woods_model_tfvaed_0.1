@@ -1,0 +1,38 @@
+!25 AED water quality variables to be simulated:
+!  1 NCS_ss1
+!  2 OXY_oxy
+!  3 NIT_amm
+!  4 NIT_nit
+!  5 PHS_frp
+!  6 PHS_frp_ads
+!  7 OGM_doc
+!  8 OGM_poc
+!  9 OGM_don
+!  10 OGM_pon
+!  11 OGM_dop
+!  12 OGM_pop
+!  13 PHY_grn
+!  14 PHY_grn_IN
+!  15 PHY_grn_IP
+!  16 PHY_bga
+!  17 PHY_bga_IN
+!  18 PHY_bga_IP
+!  19 PHY_diat
+!  20 PHY_diat_IN
+!  21 PHY_diat_IP
+!  22 PHY_doli
+!  23 PHY_doli_IN
+!  24 PHY_doli_IP
+!  25 TRC_age
+
+! HEADER: Date,FLOW,TEMP,SAL, CHLA,SS,NH4,NO3,OXY,FRP,ON,OP,OC,ZEROS,ONES
+
+! INFLOW (NATURAL) + INFLOW  (A.L. OUTLETS) 
+bc == Q, 1  ,  ../../../bc_repo/4_rivers/LAKE_RIVER/combine_inflow_woods_dam_20160107-20240514_adjusted_4.csv
+ ! 1 2    3   4  5   6   7  8  9  10 11 12  13   14   15  16    17   18  19    20   21   22   23   24   25
+  bc header == Date,FLOW,SAL,TEMP,ONES, SS,OXY,NH4,NO3,FRP,FRP,OC,OC,ON,ON,OP,OP,CHLA,CHLA,CHLA,CHLA,CHLA,CHLA,CHLA,CHLA,CHLA,CHLA,CHLA,CHLA,ZEROS
+ !bc scale ==  1.  ,  1.0,  1., 1.,1., 1., 1., 1.,0.6,0.4,0.5.,0.5,0.5.,0.5,0.5.,0.5,0.25,0.02,0.005,0.25,0.02,0.005,0.25,0.02,0.005,0.25,0.02,0.005,1. 
+  bc scale ==        1.0, 1., 1.,1., 1., 1., 1.,0.6,0.4,0.5.,0.5,0.5.,0.5,0.5.,0.5,0.25,0.02,0.005,0.25,0.02,0.005,0.25,0.02,0.005,0.25,0.02,0.005,1. 
+end bc
+
+
